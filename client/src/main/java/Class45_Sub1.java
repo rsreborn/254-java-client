@@ -834,6 +834,12 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 						this.anInputStream2 = this.aSocket2.getInputStream();
 						this.anOutputStream2 = this.aSocket2.getOutputStream();
 						this.anOutputStream2.write(15);
+
+						byte[] buildNumberBuffer = new byte[2];
+						buildNumberBuffer[0] = (byte) (Constants.BUILD_NUMBER >> 8);
+						buildNumberBuffer[1] = (byte) Constants.BUILD_NUMBER;
+						this.anOutputStream2.write(buildNumberBuffer, 0, 2);
+
 						for (@Pc(45) int local45 = 0; local45 < 8; local45++) {
 							this.anInputStream2.read();
 						}

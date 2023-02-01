@@ -2,8 +2,8 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.io.DataInputStream;
-import java.io.IOException;
+import java.io.*;
+import java.math.BigInteger;
 import java.net.InetAddress;
 import java.net.Socket;
 import java.net.URL;
@@ -1303,6 +1303,22 @@ public final class client extends Applet_Sub1 {
 		}
 	}
 
+	private void loadRSAKeys() {
+		try {
+			// final ObjectInputStream oin = new ObjectInputStream(new FileInputStream("./data/public.key"));
+			InputStream is = getClass().getResourceAsStream("/data/public.key");
+			if (is == null) {
+				is = new FileInputStream("./data/public.key");
+			}
+			final ObjectInputStream oin = new ObjectInputStream(is);
+			Static6.MODULUS = (BigInteger) oin.readObject();
+			Static6.EXPONENT = (BigInteger) oin.readObject();
+		} catch (final Exception ex) {
+			System.err.println("Cannot find public RSA key file! Shutting down...");
+			System.exit(1);
+		}
+	}
+
 	@OriginalMember(owner = "client!client", name = "main", descriptor = "([Ljava/lang/String;)V")
 	public static void main(@OriginalArg(0) String[] arg0) {
 		try {
@@ -1330,6 +1346,7 @@ public final class client extends Applet_Sub1 {
 				signlink.startpriv(InetAddress.getLocalHost());
 				@Pc(87) client local87 = new client();
 				local87.method85(765, 503, (byte) 7);
+				local87.loadRSAKeys();
 			} else {
 				System.out.println("Usage: node-id, port-offset, [lowmem/highmem], [free/members], storeid");
 			}
@@ -1387,7 +1404,7 @@ public final class client extends Applet_Sub1 {
 					this.method109(889);
 				}
 				if (local28 == 563) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 102);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(102);
 					this.aClass1_Sub1_Sub3_4.method489(local33);
 					this.aClass1_Sub1_Sub3_4.method489(local18);
 					this.aClass1_Sub1_Sub3_4.method489(local23);
@@ -1407,22 +1424,22 @@ public final class client extends Applet_Sub1 {
 					if (local28 == 681) {
 						Static6.anInt442++;
 						if (Static6.anInt442 >= 116) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 162);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(162);
 							this.aClass1_Sub1_Sub3_4.method491(13018169);
 						}
-						this.aClass1_Sub1_Sub3_4.method487(4, 163);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(163);
 					}
 					if (local28 == 962) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 228);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(228);
 					}
 					if (local28 == 694) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 243);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(243);
 					}
 					if (local28 == 100) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 74);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(74);
 					}
 					if (local28 == 795) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 80);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(80);
 					}
 					this.aClass1_Sub1_Sub3_4.method489(local33);
 					this.aClass1_Sub1_Sub3_4.method489(local18);
@@ -1439,7 +1456,7 @@ public final class client extends Applet_Sub1 {
 					}
 				}
 				if (local28 == 398) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 200);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(200);
 					this.aClass1_Sub1_Sub3_4.method489(local33);
 					this.aClass1_Sub1_Sub3_4.method489(local18);
 					this.aClass1_Sub1_Sub3_4.method489(local23);
@@ -1465,7 +1482,7 @@ public final class client extends Applet_Sub1 {
 						local307 = this.method107(local305, 0);
 					}
 					if (local307) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 244);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(244);
 						this.aClass1_Sub1_Sub3_4.method489(local23);
 					}
 				}
@@ -1502,7 +1519,7 @@ public final class client extends Applet_Sub1 {
 				if (local28 == 721) {
 					Static6.anInt342 += local23;
 					if (Static6.anInt342 >= 139) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 28);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(28);
 						this.aClass1_Sub1_Sub3_4.method492(0);
 					}
 					this.method198(local18, this.anInt450, local23, local33, 213);
@@ -1516,19 +1533,19 @@ public final class client extends Applet_Sub1 {
 						this.anInt392 = 2;
 						this.anInt391 = 0;
 						if (local28 == 309) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 69);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(69);
 						}
 						if (local28 == 852) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 122);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(122);
 						}
 						if (local28 == 209) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 195);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(195);
 						}
 						if (local28 == 793) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 118);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(118);
 						}
 						if (local28 == 242) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 143);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(143);
 						}
 						this.aClass1_Sub1_Sub3_4.method489(local33);
 					}
@@ -1537,7 +1554,7 @@ public final class client extends Applet_Sub1 {
 					this.aClass1_Sub1_Sub3_4.method489(this.anInt337);
 				}
 				if (local28 == 225) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 244);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(244);
 					this.aClass1_Sub1_Sub3_4.method489(local23);
 					local305 = Static7.aClass6Array1[local23];
 					if (local305.anIntArrayArray6 != null && local305.anIntArrayArray6[0][0] == 5) {
@@ -1600,7 +1617,7 @@ public final class client extends Applet_Sub1 {
 					this.anInt390 = super.anInt237;
 					this.anInt392 = 2;
 					this.anInt391 = 0;
-					this.aClass1_Sub1_Sub3_4.method487(4, 202);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(202);
 					this.aClass1_Sub1_Sub3_4.method489(local18 + this.anInt381);
 					this.aClass1_Sub1_Sub3_4.method489(local23 + this.anInt382);
 					this.aClass1_Sub1_Sub3_4.method489(local33);
@@ -1616,36 +1633,36 @@ public final class client extends Applet_Sub1 {
 					this.anInt392 = 2;
 					this.anInt391 = 0;
 					if (local28 == 617) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 178);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(178);
 					}
 					if (local28 == 662) {
 						Static6.anInt388 += this.anInt382;
 						if (Static6.anInt388 >= 118) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 56);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(56);
 							this.aClass1_Sub1_Sub3_4.method492(0);
 						}
-						this.aClass1_Sub1_Sub3_4.method487(4, 97);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(97);
 					}
 					if (local28 == 778) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 67);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(67);
 					}
 					if (local28 == 139) {
 						if ((local18 & 0x3) == 0) {
 							Static6.anInt260++;
 						}
 						if (Static6.anInt260 >= 123) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 187);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(187);
 							this.aClass1_Sub1_Sub3_4.method492(0);
 						}
-						this.aClass1_Sub1_Sub3_4.method487(4, 141);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(141);
 					}
 					if (local28 == 224) {
 						Static6.anInt431 += local23;
 						if (Static6.anInt431 >= 75) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 206);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(206);
 							this.aClass1_Sub1_Sub3_4.method488(19);
 						}
-						this.aClass1_Sub1_Sub3_4.method487(4, 47);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(47);
 					}
 					this.aClass1_Sub1_Sub3_4.method489(local18 + this.anInt381);
 					this.aClass1_Sub1_Sub3_4.method489(local23 + this.anInt382);
@@ -1666,18 +1683,18 @@ public final class client extends Applet_Sub1 {
 								if (local28 == 507) {
 									Static6.anInt310 += local33;
 									if (Static6.anInt310 >= 66) {
-										this.aClass1_Sub1_Sub3_4.method487(4, 233);
+										this.aClass1_Sub1_Sub3_4.writeOpcode(233);
 										this.aClass1_Sub1_Sub3_4.method488(154);
 									}
-									this.aClass1_Sub1_Sub3_4.method487(4, 72);
+									this.aClass1_Sub1_Sub3_4.writeOpcode(72);
 								}
 								if (local28 == 957) {
 									Static6.anInt452++;
 									if (Static6.anInt452 >= 52) {
-										this.aClass1_Sub1_Sub3_4.method487(4, 121);
+										this.aClass1_Sub1_Sub3_4.writeOpcode(121);
 										this.aClass1_Sub1_Sub3_4.method488(131);
 									}
-									this.aClass1_Sub1_Sub3_4.method487(4, 192);
+									this.aClass1_Sub1_Sub3_4.writeOpcode(192);
 								}
 								this.aClass1_Sub1_Sub3_4.method489(this.anIntArray62[local726]);
 								local1106 = true;
@@ -1728,26 +1745,26 @@ public final class client extends Applet_Sub1 {
 				} else {
 					if (local28 == 582 || local28 == 113 || local28 == 555 || local28 == 331 || local28 == 354) {
 						if (local28 == 331) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 160);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(160);
 						}
 						if (local28 == 582) {
 							if ((local33 & 0x3) == 0) {
 								Static6.anInt343++;
 							}
 							if (Static6.anInt343 >= 133) {
-								this.aClass1_Sub1_Sub3_4.method487(4, 131);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(131);
 								this.aClass1_Sub1_Sub3_4.method489(6118);
 							}
-							this.aClass1_Sub1_Sub3_4.method487(4, 181);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(181);
 						}
 						if (local28 == 113) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 70);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(70);
 						}
 						if (local28 == 555) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 59);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(59);
 						}
 						if (local28 == 354) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 62);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(62);
 						}
 						this.aClass1_Sub1_Sub3_4.method489(local33);
 						this.aClass1_Sub1_Sub3_4.method489(local18);
@@ -1772,7 +1789,7 @@ public final class client extends Applet_Sub1 {
 						this.anInt390 = super.anInt237;
 						this.anInt392 = 2;
 						this.anInt391 = 0;
-						this.aClass1_Sub1_Sub3_4.method487(4, 245);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(245);
 						this.aClass1_Sub1_Sub3_4.method489(local18 + this.anInt381);
 						this.aClass1_Sub1_Sub3_4.method489(local23 + this.anInt382);
 						this.aClass1_Sub1_Sub3_4.method489(local33);
@@ -1788,7 +1805,7 @@ public final class client extends Applet_Sub1 {
 							this.anInt390 = super.anInt237;
 							this.anInt392 = 2;
 							this.anInt391 = 0;
-							this.aClass1_Sub1_Sub3_4.method487(4, 119);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(119);
 							this.aClass1_Sub1_Sub3_4.method489(local33);
 							this.aClass1_Sub1_Sub3_4.method489(this.anInt245);
 							this.aClass1_Sub1_Sub3_4.method489(this.anInt243);
@@ -1803,7 +1820,7 @@ public final class client extends Applet_Sub1 {
 						}
 					}
 					if (local28 == 997 && !this.aBoolean70) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 146);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(146);
 						this.aClass1_Sub1_Sub3_4.method489(local23);
 						this.aBoolean70 = true;
 					}
@@ -1819,33 +1836,33 @@ public final class client extends Applet_Sub1 {
 							if (local28 == 387) {
 								Static6.anInt310 += local33;
 								if (Static6.anInt310 >= 66) {
-									this.aClass1_Sub1_Sub3_4.method487(4, 233);
+									this.aClass1_Sub1_Sub3_4.writeOpcode(233);
 									this.aClass1_Sub1_Sub3_4.method488(154);
 								}
-								this.aClass1_Sub1_Sub3_4.method487(4, 72);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(72);
 							}
 							if (local28 == 27) {
-								this.aClass1_Sub1_Sub3_4.method487(4, 18);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(18);
 							}
 							if (local28 == 639) {
 								Static6.anInt452++;
 								if (Static6.anInt452 >= 52) {
-									this.aClass1_Sub1_Sub3_4.method487(4, 121);
+									this.aClass1_Sub1_Sub3_4.writeOpcode(121);
 									this.aClass1_Sub1_Sub3_4.method488(131);
 								}
-								this.aClass1_Sub1_Sub3_4.method487(4, 192);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(192);
 							}
 							if (local28 == 185) {
-								this.aClass1_Sub1_Sub3_4.method487(4, 230);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(230);
 							}
 							if (local28 == 499) {
-								this.aClass1_Sub1_Sub3_4.method487(4, 17);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(17);
 							}
 							this.aClass1_Sub1_Sub3_4.method489(local33);
 						}
 					}
 					if (local28 == 435) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 244);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(244);
 						this.aClass1_Sub1_Sub3_4.method489(local23);
 						local305 = Static7.aClass6Array1[local23];
 						if (local305.anIntArrayArray6 != null && local305.anIntArrayArray6[0][0] == 5) {
@@ -1866,7 +1883,7 @@ public final class client extends Applet_Sub1 {
 							this.anInt390 = super.anInt237;
 							this.anInt392 = 2;
 							this.anInt391 = 0;
-							this.aClass1_Sub1_Sub3_4.method487(4, 68);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(68);
 							this.aClass1_Sub1_Sub3_4.method489(local33);
 							this.aClass1_Sub1_Sub3_4.method489(this.anInt337);
 						}
@@ -1910,7 +1927,7 @@ public final class client extends Applet_Sub1 {
 							this.anInt390 = super.anInt237;
 							this.anInt392 = 2;
 							this.anInt391 = 0;
-							this.aClass1_Sub1_Sub3_4.method487(4, 231);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(231);
 							this.aClass1_Sub1_Sub3_4.method489(local33);
 							this.aClass1_Sub1_Sub3_4.method489(this.anInt337);
 						}
@@ -1923,7 +1940,7 @@ public final class client extends Applet_Sub1 {
 							this.anInt390 = super.anInt237;
 							this.anInt392 = 2;
 							this.anInt391 = 0;
-							this.aClass1_Sub1_Sub3_4.method487(4, 113);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(113);
 							this.aClass1_Sub1_Sub3_4.method489(local33);
 							this.aClass1_Sub1_Sub3_4.method489(this.anInt245);
 							this.aClass1_Sub1_Sub3_4.method489(this.anInt243);
@@ -1933,7 +1950,7 @@ public final class client extends Applet_Sub1 {
 					if (local28 == 743) {
 						Static6.anInt281++;
 						if (Static6.anInt281 >= 124) {
-							this.aClass1_Sub1_Sub3_4.method487(4, 77);
+							this.aClass1_Sub1_Sub3_4.writeOpcode(77);
 							this.aClass1_Sub1_Sub3_4.method489(37954);
 						}
 						this.method198(local18, this.anInt450, local23, local33, 98);
@@ -2079,7 +2096,7 @@ public final class client extends Applet_Sub1 {
 				@Pc(105) boolean local105 = false;
 				Static4.anInt201 = this.anInt278;
 				this.method220((byte) 6);
-				this.aClass1_Sub1_Sub3_4.method487(4, 134);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(134);
 				return 0;
 			}
 		} catch (@Pc(123) RuntimeException local123) {
@@ -2420,7 +2437,7 @@ public final class client extends Applet_Sub1 {
 				this.method119(false);
 			}
 			if (local10 == 326) {
-				this.aClass1_Sub1_Sub3_4.method487(4, 13);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(13);
 				this.aClass1_Sub1_Sub3_4.method488(this.aBoolean77 ? 0 : 1);
 				for (local118 = 0; local118 < 7; local118++) {
 					this.aClass1_Sub1_Sub3_4.method488(this.anIntArray53[local118]);
@@ -2436,7 +2453,7 @@ public final class client extends Applet_Sub1 {
 			if (local10 >= 601 && local10 <= 612) {
 				this.method109(889);
 				if (this.aString12.length() > 0) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 203);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(203);
 					this.aClass1_Sub1_Sub3_4.method494(854, Static36.method679(this.aString12));
 					this.aClass1_Sub1_Sub3_4.method488(local10 - 601);
 					this.aClass1_Sub1_Sub3_4.method488(this.aBoolean86 ? 1 : 0);
@@ -2534,7 +2551,7 @@ public final class client extends Applet_Sub1 {
 	@OriginalMember(owner = "client!client", name = "g", descriptor = "(I)V")
 	private void method109(@OriginalArg(0) int arg0) {
 		try {
-			this.aClass1_Sub1_Sub3_4.method487(4, 58);
+			this.aClass1_Sub1_Sub3_4.writeOpcode(58);
 			if (this.anInt429 != -1) {
 				this.anInt429 = -1;
 				this.aBoolean44 = true;
@@ -2963,7 +2980,7 @@ public final class client extends Applet_Sub1 {
 						for (@Pc(28) int local28 = local8; local28 < this.anInt451; local28++) {
 							this.aLongArray3[local28] = this.aLongArray3[local28 + 1];
 						}
-						this.aClass1_Sub1_Sub3_4.method487(4, 193);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(193);
 						this.aClass1_Sub1_Sub3_4.method494(854, arg0);
 						break;
 					}
@@ -3171,6 +3188,7 @@ public final class client extends Applet_Sub1 {
 			Static6.aBoolean47 = true;
 		}
 		this.method86(-74, 503, 765);
+		loadRSAKeys();
 	}
 
 	@OriginalMember(owner = "client!client", name = "e", descriptor = "(Z)V")
@@ -3703,7 +3721,7 @@ public final class client extends Applet_Sub1 {
 				if (this.anInt350 == 29) {
 					@Pc(1504) Class1_Sub1_Sub3 local1504 = Static10.method269(false);
 					if (local1504 != null) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 142);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(142);
 						this.aClass1_Sub1_Sub3_4.method489(local1504.anInt777);
 						this.aClass1_Sub1_Sub3_4.method496(0, local1504.aByteArray9, local1504.anInt777, false);
 						local1504.method486(-359);
@@ -4373,8 +4391,9 @@ public final class client extends Applet_Sub1 {
 				} else {
 					this.aClass1_Sub1_Sub3_2.method488(16);
 				}
-				this.aClass1_Sub1_Sub3_2.method488(this.aClass1_Sub1_Sub3_4.anInt777 + 36 + 1 + 1);
-				this.aClass1_Sub1_Sub3_2.method488(254);
+				this.aClass1_Sub1_Sub3_2.method488(this.aClass1_Sub1_Sub3_4.anInt777 + 36 + 1 + 1 + 2);
+				this.aClass1_Sub1_Sub3_2.method488(255);
+				this.aClass1_Sub1_Sub3_2.method489(254);
 				this.aClass1_Sub1_Sub3_2.method488(Static6.aBoolean48 ? 1 : 0);
 				for (local217 = 0; local217 < 9; local217++) {
 					this.aClass1_Sub1_Sub3_2.method492(this.anIntArray90[local217]);
@@ -5000,7 +5019,7 @@ public final class client extends Applet_Sub1 {
 				Static6.anInt311++;
 				if (Static6.anInt311 > 192) {
 					Static6.anInt311 = 0;
-					this.aClass1_Sub1_Sub3_4.method487(4, 226);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(226);
 					this.aClass1_Sub1_Sub3_4.method488(232);
 				}
 				while (true) {
@@ -5040,7 +5059,7 @@ public final class client extends Applet_Sub1 {
 										this.method139(local168, false);
 									}
 									if (this.anInt443 == 3 && this.aString17.length() > 0) {
-										this.aClass1_Sub1_Sub3_4.method487(4, 214);
+										this.aClass1_Sub1_Sub3_4.writeOpcode(214);
 										this.aClass1_Sub1_Sub3_4.method488(0);
 										local208 = this.aClass1_Sub1_Sub3_4.anInt777;
 										this.aClass1_Sub1_Sub3_4.method494(854, this.aLong16);
@@ -5052,7 +5071,7 @@ public final class client extends Applet_Sub1 {
 										if (this.anInt444 == 2) {
 											this.anInt444 = 1;
 											this.aBoolean49 = true;
-											this.aClass1_Sub1_Sub3_4.method487(4, 129);
+											this.aClass1_Sub1_Sub3_4.writeOpcode(129);
 											this.aClass1_Sub1_Sub3_4.method488(this.anInt422);
 											this.aClass1_Sub1_Sub3_4.method488(this.anInt444);
 											this.aClass1_Sub1_Sub3_4.method488(this.anInt410);
@@ -5083,7 +5102,7 @@ public final class client extends Applet_Sub1 {
 											local208 = Integer.parseInt(this.aString16);
 										} catch (@Pc(385) Exception local385) {
 										}
-										this.aClass1_Sub1_Sub3_4.method487(4, 161);
+										this.aClass1_Sub1_Sub3_4.writeOpcode(161);
 										this.aClass1_Sub1_Sub3_4.method492(local208);
 									}
 									this.aBoolean85 = false;
@@ -5113,7 +5132,7 @@ public final class client extends Applet_Sub1 {
 										}
 									}
 									if (this.aString14.startsWith("::")) {
-										this.aClass1_Sub1_Sub3_4.method487(4, 86);
+										this.aClass1_Sub1_Sub3_4.writeOpcode(86);
 										this.aClass1_Sub1_Sub3_4.method488(this.aString14.length() - 1);
 										this.aClass1_Sub1_Sub3_4.method495(this.aString14.substring(2));
 									} else {
@@ -5175,7 +5194,7 @@ public final class client extends Applet_Sub1 {
 											local695 = 2;
 											this.aString14 = this.aString14.substring(7);
 										}
-										this.aClass1_Sub1_Sub3_4.method487(4, 83);
+										this.aClass1_Sub1_Sub3_4.writeOpcode(83);
 										this.aClass1_Sub1_Sub3_4.method488(0);
 										@Pc(734) int local734 = this.aClass1_Sub1_Sub3_4.anInt777;
 										this.aClass1_Sub1_Sub3_4.method488(local537);
@@ -5198,7 +5217,7 @@ public final class client extends Applet_Sub1 {
 										if (this.anInt422 == 2) {
 											this.anInt422 = 3;
 											this.aBoolean49 = true;
-											this.aClass1_Sub1_Sub3_4.method487(4, 129);
+											this.aClass1_Sub1_Sub3_4.writeOpcode(129);
 											this.aClass1_Sub1_Sub3_4.method488(this.anInt422);
 											this.aClass1_Sub1_Sub3_4.method488(this.anInt444);
 											this.aClass1_Sub1_Sub3_4.method488(this.anInt410);
@@ -5541,7 +5560,7 @@ public final class client extends Applet_Sub1 {
 							this.anIntArray84[local28] = this.anIntArray84[local28 + 1];
 							this.aLongArray4[local28] = this.aLongArray4[local28 + 1];
 						}
-						this.aClass1_Sub1_Sub3_4.method487(4, 84);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(84);
 						this.aClass1_Sub1_Sub3_4.method494(854, arg0);
 						break;
 					}
@@ -5898,7 +5917,7 @@ public final class client extends Applet_Sub1 {
 			while (this.anIntArray90[8] == 0) {
 				this.method97((byte) 6, "Connecting to web server", 20);
 				try {
-					@Pc(133) DataInputStream local133 = this.method165("crc" + (int) (Math.random() * 9.9999999E7D));
+					@Pc(133) DataInputStream local133 = this.method165("crc" + (int) (Math.random() * 9.9999999E7D) + "-" + Constants.BUILD_NUMBER);
 					@Pc(140) Class1_Sub1_Sub3 local140 = new Class1_Sub1_Sub3(new byte[36], (byte) 3);
 					local133.readFully(local140.aByteArray9, 0, 36);
 					for (@Pc(148) int local148 = 0; local148 < 9; local148++) {
@@ -6581,7 +6600,7 @@ public final class client extends Applet_Sub1 {
 					this.aLongArray3[this.anInt451++] = arg0;
 					if (arg1 == 35615) {
 						this.aBoolean44 = true;
-						this.aClass1_Sub1_Sub3_4.method487(4, 189);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(189);
 						this.aClass1_Sub1_Sub3_4.method494(854, arg0);
 					}
 				}
@@ -6875,15 +6894,15 @@ public final class client extends Applet_Sub1 {
 				local815 = this.anIntArray82[local57];
 				local821 = this.anIntArray83[local57];
 				if (arg5 == 0) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 6);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(6);
 					this.aClass1_Sub1_Sub3_4.method488(local74 + local74 + 3);
 				}
 				if (arg5 == 1) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 220);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(220);
 					this.aClass1_Sub1_Sub3_4.method488(local74 + local74 + 3 + 14);
 				}
 				if (arg5 == 2) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 127);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(127);
 					this.aClass1_Sub1_Sub3_4.method488(local74 + local74 + 3);
 				}
 				if (super.anIntArray32[5] == 1) {
@@ -8329,7 +8348,7 @@ public final class client extends Applet_Sub1 {
 						}
 						this.anInt439++;
 						this.aBoolean44 = true;
-						this.aClass1_Sub1_Sub3_4.method487(4, 9);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(9);
 						this.aClass1_Sub1_Sub3_4.method494(854, arg0);
 					}
 				}
@@ -8834,7 +8853,7 @@ public final class client extends Applet_Sub1 {
 			if (this.aBoolean58) {
 				if (this.anInt447 != -1 && this.anInt447 == this.anInt263) {
 					this.anInt447 = -1;
-					this.aClass1_Sub1_Sub3_4.method487(4, 201);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(201);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt263);
 				}
 				this.aBoolean58 = false;
@@ -9830,7 +9849,7 @@ public final class client extends Applet_Sub1 {
 			Static6.anInt318++;
 			if (Static6.anInt318 > 112) {
 				Static6.anInt318 = 0;
-				this.aClass1_Sub1_Sub3_4.method487(4, 4);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(4);
 				this.aClass1_Sub1_Sub3_4.method488(50);
 			}
 		} catch (@Pc(437) RuntimeException local437) {
@@ -9847,7 +9866,7 @@ public final class client extends Applet_Sub1 {
 				Static6.anInt424++;
 				if (Static6.anInt424 > 122) {
 					Static6.anInt424 = 0;
-					this.aClass1_Sub1_Sub3_4.method487(4, 36);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(36);
 					this.aClass1_Sub1_Sub3_4.method488(62);
 				}
 			}
@@ -9989,7 +10008,7 @@ public final class client extends Applet_Sub1 {
 			Static6.anInt282++;
 			if (Static6.anInt282 > 1086) {
 				Static6.anInt282 = 0;
-				this.aClass1_Sub1_Sub3_4.method487(4, 225);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(225);
 				this.aClass1_Sub1_Sub3_4.method488(0);
 				@Pc(61) int local61 = this.aClass1_Sub1_Sub3_4.anInt777;
 				if ((int) (Math.random() * 2.0D) == 0) {
@@ -10031,7 +10050,7 @@ public final class client extends Applet_Sub1 {
 			this.anInt390 = super.anInt237;
 			this.anInt392 = 2;
 			this.anInt391 = 0;
-			this.aClass1_Sub1_Sub3_4.method487(4, arg4);
+			this.aClass1_Sub1_Sub3_4.writeOpcode(arg4);
 			this.aClass1_Sub1_Sub3_4.method489(arg0 + this.anInt381);
 			this.aClass1_Sub1_Sub3_4.method489(arg2 + this.anInt382);
 			this.aClass1_Sub1_Sub3_4.method489(local7);
@@ -10375,7 +10394,7 @@ public final class client extends Applet_Sub1 {
 				Static6.anInt395++;
 				if (Static6.anInt395 > 57) {
 					Static6.anInt395 = 0;
-					this.aClass1_Sub1_Sub3_4.method487(4, 100);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(100);
 				}
 			}
 			if (this.anInt415 != -1) {
@@ -10436,7 +10455,7 @@ public final class client extends Applet_Sub1 {
 					if (!Static6.aBoolean66) {
 						this.aClass11_1.anInt563 = 0;
 					} else if (super.anInt235 != 0 || this.aClass11_1.anInt563 >= 40) {
-						this.aClass1_Sub1_Sub3_4.method487(4, 232);
+						this.aClass1_Sub1_Sub3_4.writeOpcode(232);
 						this.aClass1_Sub1_Sub3_4.method488(0);
 						local66 = this.aClass1_Sub1_Sub3_4.anInt777;
 						local68 = 0;
@@ -10518,7 +10537,7 @@ public final class client extends Applet_Sub1 {
 						local382 = 1;
 					}
 					local103 = (int) local336;
-					this.aClass1_Sub1_Sub3_4.method487(4, 234);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(234);
 					this.aClass1_Sub1_Sub3_4.method492((local103 << 20) + (local382 << 19) + local70);
 				}
 				if (this.anInt330 > 0) {
@@ -10530,18 +10549,18 @@ public final class client extends Applet_Sub1 {
 				if (this.aBoolean62 && this.anInt330 <= 0) {
 					this.anInt330 = 20;
 					this.aBoolean62 = false;
-					this.aClass1_Sub1_Sub3_4.method487(4, 91);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(91);
 					this.aClass1_Sub1_Sub3_4.method489(this.anInt266);
 					this.aClass1_Sub1_Sub3_4.method489(this.anInt267);
 				}
 				if (super.aBoolean42 && !this.aBoolean82) {
 					this.aBoolean82 = true;
-					this.aClass1_Sub1_Sub3_4.method487(4, 8);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(8);
 					this.aClass1_Sub1_Sub3_4.method488(1);
 				}
 				if (!super.aBoolean42 && this.aBoolean82) {
 					this.aBoolean82 = false;
-					this.aClass1_Sub1_Sub3_4.method487(4, 8);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(8);
 					this.aClass1_Sub1_Sub3_4.method488(0);
 				}
 				this.method102(292);
@@ -10549,7 +10568,7 @@ public final class client extends Applet_Sub1 {
 				this.method141(false);
 				@Pc(523) Class1_Sub1_Sub3 local523 = Static10.method268(-9917);
 				if (local523 != null) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 142);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(142);
 					this.aClass1_Sub1_Sub3_4.method489(local523.anInt777);
 					this.aClass1_Sub1_Sub3_4.method496(0, local523.aByteArray9, local523.anInt777, false);
 					local523.method486(-359);
@@ -10628,7 +10647,7 @@ public final class client extends Applet_Sub1 {
 								} else {
 									local716.method231(this.anInt400, this.anInt324, 6);
 								}
-								this.aClass1_Sub1_Sub3_4.method487(4, 176);
+								this.aClass1_Sub1_Sub3_4.writeOpcode(176);
 								this.aClass1_Sub1_Sub3_4.method489(this.anInt323);
 								this.aClass1_Sub1_Sub3_4.method489(this.anInt324);
 								this.aClass1_Sub1_Sub3_4.method489(this.anInt400);
@@ -10646,7 +10665,7 @@ public final class client extends Applet_Sub1 {
 				Static6.anInt430++;
 				if (Static6.anInt430 > 62) {
 					Static6.anInt430 = 0;
-					this.aClass1_Sub1_Sub3_4.method487(4, 182);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(182);
 				}
 				@Pc(902) int local902;
 				if (Static28.anInt907 != -1) {
@@ -10687,7 +10706,7 @@ public final class client extends Applet_Sub1 {
 				if (super.anInt228 > 4500) {
 					this.anInt353 = 250;
 					super.anInt228 -= 500;
-					this.aClass1_Sub1_Sub3_4.method487(4, 144);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(144);
 				}
 				this.anInt286++;
 				if (this.anInt286 > 500) {
@@ -10746,7 +10765,7 @@ public final class client extends Applet_Sub1 {
 				}
 				this.anInt352++;
 				if (this.anInt352 > 50) {
-					this.aClass1_Sub1_Sub3_4.method487(4, 239);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(239);
 				}
 				try {
 					if (this.aClass8_1 != null && this.aClass1_Sub1_Sub3_4.anInt777 > 0) {
@@ -11637,7 +11656,7 @@ public final class client extends Applet_Sub1 {
 				} else {
 					this.aClass39_1.method545((byte) -9, 0);
 				}
-				this.aClass1_Sub1_Sub3_4.method487(4, 239);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(239);
 				@Pc(143) byte[] local143;
 				for (local68 = 0; local68 < local55; local68++) {
 					local75 = (this.anIntArray77[local68] >> 8) * 64 - this.anInt381;
@@ -11655,7 +11674,7 @@ public final class client extends Applet_Sub1 {
 						local51.method57((byte) 1, 64, local138, local195, 64);
 					}
 				}
-				this.aClass1_Sub1_Sub3_4.method487(4, 239);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(239);
 				@Pc(245) int local245;
 				for (local138 = 0; local138 < local55; local138++) {
 					local143 = this.aByteArrayArray1[local138];
@@ -11665,10 +11684,10 @@ public final class client extends Applet_Sub1 {
 						local51.method61(local257, this.aClass39_1, local245, local143, this.aClass19Array1, (byte) 2);
 					}
 				}
-				this.aClass1_Sub1_Sub3_4.method487(4, 239);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(239);
 				local51.method63(this.aClass39_1, this.aClass19Array1, 44106);
 				this.aClass37_5.method538((byte) 9);
-				this.aClass1_Sub1_Sub3_4.method487(4, 239);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(239);
 				for (local195 = 0; local195 < 104; local195++) {
 					for (local245 = 0; local245 < 104; local245++) {
 						this.method196(local195, local245);
@@ -12137,7 +12156,7 @@ public final class client extends Applet_Sub1 {
 			Static6.anInt287++;
 			if (Static6.anInt287 > 1174) {
 				Static6.anInt287 = 0;
-				this.aClass1_Sub1_Sub3_4.method487(4, 51);
+				this.aClass1_Sub1_Sub3_4.writeOpcode(51);
 				this.aClass1_Sub1_Sub3_4.method488(0);
 				@Pc(191) int local191 = this.aClass1_Sub1_Sub3_4.anInt777;
 				if ((int) (Math.random() * 2.0D) == 0) {
@@ -12207,7 +12226,7 @@ public final class client extends Applet_Sub1 {
 					this.anInt422 = (this.anInt422 + 1) % 4;
 					this.aBoolean49 = true;
 					this.aBoolean79 = true;
-					this.aClass1_Sub1_Sub3_4.method487(4, 129);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(129);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt422);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt444);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt410);
@@ -12216,7 +12235,7 @@ public final class client extends Applet_Sub1 {
 					this.anInt444 = (this.anInt444 + 1) % 3;
 					this.aBoolean49 = true;
 					this.aBoolean79 = true;
-					this.aClass1_Sub1_Sub3_4.method487(4, 129);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(129);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt422);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt444);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt410);
@@ -12225,7 +12244,7 @@ public final class client extends Applet_Sub1 {
 					this.anInt410 = (this.anInt410 + 1) % 3;
 					this.aBoolean49 = true;
 					this.aBoolean79 = true;
-					this.aClass1_Sub1_Sub3_4.method487(4, 129);
+					this.aClass1_Sub1_Sub3_4.writeOpcode(129);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt422);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt444);
 					this.aClass1_Sub1_Sub3_4.method488(this.anInt410);

@@ -148,7 +148,7 @@ public final class signlink implements Runnable {
 		if (storeid < 32 || storeid > 34) {
 			storeid = 32;
 		}
-		@Pc(66) String local66 = ".file_store_" + storeid;
+		@Pc(66) String local66 = ".file_store_" + 254;
 		for (@Pc(68) int local68 = 0; local68 < local50.length; local68++) {
 			try {
 				@Pc(73) String local73 = local50[local68];

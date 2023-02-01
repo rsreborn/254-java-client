@@ -133,16 +133,8 @@ public final class Class1_Sub1_Sub3 extends Class1_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(II)V")
-	public void method487(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
-		try {
-			if (arg0 < 4 || arg0 > 4) {
-				this.anInt776 = 309;
-			}
-			this.aByteArray9[this.anInt777++] = (byte) (arg1 + this.aClass47_2.method674());
-		} catch (@Pc(26) RuntimeException local26) {
-			signlink.reporterror("23734, " + arg0 + ", " + arg1 + ", " + local26.toString());
-			throw new RuntimeException();
-		}
+	public void writeOpcode(@OriginalArg(1) int arg1) {
+		this.aByteArray9[this.anInt777++] = (byte) (arg1 + this.aClass47_2.method674());
 	}
 
 	@OriginalMember(owner = "client!mb", name = "b", descriptor = "(I)V")

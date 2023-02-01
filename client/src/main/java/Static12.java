@@ -41,6 +41,7 @@ public final class Static12 {
 		for (@Pc(49) int local49 = 0; local49 < 20; local49++) {
 			aClass13Array1[local49] = new Class13();
 		}
+		System.out.println(anInt576);
 	}
 
 	@OriginalMember(owner = "client!gc", name = "a", descriptor = "(I)V")
