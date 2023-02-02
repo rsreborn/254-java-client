@@ -185,7 +185,7 @@ public final class Class15 {
 			}
 			while (true) {
 				while (true) {
-					local9 = arg1.get1();
+					local9 = arg1.readByte();
 					if (local9 == 0) {
 						return;
 					}
@@ -243,7 +243,7 @@ public final class Class15 {
 						}
 						this.aStringArray11[local9 - 35] = arg1.getString();
 					} else if (local9 == 40) {
-						@Pc(259) int local259 = arg1.get1();
+						@Pc(259) int local259 = arg1.readByte();
 						this.anIntArray176 = new int[local259];
 						this.anIntArray177 = new int[local259];
 						for (@Pc(269) int local269 = 0; local269 < local259; local269++) {

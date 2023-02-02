@@ -164,7 +164,7 @@ public final class Class9 {
 				@Pc(33) int local33;
 				do {
 					while (true) {
-						@Pc(13) int local13 = arg1.get1();
+						@Pc(13) int local13 = arg1.readByte();
 						if (local13 == 0) {
 							if (local10 == -1) {
 								this.aBoolean117 = false;
@@ -186,7 +186,7 @@ public final class Class9 {
 							return;
 						}
 						if (local13 == 1) {
-							local21 = arg1.get1();
+							local21 = arg1.readByte();
 							break;
 						}
 						if (local13 == 2) {
@@ -194,7 +194,7 @@ public final class Class9 {
 						} else if (local13 == 3) {
 							this.aByteArray4 = arg1.getStringArray((byte) 3);
 						} else if (local13 == 5) {
-							local21 = arg1.get1();
+							local21 = arg1.readByte();
 							if (local21 > 0) {
 								this.anIntArray118 = null;
 								this.anIntArray117 = new int[local21];
@@ -203,15 +203,15 @@ public final class Class9 {
 								}
 							}
 						} else if (local13 == 14) {
-							this.anInt519 = arg1.get1();
+							this.anInt519 = arg1.readByte();
 						} else if (local13 == 15) {
-							this.anInt520 = arg1.get1();
+							this.anInt520 = arg1.readByte();
 						} else if (local13 == 17) {
 							this.aBoolean115 = false;
 						} else if (local13 == 18) {
 							this.aBoolean116 = false;
 						} else if (local13 == 19) {
-							local10 = arg1.get1();
+							local10 = arg1.readByte();
 							if (local10 == 1) {
 								this.aBoolean117 = true;
 							}
@@ -227,7 +227,7 @@ public final class Class9 {
 								this.anInt521 = -1;
 							}
 						} else if (local13 == 28) {
-							this.anInt522 = arg1.get1();
+							this.anInt522 = arg1.readByte();
 						} else if (local13 == 29) {
 							this.aByte20 = arg1.get1Signed();
 						} else if (local13 == 39) {
@@ -241,7 +241,7 @@ public final class Class9 {
 								this.aStringArray8[local13 - 30] = null;
 							}
 						} else if (local13 == 40) {
-							local21 = arg1.get1();
+							local21 = arg1.readByte();
 							this.anIntArray119 = new int[local21];
 							this.anIntArray120 = new int[local21];
 							for (local33 = 0; local33 < local21; local33++) {
@@ -263,7 +263,7 @@ public final class Class9 {
 						} else if (local13 == 68) {
 							this.anInt524 = arg1.get2();
 						} else if (local13 == 69) {
-							this.anInt531 = arg1.get1();
+							this.anInt531 = arg1.readByte();
 						} else if (local13 == 70) {
 							this.anInt528 = arg1.get2LE();
 						} else if (local13 == 71) {
@@ -275,7 +275,7 @@ public final class Class9 {
 						} else if (local13 == 74) {
 							this.aBoolean124 = true;
 						} else if (local13 == 75) {
-							this.anInt532 = arg1.get1();
+							this.anInt532 = arg1.readByte();
 						}
 					}
 				} while (local21 <= 0);
@@ -283,7 +283,7 @@ public final class Class9 {
 				this.anIntArray117 = new int[local21];
 				for (local33 = 0; local33 < local21; local33++) {
 					this.anIntArray117[local33] = arg1.get2();
-					this.anIntArray118[local33] = arg1.get1();
+					this.anIntArray118[local33] = arg1.readByte();
 				}
 			}
 		} catch (@Pc(465) RuntimeException local465) {

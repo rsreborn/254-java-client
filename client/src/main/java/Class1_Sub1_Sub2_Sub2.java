@@ -90,7 +90,7 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 		local49.anInt777 = local40.get2();
 		this.anInt690 = local49.get2();
 		this.anInt691 = local49.get2();
-		@Pc(64) int local64 = local49.get1();
+		@Pc(64) int local64 = local49.readByte();
 		@Pc(67) int[] local67 = new int[local64];
 		for (@Pc(69) int local69 = 0; local69 < local64 - 1; local69++) {
 			local67[local69 + 1] = local49.get3();
@@ -103,22 +103,22 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 			local40.anInt777 += local49.get2() * local49.get2();
 			local49.anInt777++;
 		}
-		this.anInt688 = local49.get1();
-		this.anInt689 = local49.get1();
+		this.anInt688 = local49.readByte();
+		this.anInt689 = local49.readByte();
 		this.anInt686 = local49.get2();
 		this.anInt687 = local49.get2();
-		@Pc(151) int local151 = local49.get1();
+		@Pc(151) int local151 = local49.readByte();
 		@Pc(157) int local157 = this.anInt686 * this.anInt687;
 		this.anIntArray210 = new int[local157];
 		@Pc(165) int local165;
 		if (local151 == 0) {
 			for (local165 = 0; local165 < local157; local165++) {
-				this.anIntArray210[local165] = local67[local40.get1()];
+				this.anIntArray210[local165] = local67[local40.readByte()];
 			}
 		} else if (local151 == 1) {
 			for (local165 = 0; local165 < this.anInt686; local165++) {
 				for (@Pc(189) int local189 = 0; local189 < this.anInt687; local189++) {
-					this.anIntArray210[local165 + local189 * this.anInt686] = local67[local40.get1()];
+					this.anIntArray210[local165 + local189 * this.anInt686] = local67[local40.readByte()];
 				}
 			}
 		}

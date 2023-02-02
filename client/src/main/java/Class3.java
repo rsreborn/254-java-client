@@ -49,13 +49,13 @@ public final class Class3 {
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(ILclient!mb;)V")
 	public void method54(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
 		try {
-			this.anInt191 = arg1.get1();
+			this.anInt191 = arg1.readByte();
 			if (arg0 != 9) {
 				this.aBoolean31 = !this.aBoolean31;
 			}
 			this.anInt189 = arg1.get4();
 			this.anInt190 = arg1.get4();
-			this.anInt188 = arg1.get1();
+			this.anInt188 = arg1.readByte();
 			this.anIntArray20 = new int[this.anInt188];
 			this.anIntArray21 = new int[this.anInt188];
 			for (@Pc(40) int local40 = 0; local40 < this.anInt188; local40++) {

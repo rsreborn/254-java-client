@@ -45,29 +45,29 @@ public final class Static7 {
 					local56 = aClass6Array1[local39] = new Class6();
 					local56.anInt456 = local39;
 					local56.anInt457 = local21;
-					local56.anInt458 = local16.get1();
-					local56.anInt459 = local16.get1();
+					local56.anInt458 = local16.readByte();
+					local56.anInt459 = local16.readByte();
 					local56.anInt460 = local16.get2();
 					local56.anInt461 = local16.get2();
 					local56.anInt462 = local16.get2();
-					local56.aByte16 = (byte) local16.get1();
-					local56.anInt465 = local16.get1();
+					local56.aByte16 = (byte) local16.readByte();
+					local56.anInt465 = local16.readByte();
 					if (local56.anInt465 == 0) {
 						local56.anInt465 = -1;
 					} else {
-						local56.anInt465 = (local56.anInt465 - 1 << 8) + local16.get1();
+						local56.anInt465 = (local56.anInt465 - 1 << 8) + local16.readByte();
 					}
-					@Pc(113) int local113 = local16.get1();
+					@Pc(113) int local113 = local16.readByte();
 					@Pc(125) int local125;
 					if (local113 > 0) {
 						local56.anIntArray98 = new int[local113];
 						local56.anIntArray99 = new int[local113];
 						for (local125 = 0; local125 < local113; local125++) {
-							local56.anIntArray98[local125] = local16.get1();
+							local56.anIntArray98[local125] = local16.readByte();
 							local56.anIntArray99[local125] = local16.get2();
 						}
 					}
-					local125 = local16.get1();
+					local125 = local16.readByte();
 					@Pc(154) int local154;
 					@Pc(159) int local159;
 					if (local125 > 0) {
@@ -82,7 +82,7 @@ public final class Static7 {
 					}
 					if (local56.anInt458 == 0) {
 						local56.anInt466 = local16.get2();
-						local56.aBoolean92 = local16.get1() == 1;
+						local56.aBoolean92 = local16.readByte() == 1;
 						local154 = local16.get2();
 						local56.anIntArray100 = new int[local154];
 						local56.anIntArray101 = new int[local154];
@@ -95,22 +95,22 @@ public final class Static7 {
 					}
 					if (local56.anInt458 == 1) {
 						local56.anInt468 = local16.get2();
-						local56.aBoolean93 = local16.get1() == 1;
+						local56.aBoolean93 = local16.readByte() == 1;
 					}
 					if (local56.anInt458 == 2) {
 						local56.anIntArray96 = new int[local56.anInt461 * local56.anInt462];
 						local56.anIntArray97 = new int[local56.anInt461 * local56.anInt462];
-						local56.aBoolean94 = local16.get1() == 1;
-						local56.aBoolean95 = local16.get1() == 1;
-						local56.aBoolean96 = local16.get1() == 1;
-						local56.aBoolean97 = local16.get1() == 1;
-						local56.anInt469 = local16.get1();
-						local56.anInt470 = local16.get1();
+						local56.aBoolean94 = local16.readByte() == 1;
+						local56.aBoolean95 = local16.readByte() == 1;
+						local56.aBoolean96 = local16.readByte() == 1;
+						local56.aBoolean97 = local16.readByte() == 1;
+						local56.anInt469 = local16.readByte();
+						local56.anInt470 = local16.readByte();
 						local56.anIntArray103 = new int[20];
 						local56.anIntArray104 = new int[20];
 						local56.aClass1_Sub1_Sub2_Sub2Array8 = new Class1_Sub1_Sub2_Sub2[20];
 						for (local154 = 0; local154 < 20; local154++) {
-							local159 = local16.get1();
+							local159 = local16.readByte();
 							if (local159 == 1) {
 								local56.anIntArray103[local154] = local16.get2LE();
 								local56.anIntArray104[local154] = local16.get2LE();
@@ -130,15 +130,15 @@ public final class Static7 {
 						}
 					}
 					if (local56.anInt458 == 3) {
-						local56.aBoolean98 = local16.get1() == 1;
+						local56.aBoolean98 = local16.readByte() == 1;
 					}
 					if (local56.anInt458 == 4 || local56.anInt458 == 1) {
-						local56.aBoolean99 = local16.get1() == 1;
-						local154 = local16.get1();
+						local56.aBoolean99 = local16.readByte() == 1;
+						local154 = local16.readByte();
 						if (arg2 != null) {
 							local56.aClass1_Sub1_Sub2_Sub4_5 = arg2[local154];
 						}
-						local56.aBoolean100 = local16.get1() == 1;
+						local56.aBoolean100 = local16.readByte() == 1;
 					}
 					if (local56.anInt458 == 4) {
 						local56.aString19 = local16.getString();
@@ -165,27 +165,27 @@ public final class Static7 {
 						}
 					}
 					if (local56.anInt458 == 6) {
-						local39 = local16.get1();
+						local39 = local16.readByte();
 						if (local39 != 0) {
 							local56.anInt475 = 1;
-							local56.anInt476 = (local39 - 1 << 8) + local16.get1();
+							local56.anInt476 = (local39 - 1 << 8) + local16.readByte();
 						}
-						local39 = local16.get1();
+						local39 = local16.readByte();
 						if (local39 != 0) {
 							local56.anInt477 = 1;
-							local56.anInt478 = (local39 - 1 << 8) + local16.get1();
+							local56.anInt478 = (local39 - 1 << 8) + local16.readByte();
 						}
-						local39 = local16.get1();
+						local39 = local16.readByte();
 						if (local39 == 0) {
 							local56.anInt479 = -1;
 						} else {
-							local56.anInt479 = (local39 - 1 << 8) + local16.get1();
+							local56.anInt479 = (local39 - 1 << 8) + local16.readByte();
 						}
-						local39 = local16.get1();
+						local39 = local16.readByte();
 						if (local39 == 0) {
 							local56.anInt480 = -1;
 						} else {
-							local56.anInt480 = (local39 - 1 << 8) + local16.get1();
+							local56.anInt480 = (local39 - 1 << 8) + local16.readByte();
 						}
 						local56.anInt481 = local16.get2();
 						local56.anInt482 = local16.get2();
@@ -194,16 +194,16 @@ public final class Static7 {
 					if (local56.anInt458 == 7) {
 						local56.anIntArray96 = new int[local56.anInt461 * local56.anInt462];
 						local56.anIntArray97 = new int[local56.anInt461 * local56.anInt462];
-						local56.aBoolean99 = local16.get1() == 1;
-						local154 = local16.get1();
+						local56.aBoolean99 = local16.readByte() == 1;
+						local154 = local16.readByte();
 						if (arg2 != null) {
 							local56.aClass1_Sub1_Sub2_Sub4_5 = arg2[local154];
 						}
-						local56.aBoolean100 = local16.get1() == 1;
+						local56.aBoolean100 = local16.readByte() == 1;
 						local56.anInt471 = local16.get4();
 						local56.anInt469 = local16.get2LE();
 						local56.anInt470 = local16.get2LE();
-						local56.aBoolean95 = local16.get1() == 1;
+						local56.aBoolean95 = local16.readByte() == 1;
 						local56.aStringArray7 = new String[5];
 						for (local159 = 0; local159 < 5; local159++) {
 							local56.aStringArray7[local159] = local16.getString();

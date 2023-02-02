@@ -196,7 +196,7 @@ public final class Class7 {
 			this.aClass3_1.method54(9, arg1);
 			this.aClass3_2 = new Class3();
 			this.aClass3_2.method54(9, arg1);
-			@Pc(24) int local24 = arg1.get1();
+			@Pc(24) int local24 = arg1.readByte();
 			if (local24 != 0) {
 				arg1.anInt777--;
 				this.aClass3_3 = new Class3();
@@ -204,7 +204,7 @@ public final class Class7 {
 				this.aClass3_4 = new Class3();
 				this.aClass3_4.method54(9, arg1);
 			}
-			local24 = arg1.get1();
+			local24 = arg1.readByte();
 			if (local24 != 0) {
 				arg1.anInt777--;
 				this.aClass3_5 = new Class3();
@@ -212,7 +212,7 @@ public final class Class7 {
 				this.aClass3_6 = new Class3();
 				this.aClass3_6.method54(9, arg1);
 			}
-			local24 = arg1.get1();
+			local24 = arg1.readByte();
 			if (local24 != 0) {
 				arg1.anInt777--;
 				this.aClass3_7 = new Class3();

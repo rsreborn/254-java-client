@@ -96,14 +96,14 @@ public final class Class13 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(11) int local11 = arg1.get1();
+					@Pc(11) int local11 = arg1.readByte();
 					if (local11 == 0) {
 						return;
 					}
 					@Pc(20) int local20;
 					@Pc(26) int local26;
 					if (local11 == 1) {
-						local20 = arg1.get1();
+						local20 = arg1.readByte();
 						this.anIntArray166 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
 							this.anIntArray166[local26] = arg1.get2();
@@ -132,7 +132,7 @@ public final class Class13 {
 							this.aStringArray9[local11 - 30] = null;
 						}
 					} else if (local11 == 40) {
-						local20 = arg1.get1();
+						local20 = arg1.readByte();
 						this.anIntArray168 = new int[local20];
 						this.anIntArray169 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
@@ -140,7 +140,7 @@ public final class Class13 {
 							this.anIntArray169[local26] = arg1.get2();
 						}
 					} else if (local11 == 60) {
-						local20 = arg1.get1();
+						local20 = arg1.readByte();
 						this.anIntArray167 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
 							this.anIntArray167[local26] = arg1.get2();

@@ -189,7 +189,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			@Pc(219) int local219;
 			@Pc(228) int local228;
 			for (local196 = 0; local196 < this.anInt543; local196++) {
-				local208 = local138.get1();
+				local208 = local138.readByte();
 				local210 = 0;
 				if ((local208 & 0x1) != 0) {
 					local210 = local149.method511();
@@ -209,7 +209,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 				local190 = this.anIntArray126[local196];
 				local192 = this.anIntArray127[local196];
 				if (this.anIntArray141 != null) {
-					this.anIntArray141[local196] = local182.get1();
+					this.anIntArray141[local196] = local182.readByte();
 				}
 			}
 			local138.anInt777 = local20.anInt764;
@@ -220,16 +220,16 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			for (local208 = 0; local208 < this.anInt544; local208++) {
 				this.anIntArray137[local208] = local138.get2();
 				if (this.anIntArray134 != null) {
-					this.anIntArray134[local208] = local149.get1();
+					this.anIntArray134[local208] = local149.readByte();
 				}
 				if (this.anIntArray135 != null) {
-					this.anIntArray135[local208] = local160.get1();
+					this.anIntArray135[local208] = local160.readByte();
 				}
 				if (this.anIntArray136 != null) {
-					this.anIntArray136[local208] = local171.get1();
+					this.anIntArray136[local208] = local171.readByte();
 				}
 				if (this.anIntArray142 != null) {
-					this.anIntArray142[local208] = local182.get1();
+					this.anIntArray142[local208] = local182.readByte();
 				}
 			}
 			local138.anInt777 = local20.anInt762;
@@ -240,7 +240,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			@Pc(372) int local372 = 0;
 			@Pc(379) int local379;
 			for (@Pc(374) int local374 = 0; local374 < this.anInt544; local374++) {
-				local379 = local149.get1();
+				local379 = local149.readByte();
 				if (local379 == 1) {
 					local210 = local138.method511() + local372;
 					local219 = local138.method511() + local210;

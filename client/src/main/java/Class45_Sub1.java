@@ -193,7 +193,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 			this.anIntArray258[local216] = local193.get2();
 			this.anIntArray259[local216] = local193.get2();
 			this.anIntArray260[local216] = local193.get2();
-			this.anIntArray261[local216] = local193.get1();
+			this.anIntArray261[local216] = local193.readByte();
 		}
 		local104 = arg0.method678("anim_index", null);
 		local193 = new Class1_Sub1_Sub3(local104, (byte) 3);
@@ -207,7 +207,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 		local56 = local104.length;
 		this.anIntArray263 = new int[local56];
 		for (@Pc(300) int local300 = 0; local300 < local56; local300++) {
-			this.anIntArray263[local300] = local193.get1();
+			this.anIntArray263[local300] = local193.readByte();
 		}
 		this.aClient2 = arg1;
 		this.aBoolean236 = true;

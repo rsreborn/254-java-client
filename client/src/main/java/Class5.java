@@ -34,7 +34,7 @@ public final class Class5 {
 		try {
 			@Pc(8) int local8;
 			for (@Pc(3) int local3 = 0; local3 < 10; local3++) {
-				local8 = arg1.get1();
+				local8 = arg1.readByte();
 				if (local8 != 0) {
 					arg1.anInt777--;
 					this.aClass7Array1[local3] = new Class7();

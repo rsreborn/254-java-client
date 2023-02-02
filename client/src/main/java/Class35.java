@@ -24,14 +24,14 @@ public final class Class35 {
 		try {
 			@Pc(5) int local5 = 26 / arg1;
 			while (true) {
-				@Pc(8) int local8 = arg2.get1();
+				@Pc(8) int local8 = arg2.readByte();
 				if (local8 == 0) {
 					return;
 				}
 				if (local8 == 1) {
 					this.anInt864 = arg2.get2();
-					this.anInt865 = arg2.get1();
-					this.anInt866 = arg2.get1();
+					this.anInt865 = arg2.readByte();
+					this.anInt866 = arg2.readByte();
 				} else if (local8 == 10) {
 					this.aString28 = arg2.getString();
 				} else {

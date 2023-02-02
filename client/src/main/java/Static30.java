@@ -106,10 +106,10 @@ public final class Static30 {
 				aCharArrayArray3 = new char[local4][];
 				anIntArray251 = new int[local4];
 				for (@Pc(16) int local16 = 0; local16 < local4; local16++) {
-					anIntArray251[local16] = arg0.get1();
-					@Pc(27) char[] local27 = new char[arg0.get1()];
+					anIntArray251[local16] = arg0.readByte();
+					@Pc(27) char[] local27 = new char[arg0.readByte()];
 					for (@Pc(29) int local29 = 0; local29 < local27.length; local29++) {
-						local27[local29] = (char) arg0.get1();
+						local27[local29] = (char) arg0.readByte();
 					}
 					aCharArrayArray3[local16] = local27;
 				}
@@ -175,15 +175,15 @@ public final class Static30 {
 	private static void method609(@OriginalArg(0) char[][] arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte[][][] arg3) {
 		try {
 			for (@Pc(3) int local3 = 0; local3 < arg0.length; local3++) {
-				@Pc(9) char[] local9 = new char[arg1.get1()];
+				@Pc(9) char[] local9 = new char[arg1.readByte()];
 				for (@Pc(11) int local11 = 0; local11 < local9.length; local11++) {
-					local9[local11] = (char) arg1.get1();
+					local9[local11] = (char) arg1.readByte();
 				}
 				arg0[local3] = local9;
-				@Pc(33) byte[][] local33 = new byte[arg1.get1()][2];
+				@Pc(33) byte[][] local33 = new byte[arg1.readByte()][2];
 				for (@Pc(35) int local35 = 0; local35 < local33.length; local35++) {
-					local33[local35][0] = (byte) arg1.get1();
-					local33[local35][1] = (byte) arg1.get1();
+					local33[local35][0] = (byte) arg1.readByte();
+					local33[local35][1] = (byte) arg1.readByte();
 				}
 				if (local33.length > 0) {
 					arg3[local3] = local33;
@@ -203,9 +203,9 @@ public final class Static30 {
 		try {
 			if (arg2 < 0) {
 				for (@Pc(8) int local8 = 0; local8 < arg1.length; local8++) {
-					@Pc(14) char[] local14 = new char[arg0.get1()];
+					@Pc(14) char[] local14 = new char[arg0.readByte()];
 					for (@Pc(16) int local16 = 0; local16 < local14.length; local16++) {
-						local14[local16] = (char) arg0.get1();
+						local14[local16] = (char) arg0.readByte();
 					}
 					arg1[local8] = local14;
 				}

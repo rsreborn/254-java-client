@@ -251,7 +251,7 @@ public final class Class1_Sub1_Sub3 extends Class1_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!mb", name = "c", descriptor = "()I")
-	public int get1() {
+	public int readByte() {
 		return this.aByteArray9[this.anInt777++] & 0xFF;
 	}
 
@@ -401,13 +401,13 @@ public final class Class1_Sub1_Sub3 extends Class1_Sub1 {
 	@OriginalMember(owner = "client!mb", name = "j", descriptor = "()I")
 	public int method511() {
 		@Pc(7) int local7 = this.aByteArray9[this.anInt777] & 0xFF;
-		return local7 < 128 ? this.get1() - 64 : this.get2() - 49152;
+		return local7 < 128 ? this.readByte() - 64 : this.get2() - 49152;
 	}
 
 	@OriginalMember(owner = "client!mb", name = "k", descriptor = "()I")
 	public int getSmart() {
 		@Pc(7) int local7 = this.aByteArray9[this.anInt777] & 0xFF;
-		return local7 < 128 ? this.get1() : this.get2() - 32768;
+		return local7 < 128 ? this.readByte() : this.get2() - 32768;
 	}
 
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(ILjava/math/BigInteger;Ljava/math/BigInteger;)V")

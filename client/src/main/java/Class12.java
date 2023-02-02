@@ -22,17 +22,17 @@ public final class Class12 {
 			if (!arg1) {
 				throw new NullPointerException();
 			}
-			this.anInt564 = arg0.get1();
+			this.anInt564 = arg0.readByte();
 			this.anIntArray164 = new int[this.anInt564];
 			this.anIntArrayArray11 = new int[this.anInt564][];
 			for (@Pc(25) int local25 = 0; local25 < this.anInt564; local25++) {
-				this.anIntArray164[local25] = arg0.get1();
+				this.anIntArray164[local25] = arg0.readByte();
 			}
 			for (@Pc(40) int local40 = 0; local40 < this.anInt564; local40++) {
-				@Pc(45) int local45 = arg0.get1();
+				@Pc(45) int local45 = arg0.readByte();
 				this.anIntArrayArray11[local40] = new int[local45];
 				for (@Pc(53) int local53 = 0; local53 < local45; local53++) {
-					this.anIntArrayArray11[local40][local53] = arg0.get1();
+					this.anIntArrayArray11[local40][local53] = arg0.readByte();
 				}
 			}
 		} catch (@Pc(74) RuntimeException local74) {

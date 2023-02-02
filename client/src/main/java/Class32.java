@@ -48,7 +48,7 @@ public final class Class32 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(14) int local14 = arg1.get1();
+					@Pc(14) int local14 = arg1.readByte();
 					if (local14 == 0) {
 						return;
 					}
@@ -66,9 +66,9 @@ public final class Class32 {
 					} else if (local14 == 6) {
 						this.anInt848 = arg1.get2();
 					} else if (local14 == 7) {
-						this.anInt849 = arg1.get1();
+						this.anInt849 = arg1.readByte();
 					} else if (local14 == 8) {
-						this.anInt850 = arg1.get1();
+						this.anInt850 = arg1.readByte();
 					} else if (local14 >= 40 && local14 < 50) {
 						this.anIntArray231[local14 - 40] = arg1.get2();
 					} else if (local14 >= 50 && local14 < 60) {

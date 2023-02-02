@@ -46,14 +46,14 @@ public final class Class38 {
 				}
 			}
 			while (true) {
-				local5 = arg2.get1();
+				local5 = arg2.readByte();
 				if (local5 == 0) {
 					return;
 				}
 				if (local5 == 1) {
-					this.anInt877 = arg2.get1();
+					this.anInt877 = arg2.readByte();
 				} else if (local5 == 2) {
-					this.anInt878 = arg2.get1();
+					this.anInt878 = arg2.readByte();
 				} else if (local5 == 3) {
 					this.aBoolean216 = true;
 					Static27.anIntArray234[Static27.anInt876++] = arg0;

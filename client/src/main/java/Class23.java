@@ -36,14 +36,14 @@ public final class Class23 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(18) int local18 = arg1.get1();
+					@Pc(18) int local18 = arg1.readByte();
 					if (local18 == 0) {
 						return;
 					}
 					if (local18 == 1) {
-						this.anInt753 = arg1.get1();
+						this.anInt753 = arg1.readByte();
 					} else if (local18 == 2) {
-						@Pc(36) int local36 = arg1.get1();
+						@Pc(36) int local36 = arg1.readByte();
 						this.anIntArray221 = new int[local36];
 						for (@Pc(42) int local42 = 0; local42 < local36; local42++) {
 							this.anIntArray221[local42] = arg1.get2();

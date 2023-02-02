@@ -77,17 +77,17 @@ public final class Class1_Sub1_Sub2_Sub4 extends Class1_Sub1_Sub2 {
 			if (!arg2) {
 				this.anInt748 = -151;
 			}
-			@Pc(92) int local92 = local76.get1();
+			@Pc(92) int local92 = local76.readByte();
 			if (local92 > 0) {
 				local76.anInt777 += (local92 - 1) * 3;
 			}
 			@Pc(130) int local130;
 			for (@Pc(106) int local106 = 0; local106 < 94; local106++) {
-				this.anIntArray216[local106] = local76.get1();
-				this.anIntArray217[local106] = local76.get1();
+				this.anIntArray216[local106] = local76.readByte();
+				this.anIntArray217[local106] = local76.readByte();
 				local130 = this.anIntArray214[local106] = local76.get2();
 				@Pc(138) int local138 = this.anIntArray215[local106] = local76.get2();
-				@Pc(141) int local141 = local76.get1();
+				@Pc(141) int local141 = local76.readByte();
 				@Pc(145) int local145 = local130 * local138;
 				this.aByteArrayArray3[local106] = new byte[local145];
 				@Pc(155) int local155;

@@ -59,14 +59,14 @@ public final class Static13 {
 			for (@Pc(125) int local125 = 0; local125 < local111; local125++) {
 				@Pc(130) int local130 = local33.get2();
 				@Pc(138) Class14 local138 = aClass14Array1[local130] = new Class14();
-				local138.anInt593 = local86.get1();
+				local138.anInt593 = local86.readByte();
 				local138.aClass12_1 = local108;
-				@Pc(148) int local148 = local33.get1();
+				@Pc(148) int local148 = local33.readByte();
 				@Pc(150) int local150 = -1;
 				@Pc(152) int local152 = 0;
 				@Pc(159) int local159;
 				for (@Pc(154) int local154 = 0; local154 < local148; local154++) {
-					local159 = local48.get1();
+					local159 = local48.readByte();
 					if (local159 > 0) {
 						if (local108.anIntArray164[local154] != 0) {
 							for (@Pc(170) int local170 = local154 - 1; local170 > local150; local170--) {

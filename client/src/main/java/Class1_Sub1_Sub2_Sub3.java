@@ -41,7 +41,7 @@ public final class Class1_Sub1_Sub2_Sub3 extends Class1_Sub1_Sub2 {
 		local31.anInt777 = local22.get2();
 		this.anInt719 = local31.get2();
 		this.anInt720 = local31.get2();
-		@Pc(46) int local46 = local31.get1();
+		@Pc(46) int local46 = local31.readByte();
 		this.anIntArray212 = new int[local46];
 		for (@Pc(52) int local52 = 0; local52 < local46 - 1; local52++) {
 			this.anIntArray212[local52 + 1] = local31.get3();
@@ -51,11 +51,11 @@ public final class Class1_Sub1_Sub2_Sub3 extends Class1_Sub1_Sub2 {
 			local22.anInt777 += local31.get2() * local31.get2();
 			local31.anInt777++;
 		}
-		this.anInt717 = local31.get1();
-		this.anInt718 = local31.get1();
+		this.anInt717 = local31.readByte();
+		this.anInt718 = local31.readByte();
 		this.anInt715 = local31.get2();
 		this.anInt716 = local31.get2();
-		@Pc(117) int local117 = local31.get1();
+		@Pc(117) int local117 = local31.readByte();
 		@Pc(123) int local123 = this.anInt715 * this.anInt716;
 		this.aByteArray7 = new byte[local123];
 		@Pc(131) int local131;
