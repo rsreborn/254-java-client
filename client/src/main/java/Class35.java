@@ -20,7 +20,7 @@ public final class Class35 {
 	public int anInt866;
 
 	@OriginalMember(owner = "client!qc", name = "a", descriptor = "(IILclient!mb;)V")
-	public void method537(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class1_Sub1_Sub3 arg2) {
+	public void method537(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Buffer arg2) {
 		try {
 			@Pc(5) int local5 = 26 / arg1;
 			while (true) {

@@ -15,7 +15,7 @@ public final class Static15 {
 	private static int[] anIntArray175;
 
 	@OriginalMember(owner = "client!hc", name = "h", descriptor = "Lclient!mb;")
-	private static Class1_Sub1_Sub3 aClass1_Sub1_Sub3_9;
+	private static Buffer aBuffer_9;
 
 	@OriginalMember(owner = "client!hc", name = "i", descriptor = "[Lclient!hc;")
 	private static Class15[] aClass15Array1;
@@ -37,8 +37,8 @@ public final class Static15 {
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Lclient!yb;)V")
 	public static void method343(@OriginalArg(0) Class48 arg0) {
-		aClass1_Sub1_Sub3_9 = new Class1_Sub1_Sub3(arg0.method678("obj.dat", null), (byte) 3);
-		@Pc(19) Class1_Sub1_Sub3 local19 = new Class1_Sub1_Sub3(arg0.method678("obj.idx", null), (byte) 3);
+		aBuffer_9 = new Buffer(arg0.method678("obj.dat", null), (byte) 3);
+		@Pc(19) Buffer local19 = new Buffer(arg0.method678("obj.idx", null), (byte) 3);
 		anInt610 = local19.readUShortLE();
 		anIntArray175 = new int[anInt610];
 		@Pc(27) int local27 = 2;
@@ -59,7 +59,7 @@ public final class Static15 {
 			aClass42_8 = null;
 			anIntArray175 = null;
 			aClass15Array1 = null;
-			aClass1_Sub1_Sub3_9 = null;
+			aBuffer_9 = null;
 			@Pc(13) int local13 = 50 / arg0;
 		} catch (@Pc(15) RuntimeException local15) {
 			signlink.reporterror("64218, " + arg0 + ", " + local15.toString());
@@ -76,10 +76,10 @@ public final class Static15 {
 		}
 		anInt611 = (anInt611 + 1) % 10;
 		@Pc(27) Class15 local27 = aClass15Array1[anInt611];
-		aClass1_Sub1_Sub3_9.position = anIntArray175[arg0];
+		aBuffer_9.position = anIntArray175[arg0];
 		local27.anInt612 = arg0;
 		local27.method346();
-		local27.method347(9, aClass1_Sub1_Sub3_9);
+		local27.method347(9, aBuffer_9);
 		if (local27.anInt633 != -1) {
 			local27.method348(false);
 		}

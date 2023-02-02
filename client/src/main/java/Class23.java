@@ -29,7 +29,7 @@ public final class Class23 {
 	public boolean aBoolean190 = false;
 
 	@OriginalMember(owner = "client!lc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method478(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method478(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			if (arg0 < 9 || arg0 > 9) {
 				this.aBoolean189 = !this.aBoolean189;

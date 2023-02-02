@@ -30,7 +30,7 @@ public final class Class5 {
 	}
 
 	@OriginalMember(owner = "client!cc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method81(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method81(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			@Pc(8) int local8;
 			for (@Pc(3) int local3 = 0; local3 < 10; local3++) {
@@ -88,26 +88,26 @@ public final class Class5 {
 	}
 
 	@OriginalMember(owner = "client!cc", name = "a", descriptor = "(II)Lclient!mb;")
-	public Class1_Sub1_Sub3 method83(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
+	public Buffer method83(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		try {
 			@Pc(3) int local3 = this.method84(arg1);
 			Static5.aClass1_Sub1_Sub3_1.position = 0;
-			Static5.aClass1_Sub1_Sub3_1.method492(1380533830);
-			Static5.aClass1_Sub1_Sub3_1.method493(local3 + 36, (byte) 116);
-			Static5.aClass1_Sub1_Sub3_1.method492(1463899717);
-			Static5.aClass1_Sub1_Sub3_1.method492(1718449184);
-			Static5.aClass1_Sub1_Sub3_1.method493(16, (byte) 116);
+			Static5.aClass1_Sub1_Sub3_1.writeIntBE(1380533830);
+			Static5.aClass1_Sub1_Sub3_1.writeIntLE(local3 + 36);
+			Static5.aClass1_Sub1_Sub3_1.writeIntBE(1463899717);
+			Static5.aClass1_Sub1_Sub3_1.writeIntBE(1718449184);
+			Static5.aClass1_Sub1_Sub3_1.writeIntLE(16);
 			if (arg0 != -10189) {
 				Static5.anInt217 = 466;
 			}
 			Static5.aClass1_Sub1_Sub3_1.method490(1, 1);
 			Static5.aClass1_Sub1_Sub3_1.method490(1, 1);
-			Static5.aClass1_Sub1_Sub3_1.method493(22050, (byte) 116);
-			Static5.aClass1_Sub1_Sub3_1.method493(22050, (byte) 116);
+			Static5.aClass1_Sub1_Sub3_1.writeIntLE(22050);
+			Static5.aClass1_Sub1_Sub3_1.writeIntLE(22050);
 			Static5.aClass1_Sub1_Sub3_1.method490(1, 1);
 			Static5.aClass1_Sub1_Sub3_1.method490(8, 1);
-			Static5.aClass1_Sub1_Sub3_1.method492(1684108385);
-			Static5.aClass1_Sub1_Sub3_1.method493(local3, (byte) 116);
+			Static5.aClass1_Sub1_Sub3_1.writeIntBE(1684108385);
+			Static5.aClass1_Sub1_Sub3_1.writeIntLE(local3);
 			Static5.aClass1_Sub1_Sub3_1.position += local3;
 			return Static5.aClass1_Sub1_Sub3_1;
 		} catch (@Pc(70) RuntimeException local70) {

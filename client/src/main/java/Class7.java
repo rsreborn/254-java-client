@@ -190,7 +190,7 @@ public final class Class7 {
 	}
 
 	@OriginalMember(owner = "client!dc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method243(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method243(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			this.aClass3_1 = new Class3();
 			this.aClass3_1.method54(9, arg1);
@@ -221,16 +221,16 @@ public final class Class7 {
 				this.aClass3_8.method54(9, arg1);
 			}
 			for (@Pc(116) int local116 = 0; local116 < 10; local116++) {
-				@Pc(127) int local127 = arg1.getSmart();
+				@Pc(127) int local127 = arg1.readUSmart();
 				if (local127 == 0) {
 					break;
 				}
 				this.anIntArray105[local116] = local127;
-				this.anIntArray106[local116] = arg1.method511();
-				this.anIntArray107[local116] = arg1.getSmart();
+				this.anIntArray106[local116] = arg1.readSmart();
+				this.anIntArray107[local116] = arg1.readUSmart();
 			}
-			this.anInt491 = arg1.getSmart();
-			this.anInt492 = arg1.getSmart();
+			this.anInt491 = arg1.readUSmart();
+			this.anInt492 = arg1.readUSmart();
 			this.anInt493 = arg1.readUShortLE();
 			if (arg0 != 9) {
 				this.anInt489 = -185;

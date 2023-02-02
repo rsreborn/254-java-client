@@ -36,16 +36,16 @@ public final class Static10 {
 	private static int anInt533 = -106;
 
 	@OriginalMember(owner = "client!f", name = "f", descriptor = "Lclient!mb;")
-	private static Class1_Sub1_Sub3 aClass1_Sub1_Sub3_6 = null;
+	private static Buffer aBuffer_6 = null;
 
 	@OriginalMember(owner = "client!f", name = "g", descriptor = "Lclient!mb;")
-	private static Class1_Sub1_Sub3 aClass1_Sub1_Sub3_7 = null;
+	private static Buffer aBuffer_7 = null;
 
 	@OriginalMember(owner = "client!f", name = "a", descriptor = "(I)V")
 	public static synchronized void method266(@OriginalArg(0) int arg0) {
 		try {
-			aClass1_Sub1_Sub3_6 = Static21.method485(1, (byte) 73);
-			aClass1_Sub1_Sub3_7 = null;
+			aBuffer_6 = Static21.method485(1, (byte) 73);
+			aBuffer_7 = null;
 			aLong21 = System.currentTimeMillis();
 			aBoolean127 = true;
 			if (arg0 < 0) {
@@ -61,9 +61,9 @@ public final class Static10 {
 	public static synchronized void method267(@OriginalArg(0) int arg0) {
 		try {
 			aBoolean127 = false;
-			aClass1_Sub1_Sub3_6 = null;
+			aBuffer_6 = null;
 			if (arg0 == 32268) {
-				aClass1_Sub1_Sub3_7 = null;
+				aBuffer_7 = null;
 			}
 		} catch (@Pc(11) RuntimeException local11) {
 			signlink.reporterror("47650, " + arg0 + ", " + local11.toString());
@@ -72,16 +72,16 @@ public final class Static10 {
 	}
 
 	@OriginalMember(owner = "client!f", name = "c", descriptor = "(I)Lclient!mb;")
-	public static synchronized Class1_Sub1_Sub3 method268(@OriginalArg(0) int arg0) {
+	public static synchronized Buffer method268(@OriginalArg(0) int arg0) {
 		try {
 			if (arg0 != -9917) {
 				throw new NullPointerException();
 			}
-			@Pc(8) Class1_Sub1_Sub3 local8 = null;
-			if (aClass1_Sub1_Sub3_7 != null && aBoolean127) {
-				local8 = aClass1_Sub1_Sub3_7;
+			@Pc(8) Buffer local8 = null;
+			if (aBuffer_7 != null && aBoolean127) {
+				local8 = aBuffer_7;
 			}
-			aClass1_Sub1_Sub3_7 = null;
+			aBuffer_7 = null;
 			return local8;
 		} catch (@Pc(19) RuntimeException local19) {
 			signlink.reporterror("5279, " + arg0 + ", " + local19.toString());
@@ -90,14 +90,14 @@ public final class Static10 {
 	}
 
 	@OriginalMember(owner = "client!f", name = "a", descriptor = "(Z)Lclient!mb;")
-	public static synchronized Class1_Sub1_Sub3 method269(@OriginalArg(0) boolean arg0) {
+	public static synchronized Buffer method269(@OriginalArg(0) boolean arg0) {
 		try {
-			@Pc(1) Class1_Sub1_Sub3 local1 = null;
+			@Pc(1) Buffer local1 = null;
 			if (arg0) {
 				anInt534 = -402;
 			}
-			if (aClass1_Sub1_Sub3_6 != null && aClass1_Sub1_Sub3_6.position > 0 && aBoolean127) {
-				local1 = aClass1_Sub1_Sub3_6;
+			if (aBuffer_6 != null && aBuffer_6.position > 0 && aBoolean127) {
+				local1 = aBuffer_6;
 			}
 			method267(32268);
 			return local1;
@@ -113,10 +113,10 @@ public final class Static10 {
 			if (arg0 != 44660) {
 				aBoolean126 = !aBoolean126;
 			}
-			if (aClass1_Sub1_Sub3_6.position + arg1 >= 500) {
-				@Pc(16) Class1_Sub1_Sub3 local16 = aClass1_Sub1_Sub3_6;
-				aClass1_Sub1_Sub3_6 = Static21.method485(1, (byte) 73);
-				aClass1_Sub1_Sub3_7 = local16;
+			if (aBuffer_6.position + arg1 >= 500) {
+				@Pc(16) Buffer local16 = aBuffer_6;
+				aBuffer_6 = Static21.method485(1, (byte) 73);
+				aBuffer_7 = local16;
 			}
 		} catch (@Pc(24) RuntimeException local24) {
 			signlink.reporterror("73109, " + arg0 + ", " + arg1 + ", " + local24.toString());
@@ -137,12 +137,12 @@ public final class Static10 {
 				aLong21 = local19;
 				method270(44660, 5);
 				if (arg3 == 1) {
-					aClass1_Sub1_Sub3_6.method488(1);
+					aBuffer_6.method488(1);
 				} else {
-					aClass1_Sub1_Sub3_6.method488(2);
+					aBuffer_6.method488(2);
 				}
-				aClass1_Sub1_Sub3_6.method488((int) local25);
-				aClass1_Sub1_Sub3_6.method491(arg0 + (arg2 << 10));
+				aBuffer_6.method488((int) local25);
+				aBuffer_6.writeMiddleBE(arg0 + (arg2 << 10));
 				if (arg1 == 9) {
 					;
 				}
@@ -172,11 +172,11 @@ public final class Static10 {
 					}
 				}
 				if (arg0 == 1) {
-					aClass1_Sub1_Sub3_6.method488(3);
+					aBuffer_6.method488(3);
 				} else {
-					aClass1_Sub1_Sub3_6.method488(4);
+					aBuffer_6.method488(4);
 				}
-				aClass1_Sub1_Sub3_6.method488((int) local16);
+				aBuffer_6.method488((int) local16);
 			}
 		} catch (@Pc(58) RuntimeException local58) {
 			signlink.reporterror("59308, " + arg0 + ", " + arg1 + ", " + local58.toString());
@@ -203,20 +203,20 @@ public final class Static10 {
 					aLong21 = local26;
 					if (arg1 - anInt536 < 8 && arg1 - anInt536 >= -8 && arg2 - anInt537 < 8 && arg2 - anInt537 >= -8) {
 						method270(44660, 3);
-						aClass1_Sub1_Sub3_6.method488(5);
-						aClass1_Sub1_Sub3_6.method488((int) local44);
-						aClass1_Sub1_Sub3_6.method488(arg1 + (arg2 - anInt537 + 8 << 4) + 8 - anInt536);
+						aBuffer_6.method488(5);
+						aBuffer_6.method488((int) local44);
+						aBuffer_6.method488(arg1 + (arg2 - anInt537 + 8 << 4) + 8 - anInt536);
 					} else if (arg1 - anInt536 < 128 && arg1 - anInt536 >= -128 && arg2 - anInt537 < 128 && arg2 - anInt537 >= -128) {
 						method270(44660, 4);
-						aClass1_Sub1_Sub3_6.method488(6);
-						aClass1_Sub1_Sub3_6.method488((int) local44);
-						aClass1_Sub1_Sub3_6.method488(arg1 + 128 - anInt536);
-						aClass1_Sub1_Sub3_6.method488(arg2 + 128 - anInt537);
+						aBuffer_6.method488(6);
+						aBuffer_6.method488((int) local44);
+						aBuffer_6.method488(arg1 + 128 - anInt536);
+						aBuffer_6.method488(arg2 + 128 - anInt537);
 					} else {
 						method270(44660, 5);
-						aClass1_Sub1_Sub3_6.method488(7);
-						aClass1_Sub1_Sub3_6.method488((int) local44);
-						aClass1_Sub1_Sub3_6.method491(arg1 + (arg2 << 10));
+						aBuffer_6.method488(7);
+						aBuffer_6.method488((int) local44);
+						aBuffer_6.writeMiddleBE(arg1 + (arg2 << 10));
 					}
 					anInt536 = arg1;
 					anInt537 = arg2;
@@ -255,10 +255,10 @@ public final class Static10 {
 					arg0 -= 992;
 				}
 				method270(44660, 3);
-				aClass1_Sub1_Sub3_6.method488(8);
+				aBuffer_6.method488(8);
 				@Pc(56) int local56 = 56 / arg1;
-				aClass1_Sub1_Sub3_6.method488((int) local14);
-				aClass1_Sub1_Sub3_6.method488(arg0);
+				aBuffer_6.method488((int) local14);
+				aBuffer_6.method488(arg0);
 			}
 		} catch (@Pc(65) RuntimeException local65) {
 			signlink.reporterror("62672, " + arg0 + ", " + arg1 + ", " + local65.toString());
@@ -293,9 +293,9 @@ public final class Static10 {
 					arg1 -= 992;
 				}
 				method270(44660, 3);
-				aClass1_Sub1_Sub3_6.method488(9);
-				aClass1_Sub1_Sub3_6.method488((int) local18);
-				aClass1_Sub1_Sub3_6.method488(arg1);
+				aBuffer_6.method488(9);
+				aBuffer_6.method488((int) local18);
+				aBuffer_6.method488(arg1);
 			}
 		} catch (@Pc(65) RuntimeException local65) {
 			signlink.reporterror("49771, " + arg0 + ", " + arg1 + ", " + local65.toString());
@@ -320,8 +320,8 @@ public final class Static10 {
 				}
 				aLong21 = local17;
 				method270(44660, 2);
-				aClass1_Sub1_Sub3_6.method488(10);
-				aClass1_Sub1_Sub3_6.method488((int) local23);
+				aBuffer_6.method488(10);
+				aBuffer_6.method488((int) local23);
 			}
 		} catch (@Pc(43) RuntimeException local43) {
 			signlink.reporterror("23718, " + arg0 + ", " + local43.toString());
@@ -342,8 +342,8 @@ public final class Static10 {
 					}
 					aLong21 = local12;
 					method270(44660, 2);
-					aClass1_Sub1_Sub3_6.method488(11);
-					aClass1_Sub1_Sub3_6.method488((int) local18);
+					aBuffer_6.method488(11);
+					aBuffer_6.method488((int) local18);
 				}
 			}
 		} catch (@Pc(38) RuntimeException local38) {
@@ -367,8 +367,8 @@ public final class Static10 {
 				}
 				aLong21 = local8;
 				method270(44660, 2);
-				aClass1_Sub1_Sub3_6.method488(12);
-				aClass1_Sub1_Sub3_6.method488((int) local22);
+				aBuffer_6.method488(12);
+				aBuffer_6.method488((int) local22);
 			}
 		} catch (@Pc(42) RuntimeException local42) {
 			signlink.reporterror("20674, " + arg0 + ", " + local42.toString());
@@ -389,8 +389,8 @@ public final class Static10 {
 				}
 				aLong21 = local12;
 				method270(44660, 2);
-				aClass1_Sub1_Sub3_6.method488(13);
-				aClass1_Sub1_Sub3_6.method488((int) local18);
+				aBuffer_6.method488(13);
+				aBuffer_6.method488((int) local18);
 			}
 		} catch (@Pc(38) RuntimeException local38) {
 			signlink.reporterror("26992, " + arg0 + ", " + local38.toString());

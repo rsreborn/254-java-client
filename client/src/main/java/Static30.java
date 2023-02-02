@@ -83,15 +83,15 @@ public final class Static30 {
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!yb;)V")
 	public static void method603(@OriginalArg(0) Class48 arg0) {
-		@Pc(10) Class1_Sub1_Sub3 local10 = new Class1_Sub1_Sub3(arg0.method678("fragmentsenc.txt", null), (byte) 3);
-		@Pc(19) Class1_Sub1_Sub3 local19 = new Class1_Sub1_Sub3(arg0.method678("badenc.txt", null), (byte) 3);
-		@Pc(28) Class1_Sub1_Sub3 local28 = new Class1_Sub1_Sub3(arg0.method678("domainenc.txt", null), (byte) 3);
-		@Pc(37) Class1_Sub1_Sub3 local37 = new Class1_Sub1_Sub3(arg0.method678("tldlist.txt", null), (byte) 3);
+		@Pc(10) Buffer local10 = new Buffer(arg0.method678("fragmentsenc.txt", null), (byte) 3);
+		@Pc(19) Buffer local19 = new Buffer(arg0.method678("badenc.txt", null), (byte) 3);
+		@Pc(28) Buffer local28 = new Buffer(arg0.method678("domainenc.txt", null), (byte) 3);
+		@Pc(37) Buffer local37 = new Buffer(arg0.method678("tldlist.txt", null), (byte) 3);
 		method604(local10, local19, local28, local37);
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!mb;Lclient!mb;Lclient!mb;Lclient!mb;)V")
-	private static void method604(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1, @OriginalArg(2) Class1_Sub1_Sub3 arg2, @OriginalArg(3) Class1_Sub1_Sub3 arg3) {
+	private static void method604(@OriginalArg(0) Buffer arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) Buffer arg2, @OriginalArg(3) Buffer arg3) {
 		method606(0, arg1);
 		method607(arg2, -48);
 		method608(arg0, (byte) 3);
@@ -99,7 +99,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!mb;I)V")
-	private static void method605(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) int arg1) {
+	private static void method605(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		try {
 			@Pc(4) int local4 = arg0.readIntBE();
 			if (arg1 == 2) {
@@ -121,7 +121,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILclient!mb;)V")
-	private static void method606(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	private static void method606(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			@Pc(2) int local2 = arg1.readIntBE();
 			aCharArrayArray1 = new char[local2][];
@@ -137,7 +137,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "b", descriptor = "(Lclient!mb;I)V")
-	private static void method607(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) int arg1) {
+	private static void method607(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1) {
 		try {
 			@Pc(3) int local3;
 			if (arg1 >= 0) {
@@ -154,7 +154,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!mb;B)V")
-	private static void method608(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) byte arg1) {
+	private static void method608(@OriginalArg(0) Buffer arg0, @OriginalArg(1) byte arg1) {
 		try {
 			anIntArray250 = new int[arg0.readIntBE()];
 			@Pc(10) int local10;
@@ -172,7 +172,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "([[CLclient!mb;I[[[B)V")
-	private static void method609(@OriginalArg(0) char[][] arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte[][][] arg3) {
+	private static void method609(@OriginalArg(0) char[][] arg0, @OriginalArg(1) Buffer arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte[][][] arg3) {
 		try {
 			for (@Pc(3) int local3 = 0; local3 < arg0.length; local3++) {
 				@Pc(9) char[] local9 = new char[arg1.readUByte()];
@@ -199,7 +199,7 @@ public final class Static30 {
 	}
 
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!mb;[[CI)V")
-	private static void method610(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) char[][] arg1, @OriginalArg(2) int arg2) {
+	private static void method610(@OriginalArg(0) Buffer arg0, @OriginalArg(1) char[][] arg1, @OriginalArg(2) int arg2) {
 		try {
 			if (arg2 < 0) {
 				for (@Pc(8) int local8 = 0; local8 < arg1.length; local8++) {

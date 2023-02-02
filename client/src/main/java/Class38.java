@@ -38,7 +38,7 @@ public final class Class38 {
 	private boolean aBoolean220 = false;
 
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(IILclient!mb;)V")
-	public void method542(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class1_Sub1_Sub3 arg2) {
+	public void method542(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Buffer arg2) {
 		try {
 			@Pc(5) int local5;
 			if (arg1 <= 0) {

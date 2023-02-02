@@ -42,13 +42,13 @@ public final class Static4 {
 	public static boolean method59(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) byte arg3) {
 		try {
 			@Pc(3) boolean local3 = true;
-			@Pc(9) Class1_Sub1_Sub3 local9 = new Class1_Sub1_Sub3(arg2, (byte) 3);
+			@Pc(9) Buffer local9 = new Buffer(arg2, (byte) 3);
 			if (arg3 != 74) {
 				anInt198 = -127;
 			}
 			@Pc(16) int local16 = -1;
 			label57: while (true) {
-				@Pc(19) int local19 = local9.getSmart();
+				@Pc(19) int local19 = local9.readUSmart();
 				if (local19 == 0) {
 					return local3;
 				}
@@ -58,7 +58,7 @@ public final class Static4 {
 				while (true) {
 					@Pc(34) int local34;
 					while (!local29) {
-						local34 = local9.getSmart();
+						local34 = local9.readUSmart();
 						if (local34 == 0) {
 							continue label57;
 						}
@@ -76,7 +76,7 @@ public final class Static4 {
 							}
 						}
 					}
-					local34 = local9.getSmart();
+					local34 = local9.readUSmart();
 					if (local34 == 0) {
 						break;
 					}
@@ -90,14 +90,14 @@ public final class Static4 {
 	}
 
 	@OriginalMember(owner = "client!c", name = "a", descriptor = "(Lclient!mb;Lclient!vb;B)V")
-	public static void method60(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) Class45_Sub1 arg1, @OriginalArg(2) byte arg2) {
+	public static void method60(@OriginalArg(0) Buffer arg0, @OriginalArg(1) Class45_Sub1 arg1, @OriginalArg(2) byte arg2) {
 		try {
 			@Pc(3) int local3 = -1;
 			if (arg2 != -13) {
 				aBoolean32 = !aBoolean32;
 			}
 			while (true) {
-				@Pc(15) int local15 = arg0.getSmart();
+				@Pc(15) int local15 = arg0.readUSmart();
 				if (local15 == 0) {
 					return;
 				}
@@ -105,7 +105,7 @@ public final class Static4 {
 				@Pc(24) Class9 local24 = Static9.method258(local3);
 				local24.method263(38488, arg1);
 				while (true) {
-					@Pc(31) int local31 = arg0.getSmart();
+					@Pc(31) int local31 = arg0.readUSmart();
 					if (local31 == 0) {
 						break;
 					}

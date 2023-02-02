@@ -17,7 +17,7 @@ public final class Class12 {
 	public int[][] anIntArrayArray11;
 
 	@OriginalMember(owner = "client!g", name = "<init>", descriptor = "(Lclient!mb;Z)V")
-	public Class12(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) boolean arg1) {
+	public Class12(@OriginalArg(0) Buffer arg0, @OriginalArg(1) boolean arg1) {
 		try {
 			if (!arg1) {
 				throw new NullPointerException();

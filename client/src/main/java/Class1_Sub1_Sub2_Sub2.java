@@ -85,15 +85,15 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 
 	@OriginalMember(owner = "client!jb", name = "<init>", descriptor = "(Lclient!yb;Ljava/lang/String;I)V")
 	public Class1_Sub1_Sub2_Sub2(@OriginalArg(0) Class48 arg0, @OriginalArg(1) String arg1, @OriginalArg(2) int arg2) {
-		@Pc(40) Class1_Sub1_Sub3 local40 = new Class1_Sub1_Sub3(arg0.method678(arg1 + ".dat", null), (byte) 3);
-		@Pc(49) Class1_Sub1_Sub3 local49 = new Class1_Sub1_Sub3(arg0.method678("index.dat", null), (byte) 3);
+		@Pc(40) Buffer local40 = new Buffer(arg0.method678(arg1 + ".dat", null), (byte) 3);
+		@Pc(49) Buffer local49 = new Buffer(arg0.method678("index.dat", null), (byte) 3);
 		local49.position = local40.readUShortLE();
 		this.anInt690 = local49.readUShortLE();
 		this.anInt691 = local49.readUShortLE();
 		@Pc(64) int local64 = local49.readUByte();
 		@Pc(67) int[] local67 = new int[local64];
 		for (@Pc(69) int local69 = 0; local69 < local64 - 1; local69++) {
-			local67[local69 + 1] = local49.get3();
+			local67[local69 + 1] = local49.readMediumBE();
 			if (local67[local69 + 1] == 0) {
 				local67[local69 + 1] = 1;
 			}

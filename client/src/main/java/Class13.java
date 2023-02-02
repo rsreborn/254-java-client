@@ -89,7 +89,7 @@ public final class Class13 {
 	public int anInt592 = 32;
 
 	@OriginalMember(owner = "client!gc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method321(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method321(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			if (arg0 != 9) {
 				throw new NullPointerException();
@@ -111,7 +111,7 @@ public final class Class13 {
 					} else if (local11 == 2) {
 						this.aString25 = arg1.readString();
 					} else if (local11 == 3) {
-						this.aByteArray5 = arg1.getStringArray((byte) 3);
+						this.aByteArray5 = arg1.getStringArray();
 					} else if (local11 == 12) {
 						this.aByte25 = arg1.readByte();
 					} else if (local11 == 13) {

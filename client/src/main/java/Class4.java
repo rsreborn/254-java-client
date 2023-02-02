@@ -125,7 +125,7 @@ public final class Class4 {
 	@OriginalMember(owner = "client!c", name = "a", descriptor = "(II[BIII)V")
 	public void method58(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte[] arg2, @OriginalArg(3) int arg3, @OriginalArg(4) int arg4, @OriginalArg(5) int arg5) {
 		try {
-			@Pc(7) Class1_Sub1_Sub3 local7 = new Class1_Sub1_Sub3(arg2, (byte) 3);
+			@Pc(7) Buffer local7 = new Buffer(arg2, (byte) 3);
 			@Pc(13) int local13;
 			for (@Pc(9) int local9 = 0; local9 < 4; local9++) {
 				for (local13 = 0; local13 < 64; local13++) {
@@ -198,7 +198,7 @@ public final class Class4 {
 	@OriginalMember(owner = "client!c", name = "a", descriptor = "(ILclient!s;I[B[Lclient!jc;B)V")
 	public void method61(@OriginalArg(0) int arg0, @OriginalArg(1) Class39 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte[] arg3, @OriginalArg(4) Class19[] arg4, @OriginalArg(5) byte arg5) {
 		try {
-			@Pc(7) Class1_Sub1_Sub3 local7 = new Class1_Sub1_Sub3(arg3, (byte) 3);
+			@Pc(7) Buffer local7 = new Buffer(arg3, (byte) 3);
 			@Pc(9) int local9 = -1;
 			if (arg5 == 2) {
 				@Pc(14) boolean local14 = false;
@@ -206,14 +206,14 @@ public final class Class4 {
 				this.anInt197 = -35;
 			}
 			while (true) {
-				@Pc(22) int local22 = local7.getSmart();
+				@Pc(22) int local22 = local7.readUSmart();
 				if (local22 == 0) {
 					return;
 				}
 				local9 += local22;
 				@Pc(30) int local30 = 0;
 				while (true) {
-					@Pc(33) int local33 = local7.getSmart();
+					@Pc(33) int local33 = local7.readUSmart();
 					if (local33 == 0) {
 						break;
 					}

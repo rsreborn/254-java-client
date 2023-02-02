@@ -47,7 +47,7 @@ public final class Class3 {
 	private int anInt187 = -536;
 
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method54(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method54(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			this.anInt191 = arg1.readUByte();
 			if (arg0 != 9) {

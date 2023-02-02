@@ -54,9 +54,9 @@ public final class Class48 {
 	@OriginalMember(owner = "client!yb", name = "a", descriptor = "([BZ)V")
 	private void method677(@OriginalArg(0) byte[] arg0, @OriginalArg(1) boolean arg1) {
 		try {
-			@Pc(7) Class1_Sub1_Sub3 local7 = new Class1_Sub1_Sub3(arg0, (byte) 3);
-			@Pc(10) int local10 = local7.get3();
-			@Pc(13) int local13 = local7.get3();
+			@Pc(7) Buffer local7 = new Buffer(arg0, (byte) 3);
+			@Pc(10) int local10 = local7.readMediumBE();
+			@Pc(13) int local13 = local7.readMediumBE();
 			if (!arg1) {
 				this.anInt995 = 15;
 			}
@@ -67,7 +67,7 @@ public final class Class48 {
 				@Pc(24) byte[] local24 = new byte[local10];
 				Static29.method595(local24, local10, arg0, local13, 6);
 				this.aByteArray21 = local24;
-				local7 = new Class1_Sub1_Sub3(this.aByteArray21, (byte) 3);
+				local7 = new Buffer(this.aByteArray21, (byte) 3);
 				this.aBoolean245 = true;
 			}
 			this.anInt996 = local7.readUShortLE();
@@ -78,8 +78,8 @@ public final class Class48 {
 			@Pc(84) int local84 = local7.position + this.anInt996 * 10;
 			for (@Pc(86) int local86 = 0; local86 < this.anInt996; local86++) {
 				this.anIntArray267[local86] = local7.readIntBE();
-				this.anIntArray268[local86] = local7.get3();
-				this.anIntArray269[local86] = local7.get3();
+				this.anIntArray268[local86] = local7.readMediumBE();
+				this.anIntArray269[local86] = local7.readMediumBE();
 				this.anIntArray270[local86] = local84;
 				local84 += this.anIntArray269[local86];
 			}

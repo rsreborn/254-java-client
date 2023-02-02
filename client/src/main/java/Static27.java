@@ -23,7 +23,7 @@ public final class Static27 {
 	@OriginalMember(owner = "client!rc", name = "a", descriptor = "(ZLclient!yb;)V")
 	public static void method541(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class48 arg1) {
 		try {
-			@Pc(8) Class1_Sub1_Sub3 local8 = new Class1_Sub1_Sub3(arg1.method678("varp.dat", null), (byte) 3);
+			@Pc(8) Buffer local8 = new Buffer(arg1.method678("varp.dat", null), (byte) 3);
 			anInt876 = 0;
 			anInt875 = local8.readUShortLE();
 			if (aClass38Array1 == null) {

@@ -76,7 +76,7 @@ public final class Class27 {
 	}
 
 	@OriginalMember(owner = "client!nc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method518(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method518(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			if (arg0 < 9 || arg0 > 9) {
 				this.aBoolean206 = !this.aBoolean206;

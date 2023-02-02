@@ -30,27 +30,27 @@ public final class Static21 {
 	public static Class31 aClass31_6 = new Class31(false);
 
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(IB)Lclient!mb;")
-	public static Class1_Sub1_Sub3 method485(@OriginalArg(0) int arg0, @OriginalArg(1) byte arg1) {
+	public static Buffer method485(@OriginalArg(0) int arg0, @OriginalArg(1) byte arg1) {
 		try {
 			@Pc(3) Class31 local3 = aClass31_5;
 			synchronized (aClass31_5) {
-				@Pc(7) Class1_Sub1_Sub3 local7 = null;
+				@Pc(7) Buffer local7 = null;
 				if (arg0 == 0 && anInt779 > 0) {
 					anInt779--;
-					local7 = (Class1_Sub1_Sub3) aClass31_4.method522();
+					local7 = (Buffer) aClass31_4.method522();
 				} else if (arg0 == 1 && anInt780 > 0) {
 					anInt780--;
-					local7 = (Class1_Sub1_Sub3) aClass31_5.method522();
+					local7 = (Buffer) aClass31_5.method522();
 				} else if (arg0 == 2 && anInt781 > 0) {
 					anInt781--;
-					local7 = (Class1_Sub1_Sub3) aClass31_6.method522();
+					local7 = (Buffer) aClass31_6.method522();
 				}
 				if (local7 != null) {
 					local7.position = 0;
 					return local7;
 				}
 			}
-			@Pc(69) Class1_Sub1_Sub3 local69 = new Class1_Sub1_Sub3(0);
+			@Pc(69) Buffer local69 = new Buffer(0);
 			local69.position = 0;
 			if (arg1 != aByte42) {
 				for (@Pc(77) int local77 = 1; local77 > 0; local77++) {

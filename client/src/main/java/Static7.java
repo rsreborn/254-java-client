@@ -21,7 +21,7 @@ public final class Static7 {
 	public static void method230(@OriginalArg(0) Class48 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) Class1_Sub1_Sub2_Sub4[] arg2, @OriginalArg(3) Class48 arg3) {
 		try {
 			aClass42_3 = new Class42((byte) 3, 50000);
-			@Pc(16) Class1_Sub1_Sub3 local16 = new Class1_Sub1_Sub3(arg3.method678("data", null), (byte) 3);
+			@Pc(16) Buffer local16 = new Buffer(arg3.method678("data", null), (byte) 3);
 			@Pc(21) int local21;
 			if (arg1 != 7) {
 				for (local21 = 1; local21 > 0; local21++) {

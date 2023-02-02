@@ -12,7 +12,7 @@ public final class Static2 {
 	private static char[] aCharArray2 = new char[] { ' ', 'e', 't', 'a', 'o', 'i', 'h', 'n', 's', 'r', 'd', 'l', 'u', 'm', 'w', 'c', 'y', 'f', 'g', 'p', 'b', 'v', 'k', 'x', 'j', 'q', 'z', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ' ', '!', '?', '.', ',', ':', ';', '(', ')', '-', '&', '*', '\\', '\'', '@', '#', '+', '=', '£', '$', '%', '"', '[', ']' };
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(Lclient!mb;II)Ljava/lang/String;")
-	public static String method40(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
+	public static String method40(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1, @OriginalArg(2) int arg2) {
 		try {
 			@Pc(3) int local3 = 0;
 			@Pc(5) int local5 = -1;
@@ -61,7 +61,7 @@ public final class Static2 {
 	}
 
 	@OriginalMember(owner = "client!ac", name = "a", descriptor = "(Lclient!mb;ILjava/lang/String;)V")
-	public static void method41(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) int arg1, @OriginalArg(2) String arg2) {
+	public static void method41(@OriginalArg(0) Buffer arg0, @OriginalArg(1) int arg1, @OriginalArg(2) String arg2) {
 		try {
 			if (arg2.length() > 80) {
 				arg2 = arg2.substring(0, 80);

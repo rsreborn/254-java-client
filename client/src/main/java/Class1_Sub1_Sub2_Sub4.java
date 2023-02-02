@@ -70,8 +70,8 @@ public final class Class1_Sub1_Sub2_Sub4 extends Class1_Sub1_Sub2 {
 	@OriginalMember(owner = "client!lb", name = "<init>", descriptor = "(Ljava/lang/String;Lclient!yb;Z)V")
 	public Class1_Sub1_Sub2_Sub4(@OriginalArg(0) String arg0, @OriginalArg(1) Class48 arg1, @OriginalArg(2) boolean arg2) {
 		try {
-			@Pc(67) Class1_Sub1_Sub3 local67 = new Class1_Sub1_Sub3(arg1.method678(arg0 + ".dat", null), (byte) 3);
-			@Pc(76) Class1_Sub1_Sub3 local76 = new Class1_Sub1_Sub3(arg1.method678("index.dat", null), (byte) 3);
+			@Pc(67) Buffer local67 = new Buffer(arg1.method678(arg0 + ".dat", null), (byte) 3);
+			@Pc(76) Buffer local76 = new Buffer(arg1.method678("index.dat", null), (byte) 3);
 			@Pc(78) boolean local78 = true;
 			local76.position = local67.readUShortLE() + 4;
 			if (!arg2) {

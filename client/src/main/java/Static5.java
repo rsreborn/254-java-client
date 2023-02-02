@@ -12,7 +12,7 @@ public final class Static5 {
 	public static byte[] aByteArray1;
 
 	@OriginalMember(owner = "client!cc", name = "e", descriptor = "Lclient!mb;")
-	public static Class1_Sub1_Sub3 aClass1_Sub1_Sub3_1;
+	public static Buffer aClass1_Sub1_Sub3_1;
 
 	@OriginalMember(owner = "client!cc", name = "b", descriptor = "[Lclient!cc;")
 	private static Class5[] aClass5Array1 = new Class5[1000];
@@ -21,10 +21,10 @@ public final class Static5 {
 	public static int[] anIntArray31 = new int[1000];
 
 	@OriginalMember(owner = "client!cc", name = "a", descriptor = "(ZLclient!mb;)V")
-	public static void method79(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public static void method79(@OriginalArg(0) boolean arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			aByteArray1 = new byte[441000];
-			aClass1_Sub1_Sub3_1 = new Class1_Sub1_Sub3(aByteArray1, (byte) 3);
+			aClass1_Sub1_Sub3_1 = new Buffer(aByteArray1, (byte) 3);
 			Static8.method240();
 			if (!arg0) {
 				anInt217 = 84;
@@ -45,7 +45,7 @@ public final class Static5 {
 	}
 
 	@OriginalMember(owner = "client!cc", name = "a", descriptor = "(IIB)Lclient!mb;")
-	public static Class1_Sub1_Sub3 method80(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte arg2) {
+	public static Buffer method80(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1, @OriginalArg(2) byte arg2) {
 		try {
 			if (arg2 != -74) {
 				for (@Pc(4) int local4 = 1; local4 > 0; local4++) {

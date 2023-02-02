@@ -172,7 +172,7 @@ public final class Static11 {
 				local11.anInt755 = 0;
 				local11.anInt756 = 0;
 			} else {
-				@Pc(27) Class1_Sub1_Sub3 local27 = new Class1_Sub1_Sub3(arg0, (byte) 3);
+				@Pc(27) Buffer local27 = new Buffer(arg0, (byte) 3);
 				local27.position = arg0.length - 18;
 				@Pc(41) Class24 local41 = aClass24Array1[arg2] = new Class24();
 				local41.aByteArray8 = arg0;

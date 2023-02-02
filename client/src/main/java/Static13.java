@@ -26,29 +26,29 @@ public final class Static13 {
 	@OriginalMember(owner = "client!h", name = "a", descriptor = "(I[B)V")
 	public static void method325(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1) {
 		try {
-			@Pc(7) Class1_Sub1_Sub3 local7 = new Class1_Sub1_Sub3(arg1, (byte) 3);
+			@Pc(7) Buffer local7 = new Buffer(arg1, (byte) 3);
 			local7.position = arg1.length - 8;
 			@Pc(16) int local16 = local7.readUShortLE();
 			@Pc(19) int local19 = local7.readUShortLE();
 			@Pc(22) int local22 = local7.readUShortLE();
 			@Pc(25) int local25 = local7.readUShortLE();
 			@Pc(27) byte local27 = 0;
-			@Pc(33) Class1_Sub1_Sub3 local33 = new Class1_Sub1_Sub3(arg1, (byte) 3);
+			@Pc(33) Buffer local33 = new Buffer(arg1, (byte) 3);
 			local33.position = local27;
 			@Pc(42) int local42 = local27 + local16 + 2;
-			@Pc(48) Class1_Sub1_Sub3 local48 = new Class1_Sub1_Sub3(arg1, (byte) 3);
+			@Pc(48) Buffer local48 = new Buffer(arg1, (byte) 3);
 			local48.position = local42;
 			@Pc(55) int local55 = local42 + local19;
 			if (arg0 < 2 || arg0 > 2) {
 				aBoolean143 = !aBoolean143;
 			}
-			@Pc(73) Class1_Sub1_Sub3 local73 = new Class1_Sub1_Sub3(arg1, (byte) 3);
+			@Pc(73) Buffer local73 = new Buffer(arg1, (byte) 3);
 			local73.position = local55;
 			local42 = local55 + local22;
-			@Pc(86) Class1_Sub1_Sub3 local86 = new Class1_Sub1_Sub3(arg1, (byte) 3);
+			@Pc(86) Buffer local86 = new Buffer(arg1, (byte) 3);
 			local86.position = local42;
 			local42 += local25;
-			@Pc(99) Class1_Sub1_Sub3 local99 = new Class1_Sub1_Sub3(arg1, (byte) 3);
+			@Pc(99) Buffer local99 = new Buffer(arg1, (byte) 3);
 			local99.position = local42;
 			@Pc(108) Class12 local108 = new Class12(local99, true);
 			@Pc(111) int local111 = local33.readUShortLE();
@@ -88,17 +88,17 @@ public final class Static13 {
 						if ((local159 & 0x1) == 0) {
 							local117[local152] = local206;
 						} else {
-							local117[local152] = local73.method511();
+							local117[local152] = local73.readSmart();
 						}
 						if ((local159 & 0x2) == 0) {
 							local120[local152] = local206;
 						} else {
-							local120[local152] = local73.method511();
+							local120[local152] = local73.readSmart();
 						}
 						if ((local159 & 0x4) == 0) {
 							local123[local152] = local206;
 						} else {
-							local123[local152] = local73.method511();
+							local123[local152] = local73.readSmart();
 						}
 						local150 = local154;
 						local152++;

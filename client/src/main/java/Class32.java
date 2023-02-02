@@ -41,7 +41,7 @@ public final class Class32 {
 	public int anInt847 = 128;
 
 	@OriginalMember(owner = "client!pc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method529(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method529(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			if (arg0 < 9 || arg0 > 9) {
 				throw new NullPointerException();

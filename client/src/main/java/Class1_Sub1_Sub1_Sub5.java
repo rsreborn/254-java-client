@@ -166,15 +166,15 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 				this.anIntArray142 = new int[this.anInt544];
 			}
 			this.anIntArray137 = new int[this.anInt544];
-			@Pc(138) Class1_Sub1_Sub3 local138 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
+			@Pc(138) Buffer local138 = new Buffer(local20.aByteArray8, (byte) 3);
 			local138.position = local20.anInt757;
-			@Pc(149) Class1_Sub1_Sub3 local149 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
+			@Pc(149) Buffer local149 = new Buffer(local20.aByteArray8, (byte) 3);
 			local149.position = local20.anInt758;
-			@Pc(160) Class1_Sub1_Sub3 local160 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
+			@Pc(160) Buffer local160 = new Buffer(local20.aByteArray8, (byte) 3);
 			local160.position = local20.anInt759;
-			@Pc(171) Class1_Sub1_Sub3 local171 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
+			@Pc(171) Buffer local171 = new Buffer(local20.aByteArray8, (byte) 3);
 			local171.position = local20.anInt760;
-			@Pc(182) Class1_Sub1_Sub3 local182 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
+			@Pc(182) Buffer local182 = new Buffer(local20.aByteArray8, (byte) 3);
 			local182.position = local20.anInt761;
 			@Pc(188) int local188 = 0;
 			@Pc(190) int local190 = 0;
@@ -192,15 +192,15 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 				local208 = local138.readUByte();
 				local210 = 0;
 				if ((local208 & 0x1) != 0) {
-					local210 = local149.method511();
+					local210 = local149.readSmart();
 				}
 				local219 = 0;
 				if ((local208 & 0x2) != 0) {
-					local219 = local160.method511();
+					local219 = local160.readSmart();
 				}
 				local228 = 0;
 				if ((local208 & 0x4) != 0) {
-					local228 = local171.method511();
+					local228 = local171.readSmart();
 				}
 				this.anIntArray125[local196] = local188 + local210;
 				this.anIntArray126[local196] = local190 + local219;
@@ -242,9 +242,9 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			for (@Pc(374) int local374 = 0; local374 < this.anInt544; local374++) {
 				local379 = local149.readUByte();
 				if (local379 == 1) {
-					local210 = local138.method511() + local372;
-					local219 = local138.method511() + local210;
-					local228 = local138.method511() + local219;
+					local210 = local138.readSmart() + local372;
+					local219 = local138.readSmart() + local210;
+					local228 = local138.readSmart() + local219;
 					local372 = local228;
 					this.anIntArray128[local374] = local210;
 					this.anIntArray129[local374] = local219;
@@ -253,7 +253,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 				if (local379 == 2) {
 					local210 = local210;
 					local219 = local228;
-					local228 = local138.method511() + local372;
+					local228 = local138.readSmart() + local372;
 					local372 = local228;
 					this.anIntArray128[local374] = local210;
 					this.anIntArray129[local374] = local219;
@@ -262,7 +262,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 				if (local379 == 3) {
 					local210 = local228;
 					local219 = local219;
-					local228 = local138.method511() + local372;
+					local228 = local138.readSmart() + local372;
 					local372 = local228;
 					this.anIntArray128[local374] = local210;
 					this.anIntArray129[local374] = local219;
@@ -272,7 +272,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 					@Pc(481) int local481 = local210;
 					local210 = local219;
 					local219 = local481;
-					local228 = local138.method511() + local372;
+					local228 = local138.readSmart() + local372;
 					local372 = local228;
 					this.anIntArray128[local374] = local210;
 					this.anIntArray129[local374] = local481;

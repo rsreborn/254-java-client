@@ -20,7 +20,7 @@ public final class Static26 {
 			if (!arg0) {
 				aBoolean214 = !aBoolean214;
 			}
-			@Pc(16) Class1_Sub1_Sub3 local16 = new Class1_Sub1_Sub3(arg1.method678("varbit.dat", null), (byte) 3);
+			@Pc(16) Buffer local16 = new Buffer(arg1.method678("varbit.dat", null), (byte) 3);
 			anInt863 = local16.readUShortLE();
 			if (aClass35Array1 == null) {
 				aClass35Array1 = new Class35[anInt863];

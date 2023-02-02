@@ -41,7 +41,7 @@ public final class Class21 {
 	public boolean aBoolean181 = true;
 
 	@OriginalMember(owner = "client!kc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method448(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
+	public void method448(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
 		try {
 			if (arg0 != 9) {
 				throw new NullPointerException();
@@ -52,7 +52,7 @@ public final class Class21 {
 					return;
 				}
 				if (local11 == 1) {
-					this.anInt722 = arg1.get3();
+					this.anInt722 = arg1.readMediumBE();
 					this.method449(-2048, this.anInt722);
 				} else if (local11 == 2) {
 					this.anInt723 = arg1.readUByte();

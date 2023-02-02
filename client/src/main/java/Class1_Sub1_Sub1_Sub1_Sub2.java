@@ -80,7 +80,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 	private long aLong10 = -1L;
 
 	@OriginalMember(owner = "client!bb", name = "a", descriptor = "(Lclient!mb;Z)V")
-	public void method51(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) boolean arg1) {
+	public void method51(@OriginalArg(0) Buffer arg0, @OriginalArg(1) boolean arg1) {
 		try {
 			arg0.position = 0;
 			this.anInt174 = arg0.readUByte();

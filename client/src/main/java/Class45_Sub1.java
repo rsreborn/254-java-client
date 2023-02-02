@@ -154,7 +154,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 		for (@Pc(22) int local22 = 0; local22 < 4; local22++) {
 			@Pc(31) byte[] local31 = arg0.method678(local20[local22], null);
 			local36 = local31.length / 2;
-			@Pc(42) Class1_Sub1_Sub3 local42 = new Class1_Sub1_Sub3(local31, (byte) 3);
+			@Pc(42) Buffer local42 = new Buffer(local31, (byte) 3);
 			this.anIntArrayArray23[local22] = new int[local36];
 			this.aByteArrayArray5[local22] = new byte[local36];
 			for (local56 = 0; local56 < local36; local56++) {
@@ -166,7 +166,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 		for (local36 = 0; local36 < 4; local36++) {
 			local104 = arg0.method678(local93[local36], null);
 			local56 = local104.length / 4;
-			@Pc(115) Class1_Sub1_Sub3 local115 = new Class1_Sub1_Sub3(local104, (byte) 3);
+			@Pc(115) Buffer local115 = new Buffer(local104, (byte) 3);
 			this.anIntArrayArray24[local36] = new int[local56];
 			for (@Pc(123) int local123 = 0; local123 < local56; local123++) {
 				this.anIntArrayArray24[local36][local123] = local115.readIntBE();
@@ -183,7 +183,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 			}
 		}
 		local104 = arg0.method678("map_index", null);
-		@Pc(193) Class1_Sub1_Sub3 local193 = new Class1_Sub1_Sub3(local104, (byte) 3);
+		@Pc(193) Buffer local193 = new Buffer(local104, (byte) 3);
 		local56 = local104.length / 7;
 		this.anIntArray258 = new int[local56];
 		this.anIntArray259 = new int[local56];
@@ -196,14 +196,14 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 			this.anIntArray261[local216] = local193.readUByte();
 		}
 		local104 = arg0.method678("anim_index", null);
-		local193 = new Class1_Sub1_Sub3(local104, (byte) 3);
+		local193 = new Buffer(local104, (byte) 3);
 		local56 = local104.length / 2;
 		this.anIntArray262 = new int[local56];
 		for (@Pc(268) int local268 = 0; local268 < local56; local268++) {
 			this.anIntArray262[local268] = local193.readUShortLE();
 		}
 		local104 = arg0.method678("midi_index", null);
-		local193 = new Class1_Sub1_Sub3(local104, (byte) 3);
+		local193 = new Buffer(local104, (byte) 3);
 		local56 = local104.length;
 		this.anIntArray263 = new int[local56];
 		for (@Pc(300) int local300 = 0; local300 < local56; local300++) {
