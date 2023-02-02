@@ -70,14 +70,14 @@ public final class Class48 {
 				local7 = new Class1_Sub1_Sub3(this.aByteArray21, (byte) 3);
 				this.aBoolean245 = true;
 			}
-			this.anInt996 = local7.get2();
+			this.anInt996 = local7.readUShortLE();
 			this.anIntArray267 = new int[this.anInt996];
 			this.anIntArray268 = new int[this.anInt996];
 			this.anIntArray269 = new int[this.anInt996];
 			this.anIntArray270 = new int[this.anInt996];
-			@Pc(84) int local84 = local7.anInt777 + this.anInt996 * 10;
+			@Pc(84) int local84 = local7.position + this.anInt996 * 10;
 			for (@Pc(86) int local86 = 0; local86 < this.anInt996; local86++) {
-				this.anIntArray267[local86] = local7.get4();
+				this.anIntArray267[local86] = local7.readIntBE();
 				this.anIntArray268[local86] = local7.get3();
 				this.anIntArray269[local86] = local7.get3();
 				this.anIntArray270[local86] = local84;

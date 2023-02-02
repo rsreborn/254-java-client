@@ -158,7 +158,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 			this.anIntArrayArray23[local22] = new int[local36];
 			this.aByteArrayArray5[local22] = new byte[local36];
 			for (local56 = 0; local56 < local36; local56++) {
-				this.anIntArrayArray23[local22][local56] = local42.get2();
+				this.anIntArrayArray23[local22][local56] = local42.readUShortLE();
 			}
 		}
 		@Pc(93) String[] local93 = new String[] { "model_crc", "anim_crc", "midi_crc", "map_crc" };
@@ -169,7 +169,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 			@Pc(115) Class1_Sub1_Sub3 local115 = new Class1_Sub1_Sub3(local104, (byte) 3);
 			this.anIntArrayArray24[local36] = new int[local56];
 			for (@Pc(123) int local123 = 0; local123 < local56; local123++) {
-				this.anIntArrayArray24[local36][local123] = local115.get4();
+				this.anIntArrayArray24[local36][local123] = local115.readIntBE();
 			}
 		}
 		local104 = arg0.method678("model_index", null);
@@ -190,24 +190,24 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 		this.anIntArray260 = new int[local56];
 		this.anIntArray261 = new int[local56];
 		for (@Pc(216) int local216 = 0; local216 < local56; local216++) {
-			this.anIntArray258[local216] = local193.get2();
-			this.anIntArray259[local216] = local193.get2();
-			this.anIntArray260[local216] = local193.get2();
-			this.anIntArray261[local216] = local193.readByte();
+			this.anIntArray258[local216] = local193.readUShortLE();
+			this.anIntArray259[local216] = local193.readUShortLE();
+			this.anIntArray260[local216] = local193.readUShortLE();
+			this.anIntArray261[local216] = local193.readUByte();
 		}
 		local104 = arg0.method678("anim_index", null);
 		local193 = new Class1_Sub1_Sub3(local104, (byte) 3);
 		local56 = local104.length / 2;
 		this.anIntArray262 = new int[local56];
 		for (@Pc(268) int local268 = 0; local268 < local56; local268++) {
-			this.anIntArray262[local268] = local193.get2();
+			this.anIntArray262[local268] = local193.readUShortLE();
 		}
 		local104 = arg0.method678("midi_index", null);
 		local193 = new Class1_Sub1_Sub3(local104, (byte) 3);
 		local56 = local104.length;
 		this.anIntArray263 = new int[local56];
 		for (@Pc(300) int local300 = 0; local300 < local56; local300++) {
-			this.anIntArray263[local300] = local193.readByte();
+			this.anIntArray263[local300] = local193.readUByte();
 		}
 		this.aClient2 = arg1;
 		this.aBoolean236 = true;

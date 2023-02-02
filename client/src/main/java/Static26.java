@@ -21,7 +21,7 @@ public final class Static26 {
 				aBoolean214 = !aBoolean214;
 			}
 			@Pc(16) Class1_Sub1_Sub3 local16 = new Class1_Sub1_Sub3(arg1.method678("varbit.dat", null), (byte) 3);
-			anInt863 = local16.get2();
+			anInt863 = local16.readUShortLE();
 			if (aClass35Array1 == null) {
 				aClass35Array1 = new Class35[anInt863];
 			}
@@ -31,7 +31,7 @@ public final class Static26 {
 				}
 				aClass35Array1[local26].method537(local26, 890, local16);
 			}
-			if (local16.anInt777 != local16.aByteArray9.length) {
+			if (local16.position != local16.payload.length) {
 				System.out.println("varbit load mismatch");
 			}
 		} catch (@Pc(60) RuntimeException local60) {

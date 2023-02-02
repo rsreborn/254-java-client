@@ -22,7 +22,7 @@ public final class Static25 {
 				}
 			}
 			@Pc(19) Class1_Sub1_Sub3 local19 = new Class1_Sub1_Sub3(arg1.method678("spotanim.dat", null), (byte) 3);
-			anInt842 = local19.get2();
+			anInt842 = local19.readUShortLE();
 			if (aClass32Array1 == null) {
 				aClass32Array1 = new Class32[anInt842];
 			}

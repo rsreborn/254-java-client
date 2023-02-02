@@ -73,33 +73,33 @@ public final class Class1_Sub1_Sub2_Sub4 extends Class1_Sub1_Sub2 {
 			@Pc(67) Class1_Sub1_Sub3 local67 = new Class1_Sub1_Sub3(arg1.method678(arg0 + ".dat", null), (byte) 3);
 			@Pc(76) Class1_Sub1_Sub3 local76 = new Class1_Sub1_Sub3(arg1.method678("index.dat", null), (byte) 3);
 			@Pc(78) boolean local78 = true;
-			local76.anInt777 = local67.get2() + 4;
+			local76.position = local67.readUShortLE() + 4;
 			if (!arg2) {
 				this.anInt748 = -151;
 			}
-			@Pc(92) int local92 = local76.readByte();
+			@Pc(92) int local92 = local76.readUByte();
 			if (local92 > 0) {
-				local76.anInt777 += (local92 - 1) * 3;
+				local76.position += (local92 - 1) * 3;
 			}
 			@Pc(130) int local130;
 			for (@Pc(106) int local106 = 0; local106 < 94; local106++) {
-				this.anIntArray216[local106] = local76.readByte();
-				this.anIntArray217[local106] = local76.readByte();
-				local130 = this.anIntArray214[local106] = local76.get2();
-				@Pc(138) int local138 = this.anIntArray215[local106] = local76.get2();
-				@Pc(141) int local141 = local76.readByte();
+				this.anIntArray216[local106] = local76.readUByte();
+				this.anIntArray217[local106] = local76.readUByte();
+				local130 = this.anIntArray214[local106] = local76.readUShortLE();
+				@Pc(138) int local138 = this.anIntArray215[local106] = local76.readUShortLE();
+				@Pc(141) int local141 = local76.readUByte();
 				@Pc(145) int local145 = local130 * local138;
 				this.aByteArrayArray3[local106] = new byte[local145];
 				@Pc(155) int local155;
 				@Pc(180) int local180;
 				if (local141 == 0) {
 					for (local155 = 0; local155 < local145; local155++) {
-						this.aByteArrayArray3[local106][local155] = local67.get1Signed();
+						this.aByteArrayArray3[local106][local155] = local67.readByte();
 					}
 				} else if (local141 == 1) {
 					for (local155 = 0; local155 < local130; local155++) {
 						for (local180 = 0; local180 < local138; local180++) {
-							this.aByteArrayArray3[local106][local155 + local180 * local130] = local67.get1Signed();
+							this.aByteArrayArray3[local106][local155 + local180 * local130] = local67.readByte();
 						}
 					}
 				}

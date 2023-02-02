@@ -48,31 +48,31 @@ public final class Class32 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(14) int local14 = arg1.readByte();
+					@Pc(14) int local14 = arg1.readUByte();
 					if (local14 == 0) {
 						return;
 					}
 					if (local14 == 1) {
-						this.anInt844 = arg1.get2();
+						this.anInt844 = arg1.readUShortLE();
 					} else if (local14 == 2) {
-						this.anInt845 = arg1.get2();
+						this.anInt845 = arg1.readUShortLE();
 						if (Static23.aClass27Array1 != null) {
 							this.aClass27_2 = Static23.aClass27Array1[this.anInt845];
 						}
 					} else if (local14 == 4) {
-						this.anInt846 = arg1.get2();
+						this.anInt846 = arg1.readUShortLE();
 					} else if (local14 == 5) {
-						this.anInt847 = arg1.get2();
+						this.anInt847 = arg1.readUShortLE();
 					} else if (local14 == 6) {
-						this.anInt848 = arg1.get2();
+						this.anInt848 = arg1.readUShortLE();
 					} else if (local14 == 7) {
-						this.anInt849 = arg1.readByte();
+						this.anInt849 = arg1.readUByte();
 					} else if (local14 == 8) {
-						this.anInt850 = arg1.readByte();
+						this.anInt850 = arg1.readUByte();
 					} else if (local14 >= 40 && local14 < 50) {
-						this.anIntArray231[local14 - 40] = arg1.get2();
+						this.anIntArray231[local14 - 40] = arg1.readUShortLE();
 					} else if (local14 >= 50 && local14 < 60) {
-						this.anIntArray232[local14 - 50] = arg1.get2();
+						this.anIntArray232[local14 - 50] = arg1.readUShortLE();
 					} else {
 						System.out.println("Error unrecognised spotanim config code: " + local14);
 					}

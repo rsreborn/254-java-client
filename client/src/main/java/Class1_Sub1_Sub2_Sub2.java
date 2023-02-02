@@ -87,10 +87,10 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 	public Class1_Sub1_Sub2_Sub2(@OriginalArg(0) Class48 arg0, @OriginalArg(1) String arg1, @OriginalArg(2) int arg2) {
 		@Pc(40) Class1_Sub1_Sub3 local40 = new Class1_Sub1_Sub3(arg0.method678(arg1 + ".dat", null), (byte) 3);
 		@Pc(49) Class1_Sub1_Sub3 local49 = new Class1_Sub1_Sub3(arg0.method678("index.dat", null), (byte) 3);
-		local49.anInt777 = local40.get2();
-		this.anInt690 = local49.get2();
-		this.anInt691 = local49.get2();
-		@Pc(64) int local64 = local49.readByte();
+		local49.position = local40.readUShortLE();
+		this.anInt690 = local49.readUShortLE();
+		this.anInt691 = local49.readUShortLE();
+		@Pc(64) int local64 = local49.readUByte();
 		@Pc(67) int[] local67 = new int[local64];
 		for (@Pc(69) int local69 = 0; local69 < local64 - 1; local69++) {
 			local67[local69 + 1] = local49.get3();
@@ -99,26 +99,26 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 			}
 		}
 		for (@Pc(104) int local104 = 0; local104 < arg2; local104++) {
-			local49.anInt777 += 2;
-			local40.anInt777 += local49.get2() * local49.get2();
-			local49.anInt777++;
+			local49.position += 2;
+			local40.position += local49.readUShortLE() * local49.readUShortLE();
+			local49.position++;
 		}
-		this.anInt688 = local49.readByte();
-		this.anInt689 = local49.readByte();
-		this.anInt686 = local49.get2();
-		this.anInt687 = local49.get2();
-		@Pc(151) int local151 = local49.readByte();
+		this.anInt688 = local49.readUByte();
+		this.anInt689 = local49.readUByte();
+		this.anInt686 = local49.readUShortLE();
+		this.anInt687 = local49.readUShortLE();
+		@Pc(151) int local151 = local49.readUByte();
 		@Pc(157) int local157 = this.anInt686 * this.anInt687;
 		this.anIntArray210 = new int[local157];
 		@Pc(165) int local165;
 		if (local151 == 0) {
 			for (local165 = 0; local165 < local157; local165++) {
-				this.anIntArray210[local165] = local67[local40.readByte()];
+				this.anIntArray210[local165] = local67[local40.readUByte()];
 			}
 		} else if (local151 == 1) {
 			for (local165 = 0; local165 < this.anInt686; local165++) {
 				for (@Pc(189) int local189 = 0; local189 < this.anInt687; local189++) {
-					this.anIntArray210[local165 + local189 * this.anInt686] = local67[local40.readByte()];
+					this.anIntArray210[local165 + local189 * this.anInt686] = local67[local40.readUByte()];
 				}
 			}
 		}

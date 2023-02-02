@@ -82,33 +82,33 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 	@OriginalMember(owner = "client!bb", name = "a", descriptor = "(Lclient!mb;Z)V")
 	public void method51(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) boolean arg1) {
 		try {
-			arg0.anInt777 = 0;
-			this.anInt174 = arg0.readByte();
-			this.anInt175 = arg0.readByte();
+			arg0.position = 0;
+			this.anInt174 = arg0.readUByte();
+			this.anInt175 = arg0.readUByte();
 			this.aClass13_2 = null;
 			@Pc(22) int local22;
 			@Pc(34) int local34;
 			for (@Pc(17) int local17 = 0; local17 < 12; local17++) {
-				local22 = arg0.readByte();
+				local22 = arg0.readUByte();
 				if (local22 == 0) {
 					this.anIntArray18[local17] = 0;
 				} else {
-					local34 = arg0.readByte();
+					local34 = arg0.readUByte();
 					this.anIntArray18[local17] = (local22 << 8) + local34;
 					if (local17 == 0 && this.anIntArray18[0] == 65535) {
-						this.aClass13_2 = Static12.method320(arg0.get2());
+						this.aClass13_2 = Static12.method320(arg0.readUShortLE());
 						break;
 					}
 				}
 			}
 			for (local22 = 0; local22 < 5; local22++) {
-				local34 = arg0.readByte();
+				local34 = arg0.readUByte();
 				if (local34 < 0 || local34 >= Static6.anIntArrayArray4[local22].length) {
 					local34 = 0;
 				}
 				this.anIntArray19[local22] = local34;
 			}
-			super.anInt131 = arg0.get2();
+			super.anInt131 = arg0.readUShortLE();
 			if (!arg1) {
 				for (local34 = 1; local34 > 0; local34++) {
 				}
@@ -116,32 +116,32 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 			if (super.anInt131 == 65535) {
 				super.anInt131 = -1;
 			}
-			super.anInt132 = arg0.get2();
+			super.anInt132 = arg0.readUShortLE();
 			if (super.anInt132 == 65535) {
 				super.anInt132 = -1;
 			}
-			super.anInt133 = arg0.get2();
+			super.anInt133 = arg0.readUShortLE();
 			if (super.anInt133 == 65535) {
 				super.anInt133 = -1;
 			}
-			super.anInt134 = arg0.get2();
+			super.anInt134 = arg0.readUShortLE();
 			if (super.anInt134 == 65535) {
 				super.anInt134 = -1;
 			}
-			super.anInt135 = arg0.get2();
+			super.anInt135 = arg0.readUShortLE();
 			if (super.anInt135 == 65535) {
 				super.anInt135 = -1;
 			}
-			super.anInt136 = arg0.get2();
+			super.anInt136 = arg0.readUShortLE();
 			if (super.anInt136 == 65535) {
 				super.anInt136 = -1;
 			}
-			super.anInt137 = arg0.get2();
+			super.anInt137 = arg0.readUShortLE();
 			if (super.anInt137 == 65535) {
 				super.anInt137 = -1;
 			}
-			this.aString4 = Static36.method683(true, Static36.method680(arg0.get8(0), true));
-			this.anInt176 = arg0.readByte();
+			this.aString4 = Static36.method683(true, Static36.method680(arg0.readLongBE(), true));
+			this.anInt176 = arg0.readUByte();
 			this.aBoolean29 = true;
 			this.aLong9 = 0L;
 			for (local34 = 0; local34 < 12; local34++) {

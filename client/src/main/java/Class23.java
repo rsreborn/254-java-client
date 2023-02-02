@@ -36,26 +36,26 @@ public final class Class23 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(18) int local18 = arg1.readByte();
+					@Pc(18) int local18 = arg1.readUByte();
 					if (local18 == 0) {
 						return;
 					}
 					if (local18 == 1) {
-						this.anInt753 = arg1.readByte();
+						this.anInt753 = arg1.readUByte();
 					} else if (local18 == 2) {
-						@Pc(36) int local36 = arg1.readByte();
+						@Pc(36) int local36 = arg1.readUByte();
 						this.anIntArray221 = new int[local36];
 						for (@Pc(42) int local42 = 0; local42 < local36; local42++) {
-							this.anIntArray221[local42] = arg1.get2();
+							this.anIntArray221[local42] = arg1.readUShortLE();
 						}
 					} else if (local18 == 3) {
 						this.aBoolean190 = true;
 					} else if (local18 >= 40 && local18 < 50) {
-						this.anIntArray222[local18 - 40] = arg1.get2();
+						this.anIntArray222[local18 - 40] = arg1.readUShortLE();
 					} else if (local18 >= 50 && local18 < 60) {
-						this.anIntArray223[local18 - 50] = arg1.get2();
+						this.anIntArray223[local18 - 50] = arg1.readUShortLE();
 					} else if (local18 >= 60 && local18 < 70) {
-						this.anIntArray224[local18 - 60] = arg1.get2();
+						this.anIntArray224[local18 - 60] = arg1.readUShortLE();
 					} else {
 						System.out.println("Error unrecognised config code: " + local18);
 					}

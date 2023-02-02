@@ -65,7 +65,7 @@ public final class Static4 {
 						local27 += local34 - 1;
 						@Pc(56) int local56 = local27 & 0x3F;
 						@Pc(62) int local62 = local27 >> 6 & 0x3F;
-						@Pc(67) int local67 = local9.readByte() >> 2;
+						@Pc(67) int local67 = local9.readUByte() >> 2;
 						@Pc(71) int local71 = local62 + arg1;
 						@Pc(75) int local75 = local56 + arg0;
 						if (local71 > 0 && local75 > 0 && local71 < 103 && local75 < 103) {
@@ -80,7 +80,7 @@ public final class Static4 {
 					if (local34 == 0) {
 						break;
 					}
-					local9.readByte();
+					local9.readUByte();
 				}
 			}
 		} catch (@Pc(114) RuntimeException local114) {
@@ -109,7 +109,7 @@ public final class Static4 {
 					if (local31 == 0) {
 						break;
 					}
-					arg0.readByte();
+					arg0.readUByte();
 				}
 			}
 		} catch (@Pc(42) RuntimeException local42) {

@@ -18,7 +18,7 @@ public final class Static2 {
 			@Pc(5) int local5 = -1;
 			@Pc(18) int local18;
 			for (@Pc(7) int local7 = 0; local7 < arg1; local7++) {
-				@Pc(12) int local12 = arg0.readByte();
+				@Pc(12) int local12 = arg0.readUByte();
 				local18 = local12 >> 4 & 0xF;
 				if (local5 != -1) {
 					aCharArray1[local3++] = aCharArray2[(local5 << 4) + local18 - 195];

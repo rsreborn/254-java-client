@@ -27,46 +27,46 @@ public final class Static13 {
 	public static void method325(@OriginalArg(0) int arg0, @OriginalArg(1) byte[] arg1) {
 		try {
 			@Pc(7) Class1_Sub1_Sub3 local7 = new Class1_Sub1_Sub3(arg1, (byte) 3);
-			local7.anInt777 = arg1.length - 8;
-			@Pc(16) int local16 = local7.get2();
-			@Pc(19) int local19 = local7.get2();
-			@Pc(22) int local22 = local7.get2();
-			@Pc(25) int local25 = local7.get2();
+			local7.position = arg1.length - 8;
+			@Pc(16) int local16 = local7.readUShortLE();
+			@Pc(19) int local19 = local7.readUShortLE();
+			@Pc(22) int local22 = local7.readUShortLE();
+			@Pc(25) int local25 = local7.readUShortLE();
 			@Pc(27) byte local27 = 0;
 			@Pc(33) Class1_Sub1_Sub3 local33 = new Class1_Sub1_Sub3(arg1, (byte) 3);
-			local33.anInt777 = local27;
+			local33.position = local27;
 			@Pc(42) int local42 = local27 + local16 + 2;
 			@Pc(48) Class1_Sub1_Sub3 local48 = new Class1_Sub1_Sub3(arg1, (byte) 3);
-			local48.anInt777 = local42;
+			local48.position = local42;
 			@Pc(55) int local55 = local42 + local19;
 			if (arg0 < 2 || arg0 > 2) {
 				aBoolean143 = !aBoolean143;
 			}
 			@Pc(73) Class1_Sub1_Sub3 local73 = new Class1_Sub1_Sub3(arg1, (byte) 3);
-			local73.anInt777 = local55;
+			local73.position = local55;
 			local42 = local55 + local22;
 			@Pc(86) Class1_Sub1_Sub3 local86 = new Class1_Sub1_Sub3(arg1, (byte) 3);
-			local86.anInt777 = local42;
+			local86.position = local42;
 			local42 += local25;
 			@Pc(99) Class1_Sub1_Sub3 local99 = new Class1_Sub1_Sub3(arg1, (byte) 3);
-			local99.anInt777 = local42;
+			local99.position = local42;
 			@Pc(108) Class12 local108 = new Class12(local99, true);
-			@Pc(111) int local111 = local33.get2();
+			@Pc(111) int local111 = local33.readUShortLE();
 			@Pc(114) int[] local114 = new int[500];
 			@Pc(117) int[] local117 = new int[500];
 			@Pc(120) int[] local120 = new int[500];
 			@Pc(123) int[] local123 = new int[500];
 			for (@Pc(125) int local125 = 0; local125 < local111; local125++) {
-				@Pc(130) int local130 = local33.get2();
+				@Pc(130) int local130 = local33.readUShortLE();
 				@Pc(138) Class14 local138 = aClass14Array1[local130] = new Class14();
-				local138.anInt593 = local86.readByte();
+				local138.anInt593 = local86.readUByte();
 				local138.aClass12_1 = local108;
-				@Pc(148) int local148 = local33.readByte();
+				@Pc(148) int local148 = local33.readUByte();
 				@Pc(150) int local150 = -1;
 				@Pc(152) int local152 = 0;
 				@Pc(159) int local159;
 				for (@Pc(154) int local154 = 0; local154 < local148; local154++) {
-					local159 = local48.readByte();
+					local159 = local48.readUByte();
 					if (local159 > 0) {
 						if (local108.anIntArray164[local154] != 0) {
 							for (@Pc(170) int local170 = local154 - 1; local170 > local150; local170--) {

@@ -25,7 +25,7 @@ public final class Static27 {
 		try {
 			@Pc(8) Class1_Sub1_Sub3 local8 = new Class1_Sub1_Sub3(arg1.method678("varp.dat", null), (byte) 3);
 			anInt876 = 0;
-			anInt875 = local8.get2();
+			anInt875 = local8.readUShortLE();
 			if (aClass38Array1 == null) {
 				aClass38Array1 = new Class38[anInt875];
 			}
@@ -41,7 +41,7 @@ public final class Static27 {
 			if (!arg0) {
 				aBoolean215 = !aBoolean215;
 			}
-			if (local8.anInt777 != local8.aByteArray9.length) {
+			if (local8.position != local8.payload.length) {
 				System.out.println("varptype load mismatch");
 			}
 		} catch (@Pc(67) RuntimeException local67) {

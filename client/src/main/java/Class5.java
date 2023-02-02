@@ -34,9 +34,9 @@ public final class Class5 {
 		try {
 			@Pc(8) int local8;
 			for (@Pc(3) int local3 = 0; local3 < 10; local3++) {
-				local8 = arg1.readByte();
+				local8 = arg1.readUByte();
 				if (local8 != 0) {
-					arg1.anInt777--;
+					arg1.position--;
 					this.aClass7Array1[local3] = new Class7();
 					this.aClass7Array1[local3].method243(9, arg1);
 				}
@@ -45,8 +45,8 @@ public final class Class5 {
 				for (local8 = 1; local8 > 0; local8++) {
 				}
 			}
-			this.anInt218 = arg1.get2();
-			this.anInt219 = arg1.get2();
+			this.anInt218 = arg1.readUShortLE();
+			this.anInt219 = arg1.readUShortLE();
 		} catch (@Pc(57) RuntimeException local57) {
 			signlink.reporterror("53084, " + arg0 + ", " + arg1 + ", " + local57.toString());
 			throw new RuntimeException();
@@ -91,7 +91,7 @@ public final class Class5 {
 	public Class1_Sub1_Sub3 method83(@OriginalArg(0) int arg0, @OriginalArg(1) int arg1) {
 		try {
 			@Pc(3) int local3 = this.method84(arg1);
-			Static5.aClass1_Sub1_Sub3_1.anInt777 = 0;
+			Static5.aClass1_Sub1_Sub3_1.position = 0;
 			Static5.aClass1_Sub1_Sub3_1.method492(1380533830);
 			Static5.aClass1_Sub1_Sub3_1.method493(local3 + 36, (byte) 116);
 			Static5.aClass1_Sub1_Sub3_1.method492(1463899717);
@@ -108,7 +108,7 @@ public final class Class5 {
 			Static5.aClass1_Sub1_Sub3_1.method490(8, 1);
 			Static5.aClass1_Sub1_Sub3_1.method492(1684108385);
 			Static5.aClass1_Sub1_Sub3_1.method493(local3, (byte) 116);
-			Static5.aClass1_Sub1_Sub3_1.anInt777 += local3;
+			Static5.aClass1_Sub1_Sub3_1.position += local3;
 			return Static5.aClass1_Sub1_Sub3_1;
 		} catch (@Pc(70) RuntimeException local70) {
 			signlink.reporterror("76699, " + arg0 + ", " + arg1 + ", " + local70.toString());

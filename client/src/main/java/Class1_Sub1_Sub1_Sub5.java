@@ -167,15 +167,15 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			}
 			this.anIntArray137 = new int[this.anInt544];
 			@Pc(138) Class1_Sub1_Sub3 local138 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
-			local138.anInt777 = local20.anInt757;
+			local138.position = local20.anInt757;
 			@Pc(149) Class1_Sub1_Sub3 local149 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
-			local149.anInt777 = local20.anInt758;
+			local149.position = local20.anInt758;
 			@Pc(160) Class1_Sub1_Sub3 local160 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
-			local160.anInt777 = local20.anInt759;
+			local160.position = local20.anInt759;
 			@Pc(171) Class1_Sub1_Sub3 local171 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
-			local171.anInt777 = local20.anInt760;
+			local171.position = local20.anInt760;
 			@Pc(182) Class1_Sub1_Sub3 local182 = new Class1_Sub1_Sub3(local20.aByteArray8, (byte) 3);
-			local182.anInt777 = local20.anInt761;
+			local182.position = local20.anInt761;
 			@Pc(188) int local188 = 0;
 			@Pc(190) int local190 = 0;
 			@Pc(192) int local192 = 0;
@@ -189,7 +189,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			@Pc(219) int local219;
 			@Pc(228) int local228;
 			for (local196 = 0; local196 < this.anInt543; local196++) {
-				local208 = local138.readByte();
+				local208 = local138.readUByte();
 				local210 = 0;
 				if ((local208 & 0x1) != 0) {
 					local210 = local149.method511();
@@ -209,38 +209,38 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 				local190 = this.anIntArray126[local196];
 				local192 = this.anIntArray127[local196];
 				if (this.anIntArray141 != null) {
-					this.anIntArray141[local196] = local182.readByte();
+					this.anIntArray141[local196] = local182.readUByte();
 				}
 			}
-			local138.anInt777 = local20.anInt764;
-			local149.anInt777 = local20.anInt765;
-			local160.anInt777 = local20.anInt766;
-			local171.anInt777 = local20.anInt767;
-			local182.anInt777 = local20.anInt768;
+			local138.position = local20.anInt764;
+			local149.position = local20.anInt765;
+			local160.position = local20.anInt766;
+			local171.position = local20.anInt767;
+			local182.position = local20.anInt768;
 			for (local208 = 0; local208 < this.anInt544; local208++) {
-				this.anIntArray137[local208] = local138.get2();
+				this.anIntArray137[local208] = local138.readUShortLE();
 				if (this.anIntArray134 != null) {
-					this.anIntArray134[local208] = local149.readByte();
+					this.anIntArray134[local208] = local149.readUByte();
 				}
 				if (this.anIntArray135 != null) {
-					this.anIntArray135[local208] = local160.readByte();
+					this.anIntArray135[local208] = local160.readUByte();
 				}
 				if (this.anIntArray136 != null) {
-					this.anIntArray136[local208] = local171.readByte();
+					this.anIntArray136[local208] = local171.readUByte();
 				}
 				if (this.anIntArray142 != null) {
-					this.anIntArray142[local208] = local182.readByte();
+					this.anIntArray142[local208] = local182.readUByte();
 				}
 			}
-			local138.anInt777 = local20.anInt762;
-			local149.anInt777 = local20.anInt763;
+			local138.position = local20.anInt762;
+			local149.position = local20.anInt763;
 			local210 = 0;
 			local219 = 0;
 			local228 = 0;
 			@Pc(372) int local372 = 0;
 			@Pc(379) int local379;
 			for (@Pc(374) int local374 = 0; local374 < this.anInt544; local374++) {
-				local379 = local149.readByte();
+				local379 = local149.readUByte();
 				if (local379 == 1) {
 					local210 = local138.method511() + local372;
 					local219 = local138.method511() + local210;
@@ -279,11 +279,11 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 					this.anIntArray130[local374] = local228;
 				}
 			}
-			local138.anInt777 = local20.anInt769;
+			local138.position = local20.anInt769;
 			for (local379 = 0; local379 < this.anInt546; local379++) {
-				this.anIntArray138[local379] = local138.get2();
-				this.anIntArray139[local379] = local138.get2();
-				this.anIntArray140[local379] = local138.get2();
+				this.anIntArray138[local379] = local138.readUShortLE();
+				this.anIntArray139[local379] = local138.readUShortLE();
+				this.anIntArray140[local379] = local138.readUShortLE();
 			}
 		} catch (@Pc(545) RuntimeException local545) {
 			signlink.reporterror("71741, " + arg0 + ", " + arg1 + ", " + local545.toString());

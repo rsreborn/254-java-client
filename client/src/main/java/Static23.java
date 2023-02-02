@@ -15,7 +15,7 @@ public final class Static23 {
 	public static void method516(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class48 arg1) {
 		try {
 			@Pc(8) Class1_Sub1_Sub3 local8 = new Class1_Sub1_Sub3(arg1.method678("seq.dat", null), (byte) 3);
-			anInt808 = local8.get2();
+			anInt808 = local8.readUShortLE();
 			if (aClass27Array1 == null) {
 				aClass27Array1 = new Class27[anInt808];
 			}

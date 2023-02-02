@@ -15,7 +15,7 @@ public final class Static20 {
 	public static void method477(@OriginalArg(0) boolean arg0, @OriginalArg(1) Class48 arg1) {
 		try {
 			@Pc(8) Class1_Sub1_Sub3 local8 = new Class1_Sub1_Sub3(arg1.method678("idk.dat", null), (byte) 3);
-			anInt752 = local8.get2();
+			anInt752 = local8.readUShortLE();
 			if (arg0) {
 				if (aClass23Array1 == null) {
 					aClass23Array1 = new Class23[anInt752];

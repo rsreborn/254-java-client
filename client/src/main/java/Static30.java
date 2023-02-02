@@ -101,15 +101,15 @@ public final class Static30 {
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!mb;I)V")
 	private static void method605(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) int arg1) {
 		try {
-			@Pc(4) int local4 = arg0.get4();
+			@Pc(4) int local4 = arg0.readIntBE();
 			if (arg1 == 2) {
 				aCharArrayArray3 = new char[local4][];
 				anIntArray251 = new int[local4];
 				for (@Pc(16) int local16 = 0; local16 < local4; local16++) {
-					anIntArray251[local16] = arg0.readByte();
-					@Pc(27) char[] local27 = new char[arg0.readByte()];
+					anIntArray251[local16] = arg0.readUByte();
+					@Pc(27) char[] local27 = new char[arg0.readUByte()];
 					for (@Pc(29) int local29 = 0; local29 < local27.length; local29++) {
-						local27[local29] = (char) arg0.readByte();
+						local27[local29] = (char) arg0.readUByte();
 					}
 					aCharArrayArray3[local16] = local27;
 				}
@@ -123,7 +123,7 @@ public final class Static30 {
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(ILclient!mb;)V")
 	private static void method606(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
 		try {
-			@Pc(2) int local2 = arg1.get4();
+			@Pc(2) int local2 = arg1.readIntBE();
 			aCharArrayArray1 = new char[local2][];
 			aByteArrayArrayArray8 = new byte[local2][][];
 			method609(aCharArrayArray1, arg1, 0, aByteArrayArrayArray8);
@@ -144,7 +144,7 @@ public final class Static30 {
 				for (local3 = 1; local3 > 0; local3++) {
 				}
 			}
-			local3 = arg0.get4();
+			local3 = arg0.readIntBE();
 			aCharArrayArray2 = new char[local3][];
 			method610(arg0, aCharArrayArray2, -67);
 		} catch (@Pc(20) RuntimeException local20) {
@@ -156,14 +156,14 @@ public final class Static30 {
 	@OriginalMember(owner = "client!sc", name = "a", descriptor = "(Lclient!mb;B)V")
 	private static void method608(@OriginalArg(0) Class1_Sub1_Sub3 arg0, @OriginalArg(1) byte arg1) {
 		try {
-			anIntArray250 = new int[arg0.get4()];
+			anIntArray250 = new int[arg0.readIntBE()];
 			@Pc(10) int local10;
 			if (arg1 != 3) {
 				for (local10 = 1; local10 > 0; local10++) {
 				}
 			}
 			for (local10 = 0; local10 < anIntArray250.length; local10++) {
-				anIntArray250[local10] = arg0.get2();
+				anIntArray250[local10] = arg0.readUShortLE();
 			}
 		} catch (@Pc(31) RuntimeException local31) {
 			signlink.reporterror("52284, " + arg0 + ", " + arg1 + ", " + local31.toString());
@@ -175,15 +175,15 @@ public final class Static30 {
 	private static void method609(@OriginalArg(0) char[][] arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1, @OriginalArg(2) int arg2, @OriginalArg(3) byte[][][] arg3) {
 		try {
 			for (@Pc(3) int local3 = 0; local3 < arg0.length; local3++) {
-				@Pc(9) char[] local9 = new char[arg1.readByte()];
+				@Pc(9) char[] local9 = new char[arg1.readUByte()];
 				for (@Pc(11) int local11 = 0; local11 < local9.length; local11++) {
-					local9[local11] = (char) arg1.readByte();
+					local9[local11] = (char) arg1.readUByte();
 				}
 				arg0[local3] = local9;
-				@Pc(33) byte[][] local33 = new byte[arg1.readByte()][2];
+				@Pc(33) byte[][] local33 = new byte[arg1.readUByte()][2];
 				for (@Pc(35) int local35 = 0; local35 < local33.length; local35++) {
-					local33[local35][0] = (byte) arg1.readByte();
-					local33[local35][1] = (byte) arg1.readByte();
+					local33[local35][0] = (byte) arg1.readUByte();
+					local33[local35][1] = (byte) arg1.readUByte();
 				}
 				if (local33.length > 0) {
 					arg3[local3] = local33;
@@ -203,9 +203,9 @@ public final class Static30 {
 		try {
 			if (arg2 < 0) {
 				for (@Pc(8) int local8 = 0; local8 < arg1.length; local8++) {
-					@Pc(14) char[] local14 = new char[arg0.readByte()];
+					@Pc(14) char[] local14 = new char[arg0.readUByte()];
 					for (@Pc(16) int local16 = 0; local16 < local14.length; local16++) {
-						local14[local16] = (char) arg0.readByte();
+						local14[local16] = (char) arg0.readUByte();
 					}
 					arg1[local8] = local14;
 				}

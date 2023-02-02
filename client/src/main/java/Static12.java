@@ -30,12 +30,12 @@ public final class Static12 {
 	public static void method318(@OriginalArg(0) Class48 arg0) {
 		aClass1_Sub1_Sub3_8 = new Class1_Sub1_Sub3(arg0.method678("npc.dat", null), (byte) 3);
 		@Pc(19) Class1_Sub1_Sub3 local19 = new Class1_Sub1_Sub3(arg0.method678("npc.idx", null), (byte) 3);
-		anInt576 = local19.get2();
+		anInt576 = local19.readUShortLE();
 		anIntArray165 = new int[anInt576];
 		@Pc(27) int local27 = 2;
 		for (@Pc(29) int local29 = 0; local29 < anInt576; local29++) {
 			anIntArray165[local29] = local27;
-			local27 += local19.get2();
+			local27 += local19.readUShortLE();
 		}
 		aClass13Array1 = new Class13[20];
 		for (@Pc(49) int local49 = 0; local49 < 20; local49++) {
@@ -69,7 +69,7 @@ public final class Static12 {
 		}
 		anInt577 = (anInt577 + 1) % 20;
 		@Pc(33) Class13 local33 = aClass13Array1[anInt577] = new Class13();
-		aClass1_Sub1_Sub3_8.anInt777 = anIntArray165[arg0];
+		aClass1_Sub1_Sub3_8.position = anIntArray165[arg0];
 		local33.aLong25 = arg0;
 		local33.method321(9, aClass1_Sub1_Sub3_8);
 		return local33;

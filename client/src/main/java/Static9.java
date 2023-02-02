@@ -33,12 +33,12 @@ public final class Static9 {
 	public static void method256(@OriginalArg(0) Class48 arg0) {
 		aClass1_Sub1_Sub3_5 = new Class1_Sub1_Sub3(arg0.method678("loc.dat", null), (byte) 3);
 		@Pc(19) Class1_Sub1_Sub3 local19 = new Class1_Sub1_Sub3(arg0.method678("loc.idx", null), (byte) 3);
-		anInt516 = local19.get2();
+		anInt516 = local19.readUShortLE();
 		anIntArray116 = new int[anInt516];
 		@Pc(27) int local27 = 2;
 		for (@Pc(29) int local29 = 0; local29 < anInt516; local29++) {
 			anIntArray116[local29] = local27;
-			local27 += local19.get2();
+			local27 += local19.readUShortLE();
 		}
 		aClass9Array1 = new Class9[10];
 		for (@Pc(49) int local49 = 0; local49 < 10; local49++) {
@@ -70,7 +70,7 @@ public final class Static9 {
 		}
 		anInt517 = (anInt517 + 1) % 10;
 		@Pc(27) Class9 local27 = aClass9Array1[anInt517];
-		aClass1_Sub1_Sub3_5.anInt777 = anIntArray116[arg0];
+		aClass1_Sub1_Sub3_5.position = anIntArray116[arg0];
 		local27.anInt518 = arg0;
 		local27.method259();
 		local27.method260(9, aClass1_Sub1_Sub3_5);

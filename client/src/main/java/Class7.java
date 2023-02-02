@@ -196,25 +196,25 @@ public final class Class7 {
 			this.aClass3_1.method54(9, arg1);
 			this.aClass3_2 = new Class3();
 			this.aClass3_2.method54(9, arg1);
-			@Pc(24) int local24 = arg1.readByte();
+			@Pc(24) int local24 = arg1.readUByte();
 			if (local24 != 0) {
-				arg1.anInt777--;
+				arg1.position--;
 				this.aClass3_3 = new Class3();
 				this.aClass3_3.method54(9, arg1);
 				this.aClass3_4 = new Class3();
 				this.aClass3_4.method54(9, arg1);
 			}
-			local24 = arg1.readByte();
+			local24 = arg1.readUByte();
 			if (local24 != 0) {
-				arg1.anInt777--;
+				arg1.position--;
 				this.aClass3_5 = new Class3();
 				this.aClass3_5.method54(9, arg1);
 				this.aClass3_6 = new Class3();
 				this.aClass3_6.method54(9, arg1);
 			}
-			local24 = arg1.readByte();
+			local24 = arg1.readUByte();
 			if (local24 != 0) {
-				arg1.anInt777--;
+				arg1.position--;
 				this.aClass3_7 = new Class3();
 				this.aClass3_7.method54(9, arg1);
 				this.aClass3_8 = new Class3();
@@ -231,11 +231,11 @@ public final class Class7 {
 			}
 			this.anInt491 = arg1.getSmart();
 			this.anInt492 = arg1.getSmart();
-			this.anInt493 = arg1.get2();
+			this.anInt493 = arg1.readUShortLE();
 			if (arg0 != 9) {
 				this.anInt489 = -185;
 			}
-			this.anInt494 = arg1.get2();
+			this.anInt494 = arg1.readUShortLE();
 		} catch (@Pc(174) RuntimeException local174) {
 			signlink.reporterror("19733, " + arg0 + ", " + arg1 + ", " + local174.toString());
 			throw new RuntimeException();

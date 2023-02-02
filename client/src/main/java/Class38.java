@@ -46,30 +46,30 @@ public final class Class38 {
 				}
 			}
 			while (true) {
-				local5 = arg2.readByte();
+				local5 = arg2.readUByte();
 				if (local5 == 0) {
 					return;
 				}
 				if (local5 == 1) {
-					this.anInt877 = arg2.readByte();
+					this.anInt877 = arg2.readUByte();
 				} else if (local5 == 2) {
-					this.anInt878 = arg2.readByte();
+					this.anInt878 = arg2.readUByte();
 				} else if (local5 == 3) {
 					this.aBoolean216 = true;
 					Static27.anIntArray234[Static27.anInt876++] = arg0;
 				} else if (local5 == 4) {
 					this.aBoolean217 = false;
 				} else if (local5 == 5) {
-					this.anInt879 = arg2.get2();
+					this.anInt879 = arg2.readUShortLE();
 				} else if (local5 == 6) {
 					this.aBoolean218 = true;
 				} else if (local5 == 7) {
-					this.anInt880 = arg2.get4();
+					this.anInt880 = arg2.readIntBE();
 				} else if (local5 == 8) {
 					this.aBoolean219 = true;
 					this.aBoolean220 = true;
 				} else if (local5 == 10) {
-					this.aString29 = arg2.getString();
+					this.aString29 = arg2.readString();
 				} else if (local5 == 11) {
 					this.aBoolean220 = true;
 				} else {

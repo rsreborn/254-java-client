@@ -38,35 +38,35 @@ public final class Class1_Sub1_Sub2_Sub3 extends Class1_Sub1_Sub2 {
 	public Class1_Sub1_Sub2_Sub3(@OriginalArg(0) Class48 arg0, @OriginalArg(1) String arg1, @OriginalArg(2) int arg2) {
 		@Pc(22) Class1_Sub1_Sub3 local22 = new Class1_Sub1_Sub3(arg0.method678(arg1 + ".dat", null), (byte) 3);
 		@Pc(31) Class1_Sub1_Sub3 local31 = new Class1_Sub1_Sub3(arg0.method678("index.dat", null), (byte) 3);
-		local31.anInt777 = local22.get2();
-		this.anInt719 = local31.get2();
-		this.anInt720 = local31.get2();
-		@Pc(46) int local46 = local31.readByte();
+		local31.position = local22.readUShortLE();
+		this.anInt719 = local31.readUShortLE();
+		this.anInt720 = local31.readUShortLE();
+		@Pc(46) int local46 = local31.readUByte();
 		this.anIntArray212 = new int[local46];
 		for (@Pc(52) int local52 = 0; local52 < local46 - 1; local52++) {
 			this.anIntArray212[local52 + 1] = local31.get3();
 		}
 		for (@Pc(70) int local70 = 0; local70 < arg2; local70++) {
-			local31.anInt777 += 2;
-			local22.anInt777 += local31.get2() * local31.get2();
-			local31.anInt777++;
+			local31.position += 2;
+			local22.position += local31.readUShortLE() * local31.readUShortLE();
+			local31.position++;
 		}
-		this.anInt717 = local31.readByte();
-		this.anInt718 = local31.readByte();
-		this.anInt715 = local31.get2();
-		this.anInt716 = local31.get2();
-		@Pc(117) int local117 = local31.readByte();
+		this.anInt717 = local31.readUByte();
+		this.anInt718 = local31.readUByte();
+		this.anInt715 = local31.readUShortLE();
+		this.anInt716 = local31.readUShortLE();
+		@Pc(117) int local117 = local31.readUByte();
 		@Pc(123) int local123 = this.anInt715 * this.anInt716;
 		this.aByteArray7 = new byte[local123];
 		@Pc(131) int local131;
 		if (local117 == 0) {
 			for (local131 = 0; local131 < local123; local131++) {
-				this.aByteArray7[local131] = local22.get1Signed();
+				this.aByteArray7[local131] = local22.readByte();
 			}
 		} else if (local117 == 1) {
 			for (local131 = 0; local131 < this.anInt715; local131++) {
 				for (@Pc(153) int local153 = 0; local153 < this.anInt716; local153++) {
-					this.aByteArray7[local131 + local153 * this.anInt715] = local22.get1Signed();
+					this.aByteArray7[local131 + local153 * this.anInt715] = local22.readByte();
 				}
 			}
 		}

@@ -47,7 +47,7 @@ public final class Class21 {
 				throw new NullPointerException();
 			}
 			while (true) {
-				@Pc(11) int local11 = arg1.readByte();
+				@Pc(11) int local11 = arg1.readUByte();
 				if (local11 == 0) {
 					return;
 				}
@@ -55,13 +55,13 @@ public final class Class21 {
 					this.anInt722 = arg1.get3();
 					this.method449(-2048, this.anInt722);
 				} else if (local11 == 2) {
-					this.anInt723 = arg1.readByte();
+					this.anInt723 = arg1.readUByte();
 				} else if (local11 == 3) {
 					this.aBoolean180 = true;
 				} else if (local11 == 5) {
 					this.aBoolean181 = false;
 				} else if (local11 == 6) {
-					this.aString27 = arg1.getString();
+					this.aString27 = arg1.readString();
 				} else {
 					System.out.println("Error unrecognised config code: " + local11);
 				}

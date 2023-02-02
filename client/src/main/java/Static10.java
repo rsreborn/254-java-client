@@ -96,7 +96,7 @@ public final class Static10 {
 			if (arg0) {
 				anInt534 = -402;
 			}
-			if (aClass1_Sub1_Sub3_6 != null && aClass1_Sub1_Sub3_6.anInt777 > 0 && aBoolean127) {
+			if (aClass1_Sub1_Sub3_6 != null && aClass1_Sub1_Sub3_6.position > 0 && aBoolean127) {
 				local1 = aClass1_Sub1_Sub3_6;
 			}
 			method267(32268);
@@ -113,7 +113,7 @@ public final class Static10 {
 			if (arg0 != 44660) {
 				aBoolean126 = !aBoolean126;
 			}
-			if (aClass1_Sub1_Sub3_6.anInt777 + arg1 >= 500) {
+			if (aClass1_Sub1_Sub3_6.position + arg1 >= 500) {
 				@Pc(16) Class1_Sub1_Sub3 local16 = aClass1_Sub1_Sub3_6;
 				aClass1_Sub1_Sub3_6 = Static21.method485(1, (byte) 73);
 				aClass1_Sub1_Sub3_7 = local16;

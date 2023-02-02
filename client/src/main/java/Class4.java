@@ -136,7 +136,7 @@ public final class Class4 {
 						if (local23 >= 0 && local23 < 104 && local27 >= 0 && local27 < 104) {
 							this.aByteArrayArrayArray1[local9][local23][local27] = 0;
 							while (true) {
-								local49 = local7.readByte();
+								local49 = local7.readUByte();
 								if (local49 == 0) {
 									if (local9 == 0) {
 										this.anIntArrayArrayArray1[0][local23][local27] = -Static4.method65(local23 + arg1 + 932731, local27 + 556238 + arg3) * 8;
@@ -146,7 +146,7 @@ public final class Class4 {
 									break;
 								}
 								if (local49 == 1) {
-									@Pc(105) int local105 = local7.readByte();
+									@Pc(105) int local105 = local7.readUByte();
 									if (local105 == 1) {
 										local105 = 0;
 									}
@@ -158,7 +158,7 @@ public final class Class4 {
 									break;
 								}
 								if (local49 <= 49) {
-									this.aByteArrayArrayArray3[local9][local23][local27] = local7.get1Signed();
+									this.aByteArrayArrayArray3[local9][local23][local27] = local7.readByte();
 									this.aByteArrayArrayArray4[local9][local23][local27] = (byte) ((local49 - 2) / 4);
 									this.aByteArrayArrayArray5[local9][local23][local27] = (byte) (local49 - 2 & 0x3);
 								} else if (local49 <= 81) {
@@ -169,16 +169,16 @@ public final class Class4 {
 							}
 						} else {
 							while (true) {
-								local49 = local7.readByte();
+								local49 = local7.readUByte();
 								if (local49 == 0) {
 									break;
 								}
 								if (local49 == 1) {
-									local7.readByte();
+									local7.readUByte();
 									break;
 								}
 								if (local49 <= 49) {
-									local7.readByte();
+									local7.readUByte();
 								}
 							}
 						}
@@ -221,7 +221,7 @@ public final class Class4 {
 					@Pc(45) int local45 = local30 & 0x3F;
 					@Pc(51) int local51 = local30 >> 6 & 0x3F;
 					@Pc(55) int local55 = local30 >> 12;
-					@Pc(58) int local58 = local7.readByte();
+					@Pc(58) int local58 = local7.readUByte();
 					@Pc(62) int local62 = local58 >> 2;
 					@Pc(66) int local66 = local58 & 0x3;
 					@Pc(70) int local70 = local51 + arg2;

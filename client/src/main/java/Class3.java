@@ -49,18 +49,18 @@ public final class Class3 {
 	@OriginalMember(owner = "client!bc", name = "a", descriptor = "(ILclient!mb;)V")
 	public void method54(@OriginalArg(0) int arg0, @OriginalArg(1) Class1_Sub1_Sub3 arg1) {
 		try {
-			this.anInt191 = arg1.readByte();
+			this.anInt191 = arg1.readUByte();
 			if (arg0 != 9) {
 				this.aBoolean31 = !this.aBoolean31;
 			}
-			this.anInt189 = arg1.get4();
-			this.anInt190 = arg1.get4();
-			this.anInt188 = arg1.readByte();
+			this.anInt189 = arg1.readIntBE();
+			this.anInt190 = arg1.readIntBE();
+			this.anInt188 = arg1.readUByte();
 			this.anIntArray20 = new int[this.anInt188];
 			this.anIntArray21 = new int[this.anInt188];
 			for (@Pc(40) int local40 = 0; local40 < this.anInt188; local40++) {
-				this.anIntArray20[local40] = arg1.get2();
-				this.anIntArray21[local40] = arg1.get2();
+				this.anIntArray20[local40] = arg1.readUShortLE();
+				this.anIntArray21[local40] = arg1.readUShortLE();
 			}
 		} catch (@Pc(66) RuntimeException local66) {
 			signlink.reporterror("49756, " + arg0 + ", " + arg1 + ", " + local66.toString());

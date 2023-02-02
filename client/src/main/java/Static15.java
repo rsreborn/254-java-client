@@ -39,12 +39,12 @@ public final class Static15 {
 	public static void method343(@OriginalArg(0) Class48 arg0) {
 		aClass1_Sub1_Sub3_9 = new Class1_Sub1_Sub3(arg0.method678("obj.dat", null), (byte) 3);
 		@Pc(19) Class1_Sub1_Sub3 local19 = new Class1_Sub1_Sub3(arg0.method678("obj.idx", null), (byte) 3);
-		anInt610 = local19.get2();
+		anInt610 = local19.readUShortLE();
 		anIntArray175 = new int[anInt610];
 		@Pc(27) int local27 = 2;
 		for (@Pc(29) int local29 = 0; local29 < anInt610; local29++) {
 			anIntArray175[local29] = local27;
-			local27 += local19.get2();
+			local27 += local19.readUShortLE();
 		}
 		aClass15Array1 = new Class15[10];
 		for (@Pc(49) int local49 = 0; local49 < 10; local49++) {
@@ -76,7 +76,7 @@ public final class Static15 {
 		}
 		anInt611 = (anInt611 + 1) % 10;
 		@Pc(27) Class15 local27 = aClass15Array1[anInt611];
-		aClass1_Sub1_Sub3_9.anInt777 = anIntArray175[arg0];
+		aClass1_Sub1_Sub3_9.position = anIntArray175[arg0];
 		local27.anInt612 = arg0;
 		local27.method346();
 		local27.method347(9, aClass1_Sub1_Sub3_9);

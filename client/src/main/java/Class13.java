@@ -96,79 +96,79 @@ public final class Class13 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(11) int local11 = arg1.readByte();
+					@Pc(11) int local11 = arg1.readUByte();
 					if (local11 == 0) {
 						return;
 					}
 					@Pc(20) int local20;
 					@Pc(26) int local26;
 					if (local11 == 1) {
-						local20 = arg1.readByte();
+						local20 = arg1.readUByte();
 						this.anIntArray166 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
-							this.anIntArray166[local26] = arg1.get2();
+							this.anIntArray166[local26] = arg1.readUShortLE();
 						}
 					} else if (local11 == 2) {
-						this.aString25 = arg1.getString();
+						this.aString25 = arg1.readString();
 					} else if (local11 == 3) {
 						this.aByteArray5 = arg1.getStringArray((byte) 3);
 					} else if (local11 == 12) {
-						this.aByte25 = arg1.get1Signed();
+						this.aByte25 = arg1.readByte();
 					} else if (local11 == 13) {
-						this.anInt578 = arg1.get2();
+						this.anInt578 = arg1.readUShortLE();
 					} else if (local11 == 14) {
-						this.anInt579 = arg1.get2();
+						this.anInt579 = arg1.readUShortLE();
 					} else if (local11 == 17) {
-						this.anInt579 = arg1.get2();
-						this.anInt580 = arg1.get2();
-						this.anInt581 = arg1.get2();
-						this.anInt582 = arg1.get2();
+						this.anInt579 = arg1.readUShortLE();
+						this.anInt580 = arg1.readUShortLE();
+						this.anInt581 = arg1.readUShortLE();
+						this.anInt582 = arg1.readUShortLE();
 					} else if (local11 >= 30 && local11 < 40) {
 						if (this.aStringArray9 == null) {
 							this.aStringArray9 = new String[5];
 						}
-						this.aStringArray9[local11 - 30] = arg1.getString();
+						this.aStringArray9[local11 - 30] = arg1.readString();
 						if (this.aStringArray9[local11 - 30].equalsIgnoreCase("hidden")) {
 							this.aStringArray9[local11 - 30] = null;
 						}
 					} else if (local11 == 40) {
-						local20 = arg1.readByte();
+						local20 = arg1.readUByte();
 						this.anIntArray168 = new int[local20];
 						this.anIntArray169 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
-							this.anIntArray168[local26] = arg1.get2();
-							this.anIntArray169[local26] = arg1.get2();
+							this.anIntArray168[local26] = arg1.readUShortLE();
+							this.anIntArray169[local26] = arg1.readUShortLE();
 						}
 					} else if (local11 == 60) {
-						local20 = arg1.readByte();
+						local20 = arg1.readUByte();
 						this.anIntArray167 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
-							this.anIntArray167[local26] = arg1.get2();
+							this.anIntArray167[local26] = arg1.readUShortLE();
 						}
 					} else if (local11 == 90) {
-						this.anInt583 = arg1.get2();
+						this.anInt583 = arg1.readUShortLE();
 					} else if (local11 == 91) {
-						this.anInt584 = arg1.get2();
+						this.anInt584 = arg1.readUShortLE();
 					} else if (local11 == 92) {
-						this.anInt585 = arg1.get2();
+						this.anInt585 = arg1.readUShortLE();
 					} else if (local11 == 93) {
 						this.aBoolean141 = false;
 					} else if (local11 == 95) {
-						this.anInt586 = arg1.get2();
+						this.anInt586 = arg1.readUShortLE();
 					} else if (local11 == 97) {
-						this.anInt587 = arg1.get2();
+						this.anInt587 = arg1.readUShortLE();
 					} else if (local11 == 98) {
-						this.anInt588 = arg1.get2();
+						this.anInt588 = arg1.readUShortLE();
 					} else if (local11 == 99) {
 						this.aBoolean142 = true;
 					} else if (local11 == 100) {
-						this.anInt589 = arg1.get1Signed();
+						this.anInt589 = arg1.readByte();
 					} else if (local11 == 101) {
-						this.anInt590 = arg1.get1Signed() * 5;
+						this.anInt590 = arg1.readByte() * 5;
 					} else if (local11 == 102) {
-						this.anInt591 = arg1.get2();
+						this.anInt591 = arg1.readUShortLE();
 					} else if (local11 == 103) {
-						this.anInt592 = arg1.get2();
+						this.anInt592 = arg1.readUShortLE();
 					}
 				}
 			}

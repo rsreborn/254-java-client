@@ -16,7 +16,7 @@ public final class Static19 {
 		try {
 			if (arg0) {
 				@Pc(11) Class1_Sub1_Sub3 local11 = new Class1_Sub1_Sub3(arg1.method678("flo.dat", null), (byte) 3);
-				anInt721 = local11.get2();
+				anInt721 = local11.readUShortLE();
 				if (aClass21Array1 == null) {
 					aClass21Array1 = new Class21[anInt721];
 				}

@@ -83,7 +83,7 @@ public final class Class27 {
 			}
 			while (true) {
 				while (true) {
-					@Pc(18) int local18 = arg1.readByte();
+					@Pc(18) int local18 = arg1.readUByte();
 					if (local18 == 0) {
 						if (this.anInt809 == 0) {
 							this.anInt809 = 1;
@@ -113,43 +113,43 @@ public final class Class27 {
 					}
 					@Pc(45) int local45;
 					if (local18 == 1) {
-						this.anInt809 = arg1.readByte();
+						this.anInt809 = arg1.readUByte();
 						this.anIntArray227 = new int[this.anInt809];
 						this.anIntArray228 = new int[this.anInt809];
 						this.anIntArray229 = new int[this.anInt809];
 						for (local45 = 0; local45 < this.anInt809; local45++) {
-							this.anIntArray227[local45] = arg1.get2();
-							this.anIntArray228[local45] = arg1.get2();
+							this.anIntArray227[local45] = arg1.readUShortLE();
+							this.anIntArray228[local45] = arg1.readUShortLE();
 							if (this.anIntArray228[local45] == 65535) {
 								this.anIntArray228[local45] = -1;
 							}
-							this.anIntArray229[local45] = arg1.get2();
+							this.anIntArray229[local45] = arg1.readUShortLE();
 						}
 					} else if (local18 == 2) {
-						this.anInt810 = arg1.get2();
+						this.anInt810 = arg1.readUShortLE();
 					} else if (local18 == 3) {
-						local45 = arg1.readByte();
+						local45 = arg1.readUByte();
 						this.anIntArray230 = new int[local45 + 1];
 						for (@Pc(106) int local106 = 0; local106 < local45; local106++) {
-							this.anIntArray230[local106] = arg1.readByte();
+							this.anIntArray230[local106] = arg1.readUByte();
 						}
 						this.anIntArray230[local45] = 9999999;
 					} else if (local18 == 4) {
 						this.aBoolean207 = true;
 					} else if (local18 == 5) {
-						this.anInt811 = arg1.readByte();
+						this.anInt811 = arg1.readUByte();
 					} else if (local18 == 6) {
-						this.anInt812 = arg1.get2();
+						this.anInt812 = arg1.readUShortLE();
 					} else if (local18 == 7) {
-						this.anInt813 = arg1.get2();
+						this.anInt813 = arg1.readUShortLE();
 					} else if (local18 == 8) {
-						this.anInt814 = arg1.readByte();
+						this.anInt814 = arg1.readUByte();
 					} else if (local18 == 9) {
-						this.anInt815 = arg1.readByte();
+						this.anInt815 = arg1.readUByte();
 					} else if (local18 == 10) {
-						this.anInt816 = arg1.readByte();
+						this.anInt816 = arg1.readUByte();
 					} else if (local18 == 11) {
-						this.anInt817 = arg1.readByte();
+						this.anInt817 = arg1.readUByte();
 					} else {
 						System.out.println("Error unrecognised seq config code: " + local18);
 					}

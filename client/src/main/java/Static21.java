@@ -46,22 +46,22 @@ public final class Static21 {
 					local7 = (Class1_Sub1_Sub3) aClass31_6.method522();
 				}
 				if (local7 != null) {
-					local7.anInt777 = 0;
+					local7.position = 0;
 					return local7;
 				}
 			}
 			@Pc(69) Class1_Sub1_Sub3 local69 = new Class1_Sub1_Sub3(0);
-			local69.anInt777 = 0;
+			local69.position = 0;
 			if (arg1 != aByte42) {
 				for (@Pc(77) int local77 = 1; local77 > 0; local77++) {
 				}
 			}
 			if (arg0 == 0) {
-				local69.aByteArray9 = new byte[100];
+				local69.payload = new byte[100];
 			} else if (arg0 == 1) {
-				local69.aByteArray9 = new byte[5000];
+				local69.payload = new byte[5000];
 			} else {
-				local69.aByteArray9 = new byte[30000];
+				local69.payload = new byte[30000];
 			}
 			return local69;
 		} catch (@Pc(106) RuntimeException local106) {
