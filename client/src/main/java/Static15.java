@@ -82,8 +82,6 @@ public final class Static15 {
 		local27.anInt612 = arg0;
 		local27.method346();
 		local27.readDefinition(aBuffer_9);
-		local27.groundOptions = new String[] { "One", "Two", "Three", "Four", "Five" };
-		local27.inventoryOptions = new String[] { "One", "Two", "Three", "Four", "Five" };
 		if (local27.notedId != -1) {
 			local27.method348(false);
 		}

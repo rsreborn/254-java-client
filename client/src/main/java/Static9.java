@@ -74,7 +74,6 @@ public final class Static9 {
 		local27.anInt518 = arg0;
 		local27.method259();
 		local27.method260(9, aBuffer_5);
-		local27.aStringArray8 = new String[] { "One", "Two", "Three", "Four", "Five" };
 		return local27;
 	}
 }

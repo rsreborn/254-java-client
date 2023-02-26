@@ -76,8 +76,6 @@ public final class Static12 {
 		aBuffer_8.position = anIntArray165[arg0];
 		local33.aLong25 = arg0;
 		local33.method321(9, aBuffer_8);
-		local33.aStringArray9 = new String[] { "One", "Two", "Three", "Four", "Five" };
-
 		return local33;
 	}
 }
