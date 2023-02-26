@@ -118,15 +118,15 @@ public final class Class27 {
 						this.anIntArray228 = new int[this.anInt809];
 						this.anIntArray229 = new int[this.anInt809];
 						for (local45 = 0; local45 < this.anInt809; local45++) {
-							this.anIntArray227[local45] = arg1.readUShortLE();
-							this.anIntArray228[local45] = arg1.readUShortLE();
+							this.anIntArray227[local45] = arg1.readUShortBE();
+							this.anIntArray228[local45] = arg1.readUShortBE();
 							if (this.anIntArray228[local45] == 65535) {
 								this.anIntArray228[local45] = -1;
 							}
-							this.anIntArray229[local45] = arg1.readUShortLE();
+							this.anIntArray229[local45] = arg1.readUShortBE();
 						}
 					} else if (local18 == 2) {
-						this.anInt810 = arg1.readUShortLE();
+						this.anInt810 = arg1.readUShortBE();
 					} else if (local18 == 3) {
 						local45 = arg1.readUByte();
 						this.anIntArray230 = new int[local45 + 1];
@@ -139,9 +139,9 @@ public final class Class27 {
 					} else if (local18 == 5) {
 						this.anInt811 = arg1.readUByte();
 					} else if (local18 == 6) {
-						this.anInt812 = arg1.readUShortLE();
+						this.anInt812 = arg1.readUShortBE();
 					} else if (local18 == 7) {
-						this.anInt813 = arg1.readUShortLE();
+						this.anInt813 = arg1.readUShortBE();
 					} else if (local18 == 8) {
 						this.anInt814 = arg1.readUByte();
 					} else if (local18 == 9) {

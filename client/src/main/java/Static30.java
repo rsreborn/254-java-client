@@ -163,7 +163,7 @@ public final class Static30 {
 				}
 			}
 			for (local10 = 0; local10 < anIntArray250.length; local10++) {
-				anIntArray250[local10] = arg0.readUShortLE();
+				anIntArray250[local10] = arg0.readUShortBE();
 			}
 		} catch (@Pc(31) RuntimeException local31) {
 			signlink.reporterror("52284, " + arg0 + ", " + arg1 + ", " + local31.toString());

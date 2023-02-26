@@ -56,7 +56,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 	public int anInt186;
 
 	@OriginalMember(owner = "client!bb", name = "Ob", descriptor = "Lclient!gc;")
-	private Class13 aClass13_2;
+	private NpcConfig aNpcConfig_2;
 
 	@OriginalMember(owner = "client!bb", name = "rb", descriptor = "B")
 	private byte aByte8 = 8;
@@ -85,7 +85,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 			arg0.position = 0;
 			this.anInt174 = arg0.readUByte();
 			this.anInt175 = arg0.readUByte();
-			this.aClass13_2 = null;
+			this.aNpcConfig_2 = null;
 			@Pc(22) int local22;
 			@Pc(34) int local34;
 			for (@Pc(17) int local17 = 0; local17 < 12; local17++) {
@@ -96,7 +96,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 					local34 = arg0.readUByte();
 					this.anIntArray18[local17] = (local22 << 8) + local34;
 					if (local17 == 0 && this.anIntArray18[0] == 65535) {
-						this.aClass13_2 = Static12.method320(arg0.readUShortLE());
+						this.aNpcConfig_2 = Static12.method320(arg0.readUShortBE());
 						break;
 					}
 				}
@@ -108,7 +108,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 				}
 				this.anIntArray19[local22] = local34;
 			}
-			super.anInt131 = arg0.readUShortLE();
+			super.anInt131 = arg0.readUShortBE();
 			if (!arg1) {
 				for (local34 = 1; local34 > 0; local34++) {
 				}
@@ -116,27 +116,27 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 			if (super.anInt131 == 65535) {
 				super.anInt131 = -1;
 			}
-			super.anInt132 = arg0.readUShortLE();
+			super.anInt132 = arg0.readUShortBE();
 			if (super.anInt132 == 65535) {
 				super.anInt132 = -1;
 			}
-			super.anInt133 = arg0.readUShortLE();
+			super.anInt133 = arg0.readUShortBE();
 			if (super.anInt133 == 65535) {
 				super.anInt133 = -1;
 			}
-			super.anInt134 = arg0.readUShortLE();
+			super.anInt134 = arg0.readUShortBE();
 			if (super.anInt134 == 65535) {
 				super.anInt134 = -1;
 			}
-			super.anInt135 = arg0.readUShortLE();
+			super.anInt135 = arg0.readUShortBE();
 			if (super.anInt135 == 65535) {
 				super.anInt135 = -1;
 			}
-			super.anInt136 = arg0.readUShortLE();
+			super.anInt136 = arg0.readUShortBE();
 			if (super.anInt136 == 65535) {
 				super.anInt136 = -1;
 			}
-			super.anInt137 = arg0.readUShortLE();
+			super.anInt137 = arg0.readUShortBE();
 			if (super.anInt137 == 65535) {
 				super.anInt137 = -1;
 			}
@@ -250,7 +250,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 		try {
 			if (arg0 != 0) {
 				throw new NullPointerException();
-			} else if (this.aClass13_2 == null) {
+			} else if (this.aNpcConfig_2 == null) {
 				@Pc(54) long local54 = this.aLong9;
 				@Pc(56) int local56 = -1;
 				@Pc(58) int local58 = -1;
@@ -286,7 +286,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 						if (local60 >= 0 && local157 == 5) {
 							local164 = local60;
 						}
-						if (local164 >= 256 && local164 < 512 && !Static20.aClass23Array1[local164 - 256].method479(false)) {
+						if (local164 >= 256 && local164 < 512 && !Static20.aIdentikitConfigArray1[local164 - 256].method479(false)) {
 							local155 = true;
 						}
 						if (local164 >= 512 && !Static15.method345(local164 - 512).method352((byte) 3, this.anInt174)) {
@@ -316,7 +316,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 						}
 						@Pc(273) Class1_Sub1_Sub1_Sub5 local273;
 						if (local245 >= 256 && local245 < 512) {
-							local273 = Static20.aClass23Array1[local245 - 256].method480(true);
+							local273 = Static20.aIdentikitConfigArray1[local245 - 256].method480(true);
 							if (local273 != null) {
 								local234[local157++] = local273;
 							}
@@ -363,7 +363,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 				} else if (super.anInt147 >= 0) {
 					local12 = Static23.aClass27Array1[super.anInt147].anIntArray227[super.anInt148];
 				}
-				return this.aClass13_2.method322(0, local12, null, -1);
+				return this.aNpcConfig_2.method322(0, local12, null, -1);
 			}
 		} catch (@Pc(426) RuntimeException local426) {
 			signlink.reporterror("12825, " + arg0 + ", " + local426.toString());
@@ -380,7 +380,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 			@Pc(8) boolean local8 = false;
 			for (@Pc(10) int local10 = 0; local10 < 12; local10++) {
 				@Pc(17) int local17 = this.anIntArray18[local10];
-				if (local17 >= 256 && local17 < 512 && !Static20.aClass23Array1[local17 - 256].method481(0)) {
+				if (local17 >= 256 && local17 < 512 && !Static20.aIdentikitConfigArray1[local17 - 256].method481(0)) {
 					local8 = true;
 				}
 				if (local17 >= 512 && !Static15.method345(local17 - 512).method354(false, this.anInt174)) {
@@ -396,7 +396,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub2 extends Class1_Sub1_Sub1_Sub1 {
 				@Pc(69) int local69 = this.anIntArray18[local62];
 				@Pc(83) Class1_Sub1_Sub1_Sub5 local83;
 				if (local69 >= 256 && local69 < 512) {
-					local83 = Static20.aClass23Array1[local69 - 256].method482((byte) 9);
+					local83 = Static20.aIdentikitConfigArray1[local69 - 256].method482((byte) 9);
 					if (local83 != null) {
 						local58[local60++] = local83;
 					}

@@ -15,7 +15,7 @@ public final class Static12 {
 	private static Buffer aBuffer_8;
 
 	@OriginalMember(owner = "client!gc", name = "f", descriptor = "[Lclient!gc;")
-	private static Class13[] aClass13Array1;
+	private static NpcConfig[] aNpcConfigArray1;
 
 	@OriginalMember(owner = "client!gc", name = "g", descriptor = "I")
 	private static int anInt577;
@@ -30,18 +30,22 @@ public final class Static12 {
 	public static void method318(@OriginalArg(0) Class48 arg0) {
 		aBuffer_8 = new Buffer(arg0.method678("npc.dat", null), (byte) 3);
 		@Pc(19) Buffer local19 = new Buffer(arg0.method678("npc.idx", null), (byte) 3);
-		anInt576 = local19.readUShortLE();
+		anInt576 = local19.readUShortBE();
 		anIntArray165 = new int[anInt576];
 		@Pc(27) int local27 = 2;
 		for (@Pc(29) int local29 = 0; local29 < anInt576; local29++) {
 			anIntArray165[local29] = local27;
-			local27 += local19.readUShortLE();
+			local27 += local19.readUShortBE();
 		}
-		aClass13Array1 = new Class13[20];
+		aNpcConfigArray1 = new NpcConfig[20];
 		for (@Pc(49) int local49 = 0; local49 < 20; local49++) {
-			aClass13Array1[local49] = new Class13();
+			aNpcConfigArray1[local49] = new NpcConfig();
 		}
-		System.out.println(anInt576);
+//		System.out.println(anInt576);
+//		for(int i = 0; i < anInt576; i++) {
+//			Class13 npcDef = method320(i);
+//			System.out.println(i + " " + npcDef.name);
+//		}
 	}
 
 	@OriginalMember(owner = "client!gc", name = "a", descriptor = "(I)V")
@@ -52,7 +56,7 @@ public final class Static12 {
 			if (arg0 <= 0) {
 				anInt575 = -75;
 			}
-			aClass13Array1 = null;
+			aNpcConfigArray1 = null;
 			aBuffer_8 = null;
 		} catch (@Pc(13) RuntimeException local13) {
 			signlink.reporterror("49336, " + arg0 + ", " + local13.toString());
@@ -61,17 +65,19 @@ public final class Static12 {
 	}
 
 	@OriginalMember(owner = "client!gc", name = "b", descriptor = "(I)Lclient!gc;")
-	public static Class13 method320(@OriginalArg(0) int arg0) {
+	public static NpcConfig method320(@OriginalArg(0) int arg0) {
 		for (@Pc(1) int local1 = 0; local1 < 20; local1++) {
-			if (aClass13Array1[local1].aLong25 == (long) arg0) {
-				return aClass13Array1[local1];
+			if (aNpcConfigArray1[local1].aLong25 == (long) arg0) {
+				return aNpcConfigArray1[local1];
 			}
 		}
 		anInt577 = (anInt577 + 1) % 20;
-		@Pc(33) Class13 local33 = aClass13Array1[anInt577] = new Class13();
+		@Pc(33) NpcConfig local33 = aNpcConfigArray1[anInt577] = new NpcConfig();
 		aBuffer_8.position = anIntArray165[arg0];
 		local33.aLong25 = arg0;
 		local33.method321(9, aBuffer_8);
+		local33.aStringArray9 = new String[] { "One", "Two", "Three", "Four", "Five" };
+
 		return local33;
 	}
 }

@@ -5,10 +5,10 @@ import org.openrs2.deob.annotation.Pc;
 import sign.signlink;
 
 @OriginalClass("client!gc")
-public final class Class13 {
+public final class NpcConfig {
 
 	@OriginalMember(owner = "client!gc", name = "i", descriptor = "Ljava/lang/String;")
-	public String aString25;
+	public String name;
 
 	@OriginalMember(owner = "client!gc", name = "j", descriptor = "[B")
 	public byte[] aByteArray5;
@@ -44,19 +44,19 @@ public final class Class13 {
 	public byte aByte25 = 1;
 
 	@OriginalMember(owner = "client!gc", name = "n", descriptor = "I")
-	public int anInt578 = -1;
+	public int idleAnimation = -1;
 
 	@OriginalMember(owner = "client!gc", name = "o", descriptor = "I")
-	public int anInt579 = -1;
+	public int walkingAnimation = -1;
 
 	@OriginalMember(owner = "client!gc", name = "p", descriptor = "I")
-	public int anInt580 = -1;
+	public int turnAroundAnimation = -1;
 
 	@OriginalMember(owner = "client!gc", name = "q", descriptor = "I")
-	public int anInt581 = -1;
+	public int turnRightAnimation = -1;
 
 	@OriginalMember(owner = "client!gc", name = "r", descriptor = "I")
-	public int anInt582 = -1;
+	public int turnleftAnimation = -1;
 
 	@OriginalMember(owner = "client!gc", name = "v", descriptor = "I")
 	private int anInt583 = -1;
@@ -89,91 +89,92 @@ public final class Class13 {
 	public int anInt592 = 32;
 
 	@OriginalMember(owner = "client!gc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method321(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
+	public void method321(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer buffer) {
 		try {
 			if (arg0 != 9) {
 				throw new NullPointerException();
 			}
 			while (true) {
 				while (true) {
-					@Pc(11) int local11 = arg1.readUByte();
+					@Pc(11) int local11 = buffer.readUByte();
 					if (local11 == 0) {
 						return;
 					}
 					@Pc(20) int local20;
 					@Pc(26) int local26;
 					if (local11 == 1) {
-						local20 = arg1.readUByte();
+						local20 = buffer.readUByte();
 						this.anIntArray166 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
-							this.anIntArray166[local26] = arg1.readUShortLE();
+							this.anIntArray166[local26] = buffer.readUShortBE();
 						}
 					} else if (local11 == 2) {
-						this.aString25 = arg1.readString();
+						this.name = buffer.readString();
 					} else if (local11 == 3) {
-						this.aByteArray5 = arg1.getStringArray();
+						this.aByteArray5 = buffer.readStringBytes();
 					} else if (local11 == 12) {
-						this.aByte25 = arg1.readByte();
+						this.aByte25 = buffer.readByte();
 					} else if (local11 == 13) {
-						this.anInt578 = arg1.readUShortLE();
+						this.idleAnimation = buffer.readUShortBE();
 					} else if (local11 == 14) {
-						this.anInt579 = arg1.readUShortLE();
+						this.walkingAnimation = buffer.readUShortBE();
 					} else if (local11 == 17) {
-						this.anInt579 = arg1.readUShortLE();
-						this.anInt580 = arg1.readUShortLE();
-						this.anInt581 = arg1.readUShortLE();
-						this.anInt582 = arg1.readUShortLE();
+						this.walkingAnimation = buffer.readUShortBE();
+						this.turnAroundAnimation = buffer.readUShortBE();
+						this.turnRightAnimation = buffer.readUShortBE();
+						this.turnleftAnimation = buffer.readUShortBE();
 					} else if (local11 >= 30 && local11 < 40) {
 						if (this.aStringArray9 == null) {
 							this.aStringArray9 = new String[5];
 						}
-						this.aStringArray9[local11 - 30] = arg1.readString();
+						this.aStringArray9[local11 - 30] = buffer.readString();
 						if (this.aStringArray9[local11 - 30].equalsIgnoreCase("hidden")) {
 							this.aStringArray9[local11 - 30] = null;
 						}
+
 					} else if (local11 == 40) {
-						local20 = arg1.readUByte();
+						local20 = buffer.readUByte();
 						this.anIntArray168 = new int[local20];
 						this.anIntArray169 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
-							this.anIntArray168[local26] = arg1.readUShortLE();
-							this.anIntArray169[local26] = arg1.readUShortLE();
+							this.anIntArray168[local26] = buffer.readUShortBE();
+							this.anIntArray169[local26] = buffer.readUShortBE();
 						}
 					} else if (local11 == 60) {
-						local20 = arg1.readUByte();
+						local20 = buffer.readUByte();
 						this.anIntArray167 = new int[local20];
 						for (local26 = 0; local26 < local20; local26++) {
-							this.anIntArray167[local26] = arg1.readUShortLE();
+							this.anIntArray167[local26] = buffer.readUShortBE();
 						}
 					} else if (local11 == 90) {
-						this.anInt583 = arg1.readUShortLE();
+						this.anInt583 = buffer.readUShortBE();
 					} else if (local11 == 91) {
-						this.anInt584 = arg1.readUShortLE();
+						this.anInt584 = buffer.readUShortBE();
 					} else if (local11 == 92) {
-						this.anInt585 = arg1.readUShortLE();
+						this.anInt585 = buffer.readUShortBE();
 					} else if (local11 == 93) {
 						this.aBoolean141 = false;
 					} else if (local11 == 95) {
-						this.anInt586 = arg1.readUShortLE();
+						this.anInt586 = buffer.readUShortBE();
 					} else if (local11 == 97) {
-						this.anInt587 = arg1.readUShortLE();
+						this.anInt587 = buffer.readUShortBE();
 					} else if (local11 == 98) {
-						this.anInt588 = arg1.readUShortLE();
+						this.anInt588 = buffer.readUShortBE();
 					} else if (local11 == 99) {
 						this.aBoolean142 = true;
 					} else if (local11 == 100) {
-						this.anInt589 = arg1.readByte();
+						this.anInt589 = buffer.readByte();
 					} else if (local11 == 101) {
-						this.anInt590 = arg1.readByte() * 5;
+						this.anInt590 = buffer.readByte() * 5;
 					} else if (local11 == 102) {
-						this.anInt591 = arg1.readUShortLE();
+						this.anInt591 = buffer.readUShortBE();
 					} else if (local11 == 103) {
-						this.anInt592 = arg1.readUShortLE();
+						this.anInt592 = buffer.readUShortBE();
 					}
 				}
 			}
 		} catch (@Pc(316) RuntimeException local316) {
-			signlink.reporterror("84138, " + arg0 + ", " + arg1 + ", " + local316.toString());
+			signlink.reporterror("84138, " + arg0 + ", " + buffer + ", " + local316.toString());
 			throw new RuntimeException();
 		}
 	}

@@ -60,7 +60,7 @@ public final class Class38 {
 				} else if (local5 == 4) {
 					this.aBoolean217 = false;
 				} else if (local5 == 5) {
-					this.anInt879 = arg2.readUShortLE();
+					this.anInt879 = arg2.readUShortBE();
 				} else if (local5 == 6) {
 					this.aBoolean218 = true;
 				} else if (local5 == 7) {

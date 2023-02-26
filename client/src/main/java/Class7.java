@@ -231,11 +231,11 @@ public final class Class7 {
 			}
 			this.anInt491 = arg1.readUSmart();
 			this.anInt492 = arg1.readUSmart();
-			this.anInt493 = arg1.readUShortLE();
+			this.anInt493 = arg1.readUShortBE();
 			if (arg0 != 9) {
 				this.anInt489 = -185;
 			}
-			this.anInt494 = arg1.readUShortLE();
+			this.anInt494 = arg1.readUShortBE();
 		} catch (@Pc(174) RuntimeException local174) {
 			signlink.reporterror("19733, " + arg0 + ", " + arg1 + ", " + local174.toString());
 			throw new RuntimeException();

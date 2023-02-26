@@ -53,26 +53,26 @@ public final class Class32 {
 						return;
 					}
 					if (local14 == 1) {
-						this.anInt844 = arg1.readUShortLE();
+						this.anInt844 = arg1.readUShortBE();
 					} else if (local14 == 2) {
-						this.anInt845 = arg1.readUShortLE();
+						this.anInt845 = arg1.readUShortBE();
 						if (Static23.aClass27Array1 != null) {
 							this.aClass27_2 = Static23.aClass27Array1[this.anInt845];
 						}
 					} else if (local14 == 4) {
-						this.anInt846 = arg1.readUShortLE();
+						this.anInt846 = arg1.readUShortBE();
 					} else if (local14 == 5) {
-						this.anInt847 = arg1.readUShortLE();
+						this.anInt847 = arg1.readUShortBE();
 					} else if (local14 == 6) {
-						this.anInt848 = arg1.readUShortLE();
+						this.anInt848 = arg1.readUShortBE();
 					} else if (local14 == 7) {
 						this.anInt849 = arg1.readUByte();
 					} else if (local14 == 8) {
 						this.anInt850 = arg1.readUByte();
 					} else if (local14 >= 40 && local14 < 50) {
-						this.anIntArray231[local14 - 40] = arg1.readUShortLE();
+						this.anIntArray231[local14 - 40] = arg1.readUShortBE();
 					} else if (local14 >= 50 && local14 < 60) {
-						this.anIntArray232[local14 - 50] = arg1.readUShortLE();
+						this.anIntArray232[local14 - 50] = arg1.readUShortBE();
 					} else {
 						System.out.println("Error unrecognised spotanim config code: " + local14);
 					}

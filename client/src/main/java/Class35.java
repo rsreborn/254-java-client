@@ -29,7 +29,7 @@ public final class Class35 {
 					return;
 				}
 				if (local8 == 1) {
-					this.anInt864 = arg2.readUShortLE();
+					this.anInt864 = arg2.readUShortBE();
 					this.anInt865 = arg2.readUByte();
 					this.anInt866 = arg2.readUByte();
 				} else if (local8 == 10) {

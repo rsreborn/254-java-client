@@ -198,13 +198,13 @@ public final class Buffer extends Class1_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!mb", name = "e", descriptor = "()I")
-	public int readUShortLE() {
+	public int readUShortBE() {
 		this.position += 2;
 		return ((this.payload[this.position - 2] & 0xFF) << 8) + (this.payload[this.position - 1] & 0xFF);
 	}
 
 	@OriginalMember(owner = "client!mb", name = "f", descriptor = "()I")
-	public int readUShortBE() {
+	public int readShortBE() {
 		this.position += 2;
 		@Pc(27) int value = ((this.payload[this.position - 2] & 0xFF) << 8) + (this.payload[this.position - 1] & 0xFF);
 		if (value > 32767) {
@@ -240,7 +240,7 @@ public final class Buffer extends Class1_Sub1 {
 	}
 
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(B)[B")
-	public byte[] getStringArray() {
+	public byte[] readStringBytes() {
 		@Pc(2) int position = this.position;
 		while (this.payload[this.position++] != 10);
 		@Pc(29) byte[] local29 = new byte[this.position - position - 1];
@@ -289,13 +289,13 @@ public final class Buffer extends Class1_Sub1 {
 	@OriginalMember(owner = "client!mb", name = "j", descriptor = "()I")
 	public int readSmart() {
 		@Pc(7) int value = this.payload[this.position] & 0xFF;
-		return value < 128 ? this.readUByte() - 64 : this.readUShortLE() - 49152;
+		return value < 128 ? this.readUByte() - 64 : this.readUShortBE() - 49152;
 	}
 
 	@OriginalMember(owner = "client!mb", name = "k", descriptor = "()I")
 	public int readUSmart() {
 		@Pc(7) int local7 = this.payload[this.position] & 0xFF;
-		return local7 < 128 ? this.readUByte() : this.readUShortLE() - 32768;
+		return local7 < 128 ? this.readUByte() : this.readUShortBE() - 32768;
 	}
 
 	@OriginalMember(owner = "client!mb", name = "a", descriptor = "(ILjava/math/BigInteger;Ljava/math/BigInteger;)V")

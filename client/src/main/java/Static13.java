@@ -28,10 +28,10 @@ public final class Static13 {
 		try {
 			@Pc(7) Buffer local7 = new Buffer(arg1, (byte) 3);
 			local7.position = arg1.length - 8;
-			@Pc(16) int local16 = local7.readUShortLE();
-			@Pc(19) int local19 = local7.readUShortLE();
-			@Pc(22) int local22 = local7.readUShortLE();
-			@Pc(25) int local25 = local7.readUShortLE();
+			@Pc(16) int local16 = local7.readUShortBE();
+			@Pc(19) int local19 = local7.readUShortBE();
+			@Pc(22) int local22 = local7.readUShortBE();
+			@Pc(25) int local25 = local7.readUShortBE();
 			@Pc(27) byte local27 = 0;
 			@Pc(33) Buffer local33 = new Buffer(arg1, (byte) 3);
 			local33.position = local27;
@@ -51,13 +51,13 @@ public final class Static13 {
 			@Pc(99) Buffer local99 = new Buffer(arg1, (byte) 3);
 			local99.position = local42;
 			@Pc(108) Class12 local108 = new Class12(local99, true);
-			@Pc(111) int local111 = local33.readUShortLE();
+			@Pc(111) int local111 = local33.readUShortBE();
 			@Pc(114) int[] local114 = new int[500];
 			@Pc(117) int[] local117 = new int[500];
 			@Pc(120) int[] local120 = new int[500];
 			@Pc(123) int[] local123 = new int[500];
 			for (@Pc(125) int local125 = 0; local125 < local111; local125++) {
-				@Pc(130) int local130 = local33.readUShortLE();
+				@Pc(130) int local130 = local33.readUShortBE();
 				@Pc(138) Class14 local138 = aClass14Array1[local130] = new Class14();
 				local138.anInt593 = local86.readUByte();
 				local138.aClass12_1 = local108;

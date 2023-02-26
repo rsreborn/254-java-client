@@ -59,8 +59,8 @@ public final class Class3 {
 			this.anIntArray20 = new int[this.anInt188];
 			this.anIntArray21 = new int[this.anInt188];
 			for (@Pc(40) int local40 = 0; local40 < this.anInt188; local40++) {
-				this.anIntArray20[local40] = arg1.readUShortLE();
-				this.anIntArray21[local40] = arg1.readUShortLE();
+				this.anIntArray20[local40] = arg1.readUShortBE();
+				this.anIntArray21[local40] = arg1.readUShortBE();
 			}
 		} catch (@Pc(66) RuntimeException local66) {
 			signlink.reporterror("49756, " + arg0 + ", " + arg1 + ", " + local66.toString());

@@ -158,7 +158,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 			this.anIntArrayArray23[local22] = new int[local36];
 			this.aByteArrayArray5[local22] = new byte[local36];
 			for (local56 = 0; local56 < local36; local56++) {
-				this.anIntArrayArray23[local22][local56] = local42.readUShortLE();
+				this.anIntArrayArray23[local22][local56] = local42.readUShortBE();
 			}
 		}
 		@Pc(93) String[] local93 = new String[] { "model_crc", "anim_crc", "midi_crc", "map_crc" };
@@ -190,9 +190,9 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 		this.anIntArray260 = new int[local56];
 		this.anIntArray261 = new int[local56];
 		for (@Pc(216) int local216 = 0; local216 < local56; local216++) {
-			this.anIntArray258[local216] = local193.readUShortLE();
-			this.anIntArray259[local216] = local193.readUShortLE();
-			this.anIntArray260[local216] = local193.readUShortLE();
+			this.anIntArray258[local216] = local193.readUShortBE();
+			this.anIntArray259[local216] = local193.readUShortBE();
+			this.anIntArray260[local216] = local193.readUShortBE();
 			this.anIntArray261[local216] = local193.readUByte();
 		}
 		local104 = arg0.method678("anim_index", null);
@@ -200,7 +200,7 @@ public final class Class45_Sub1 extends Class45 implements Runnable {
 		local56 = local104.length / 2;
 		this.anIntArray262 = new int[local56];
 		for (@Pc(268) int local268 = 0; local268 < local56; local268++) {
-			this.anIntArray262[local268] = local193.readUShortLE();
+			this.anIntArray262[local268] = local193.readUShortBE();
 		}
 		local104 = arg0.method678("midi_index", null);
 		local193 = new Buffer(local104, (byte) 3);

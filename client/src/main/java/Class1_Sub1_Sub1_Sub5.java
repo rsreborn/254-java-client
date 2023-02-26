@@ -218,7 +218,7 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			local171.position = local20.anInt767;
 			local182.position = local20.anInt768;
 			for (local208 = 0; local208 < this.anInt544; local208++) {
-				this.anIntArray137[local208] = local138.readUShortLE();
+				this.anIntArray137[local208] = local138.readUShortBE();
 				if (this.anIntArray134 != null) {
 					this.anIntArray134[local208] = local149.readUByte();
 				}
@@ -281,9 +281,9 @@ public final class Class1_Sub1_Sub1_Sub5 extends Class1_Sub1_Sub1 {
 			}
 			local138.position = local20.anInt769;
 			for (local379 = 0; local379 < this.anInt546; local379++) {
-				this.anIntArray138[local379] = local138.readUShortLE();
-				this.anIntArray139[local379] = local138.readUShortLE();
-				this.anIntArray140[local379] = local138.readUShortLE();
+				this.anIntArray138[local379] = local138.readUShortBE();
+				this.anIntArray139[local379] = local138.readUShortBE();
+				this.anIntArray140[local379] = local138.readUShortBE();
 			}
 		} catch (@Pc(545) RuntimeException local545) {
 			signlink.reporterror("71741, " + arg0 + ", " + arg1 + ", " + local545.toString());

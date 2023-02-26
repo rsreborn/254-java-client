@@ -45,8 +45,8 @@ public final class Class5 {
 				for (local8 = 1; local8 > 0; local8++) {
 				}
 			}
-			this.anInt218 = arg1.readUShortLE();
-			this.anInt219 = arg1.readUShortLE();
+			this.anInt218 = arg1.readUShortBE();
+			this.anInt219 = arg1.readUShortBE();
 		} catch (@Pc(57) RuntimeException local57) {
 			signlink.reporterror("53084, " + arg0 + ", " + arg1 + ", " + local57.toString());
 			throw new RuntimeException();

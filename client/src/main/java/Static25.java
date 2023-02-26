@@ -22,7 +22,7 @@ public final class Static25 {
 				}
 			}
 			@Pc(19) Buffer local19 = new Buffer(arg1.method678("spotanim.dat", null), (byte) 3);
-			anInt842 = local19.readUShortLE();
+			anInt842 = local19.readUShortBE();
 			if (aClass32Array1 == null) {
 				aClass32Array1 = new Class32[anInt842];
 			}

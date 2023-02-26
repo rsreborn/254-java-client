@@ -25,7 +25,7 @@ public final class Static27 {
 		try {
 			@Pc(8) Buffer local8 = new Buffer(arg1.method678("varp.dat", null), (byte) 3);
 			anInt876 = 0;
-			anInt875 = local8.readUShortLE();
+			anInt875 = local8.readUShortBE();
 			if (aClass38Array1 == null) {
 				aClass38Array1 = new Class38[anInt875];
 			}

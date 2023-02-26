@@ -8,7 +8,7 @@ import sign.signlink;
 public final class Class1_Sub1_Sub1_Sub1_Sub1 extends Class1_Sub1_Sub1_Sub1 {
 
 	@OriginalMember(owner = "client!ab", name = "rb", descriptor = "Lclient!gc;")
-	public Class13 aClass13_1;
+	public NpcConfig aNpcConfig_1;
 
 	@OriginalMember(owner = "client!ab", name = "a", descriptor = "(I)Lclient!fb;")
 	@Override
@@ -16,7 +16,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub1 extends Class1_Sub1_Sub1_Sub1 {
 		try {
 			if (arg0 != 45160) {
 				throw new NullPointerException();
-			} else if (this.aClass13_1 == null) {
+			} else if (this.aNpcConfig_1 == null) {
 				return null;
 			} else {
 				@Pc(15) Class1_Sub1_Sub1_Sub5 local15 = this.method39(0);
@@ -43,7 +43,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub1 extends Class1_Sub1_Sub1_Sub1 {
 						local15 = new Class1_Sub1_Sub1_Sub5((byte) 9, 2, local122, true);
 					}
 				}
-				if (this.aClass13_1.aByte25 == 1) {
+				if (this.aNpcConfig_1.aByte25 == 1) {
 					local15.aBoolean133 = true;
 				}
 				return local15;
@@ -66,14 +66,14 @@ public final class Class1_Sub1_Sub1_Sub1_Sub1 extends Class1_Sub1_Sub1_Sub1 {
 				if (super.anInt147 >= 0) {
 					local20 = Static23.aClass27Array1[super.anInt147].anIntArray227[super.anInt148];
 				}
-				return this.aClass13_1.method322(0, local20, null, -1);
+				return this.aNpcConfig_1.method322(0, local20, null, -1);
 			}
 			local20 = Static23.aClass27Array1[super.anInt150].anIntArray227[super.anInt151];
 			@Pc(22) int local22 = -1;
 			if (super.anInt147 >= 0 && super.anInt147 != super.anInt131) {
 				local22 = Static23.aClass27Array1[super.anInt147].anIntArray227[super.anInt148];
 			}
-			return this.aClass13_1.method322(0, local20, Static23.aClass27Array1[super.anInt150].anIntArray230, local22);
+			return this.aNpcConfig_1.method322(0, local20, Static23.aClass27Array1[super.anInt150].anIntArray230, local22);
 		} catch (@Pc(74) RuntimeException local74) {
 			signlink.reporterror("14524, " + arg0 + ", " + local74.toString());
 			throw new RuntimeException();
@@ -87,7 +87,7 @@ public final class Class1_Sub1_Sub1_Sub1_Sub1 extends Class1_Sub1_Sub1_Sub1 {
 			if (arg0 >= 0) {
 				throw new NullPointerException();
 			}
-			return this.aClass13_1 != null;
+			return this.aNpcConfig_1 != null;
 		} catch (@Pc(15) RuntimeException local15) {
 			signlink.reporterror("37118, " + arg0 + ", " + local15.toString());
 			throw new RuntimeException();

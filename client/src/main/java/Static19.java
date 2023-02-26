@@ -16,7 +16,7 @@ public final class Static19 {
 		try {
 			if (arg0) {
 				@Pc(11) Buffer local11 = new Buffer(arg1.method678("flo.dat", null), (byte) 3);
-				anInt721 = local11.readUShortLE();
+				anInt721 = local11.readUShortBE();
 				if (aClass21Array1 == null) {
 					aClass21Array1 = new Class21[anInt721];
 				}

@@ -73,7 +73,7 @@ public final class Class1_Sub1_Sub2_Sub4 extends Class1_Sub1_Sub2 {
 			@Pc(67) Buffer local67 = new Buffer(arg1.method678(arg0 + ".dat", null), (byte) 3);
 			@Pc(76) Buffer local76 = new Buffer(arg1.method678("index.dat", null), (byte) 3);
 			@Pc(78) boolean local78 = true;
-			local76.position = local67.readUShortLE() + 4;
+			local76.position = local67.readUShortBE() + 4;
 			if (!arg2) {
 				this.anInt748 = -151;
 			}
@@ -85,8 +85,8 @@ public final class Class1_Sub1_Sub2_Sub4 extends Class1_Sub1_Sub2 {
 			for (@Pc(106) int local106 = 0; local106 < 94; local106++) {
 				this.anIntArray216[local106] = local76.readUByte();
 				this.anIntArray217[local106] = local76.readUByte();
-				local130 = this.anIntArray214[local106] = local76.readUShortLE();
-				@Pc(138) int local138 = this.anIntArray215[local106] = local76.readUShortLE();
+				local130 = this.anIntArray214[local106] = local76.readUShortBE();
+				@Pc(138) int local138 = this.anIntArray215[local106] = local76.readUShortBE();
 				@Pc(141) int local141 = local76.readUByte();
 				@Pc(145) int local145 = local130 * local138;
 				this.aByteArrayArray3[local106] = new byte[local145];

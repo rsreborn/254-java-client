@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 import sign.signlink;
 
 @OriginalClass("client!d")
-public final class Class6 {
+public final class RSInterface {
 
 	@OriginalMember(owner = "client!d", name = "a", descriptor = "I")
 	private int anInt453;

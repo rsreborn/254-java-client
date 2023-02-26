@@ -4,59 +4,66 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 import sign.signlink;
 
+/**
+ *
+ * Credits:
+ * TheDaneEffect's 317 client renaming for member variable names
+ *
+ */
+
 @OriginalClass("client!hc")
-public final class Class15 {
+public final class ObjectConfig {
 
 	@OriginalMember(owner = "client!hc", name = "m", descriptor = "I")
-	private int anInt613;
+	private int modelId;
 
 	@OriginalMember(owner = "client!hc", name = "n", descriptor = "Ljava/lang/String;")
-	public String aString26;
+	public String name;
 
 	@OriginalMember(owner = "client!hc", name = "o", descriptor = "[B")
-	public byte[] aByteArray6;
+	public byte[] examine;
 
 	@OriginalMember(owner = "client!hc", name = "p", descriptor = "[I")
-	private int[] anIntArray176;
+	private int[] originalColor;
 
 	@OriginalMember(owner = "client!hc", name = "q", descriptor = "[I")
-	private int[] anIntArray177;
+	private int[] overrideColor;
 
 	@OriginalMember(owner = "client!hc", name = "r", descriptor = "I")
-	public int anInt614;
+	public int iconZoom;
 
 	@OriginalMember(owner = "client!hc", name = "s", descriptor = "I")
-	public int anInt615;
+	public int iconPitch;
 
 	@OriginalMember(owner = "client!hc", name = "t", descriptor = "I")
-	public int anInt616;
+	public int iconYaw;
 
 	@OriginalMember(owner = "client!hc", name = "u", descriptor = "I")
 	public int anInt617;
 
 	@OriginalMember(owner = "client!hc", name = "v", descriptor = "I")
-	public int anInt618;
+	public int iconOffsetX;
 
 	@OriginalMember(owner = "client!hc", name = "w", descriptor = "I")
-	public int anInt619;
+	public int iconOffsetY;
 
 	@OriginalMember(owner = "client!hc", name = "x", descriptor = "I")
 	private int anInt620;
 
 	@OriginalMember(owner = "client!hc", name = "y", descriptor = "Z")
-	public boolean aBoolean152;
+	public boolean isStackable;
 
 	@OriginalMember(owner = "client!hc", name = "z", descriptor = "I")
-	public int anInt621;
+	public int highAlchValue;
 
 	@OriginalMember(owner = "client!hc", name = "A", descriptor = "Z")
-	public boolean aBoolean153;
+	public boolean isMembers;
 
 	@OriginalMember(owner = "client!hc", name = "B", descriptor = "[Ljava/lang/String;")
-	public String[] aStringArray10;
+	public String[] groundOptions;
 
 	@OriginalMember(owner = "client!hc", name = "C", descriptor = "[Ljava/lang/String;")
-	public String[] aStringArray11;
+	public String[] inventoryOptions;
 
 	@OriginalMember(owner = "client!hc", name = "D", descriptor = "I")
 	private int anInt622;
@@ -101,10 +108,10 @@ public final class Class15 {
 	public int[] anIntArray179;
 
 	@OriginalMember(owner = "client!hc", name = "R", descriptor = "I")
-	public int anInt632;
+	public int linkedId;
 
 	@OriginalMember(owner = "client!hc", name = "S", descriptor = "I")
-	public int anInt633;
+	public int notedId;
 
 	@OriginalMember(owner = "client!hc", name = "T", descriptor = "I")
 	private int anInt634;
@@ -135,23 +142,23 @@ public final class Class15 {
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "()V")
 	public void method346() {
-		this.anInt613 = 0;
-		this.aString26 = null;
-		this.aByteArray6 = null;
-		this.anIntArray176 = null;
-		this.anIntArray177 = null;
-		this.anInt614 = 2000;
-		this.anInt615 = 0;
-		this.anInt616 = 0;
+		this.modelId = 0;
+		this.name = null;
+		this.examine = null;
+		this.originalColor = null;
+		this.overrideColor = null;
+		this.iconZoom = 2000;
+		this.iconPitch = 0;
+		this.iconYaw = 0;
 		this.anInt617 = 0;
-		this.anInt618 = 0;
-		this.anInt619 = 0;
+		this.iconOffsetX = 0;
+		this.iconOffsetY = 0;
 		this.anInt620 = -1;
-		this.aBoolean152 = false;
-		this.anInt621 = 1;
-		this.aBoolean153 = false;
-		this.aStringArray10 = null;
-		this.aStringArray11 = null;
+		this.isStackable = false;
+		this.highAlchValue = 1;
+		this.isMembers = false;
+		this.groundOptions = null;
+		this.inventoryOptions = null;
 		this.anInt622 = -1;
 		this.anInt623 = -1;
 		this.aByte28 = 0;
@@ -166,8 +173,8 @@ public final class Class15 {
 		this.anInt631 = -1;
 		this.anIntArray178 = null;
 		this.anIntArray179 = null;
-		this.anInt632 = -1;
-		this.anInt633 = -1;
+		this.linkedId = -1;
+		this.notedId = -1;
 		this.anInt634 = 128;
 		this.anInt635 = 128;
 		this.anInt636 = 128;
@@ -176,151 +183,140 @@ public final class Class15 {
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(ILclient!mb;)V")
-	public void method347(@OriginalArg(0) int arg0, @OriginalArg(1) Buffer arg1) {
-		try {
-			@Pc(9) int local9;
-			if (arg0 < 9 || arg0 > 9) {
-				for (local9 = 1; local9 > 0; local9++) {
-				}
+	public void readDefinition(@OriginalArg(1) Buffer buffer) {
+		while (true) {
+			int code = buffer.readUByte();
+			if (code == 0) {
+				return;
 			}
-			while (true) {
-				while (true) {
-					local9 = arg1.readUByte();
-					if (local9 == 0) {
-						return;
-					}
-					if (local9 == 1) {
-						this.anInt613 = arg1.readUShortLE();
-					} else if (local9 == 2) {
-						this.aString26 = arg1.readString();
-					} else if (local9 == 3) {
-						this.aByteArray6 = arg1.getStringArray();
-					} else if (local9 == 4) {
-						this.anInt614 = arg1.readUShortLE();
-					} else if (local9 == 5) {
-						this.anInt615 = arg1.readUShortLE();
-					} else if (local9 == 6) {
-						this.anInt616 = arg1.readUShortLE();
-					} else if (local9 == 7) {
-						this.anInt618 = arg1.readUShortLE();
-						if (this.anInt618 > 32767) {
-							this.anInt618 -= 65536;
-						}
-					} else if (local9 == 8) {
-						this.anInt619 = arg1.readUShortLE();
-						if (this.anInt619 > 32767) {
-							this.anInt619 -= 65536;
-						}
-					} else if (local9 == 10) {
-						this.anInt620 = arg1.readUShortLE();
-					} else if (local9 == 11) {
-						this.aBoolean152 = true;
-					} else if (local9 == 12) {
-						this.anInt621 = arg1.readIntBE();
-					} else if (local9 == 16) {
-						this.aBoolean153 = true;
-					} else if (local9 == 23) {
-						this.anInt622 = arg1.readUShortLE();
-						this.aByte28 = arg1.readByte();
-					} else if (local9 == 24) {
-						this.anInt623 = arg1.readUShortLE();
-					} else if (local9 == 25) {
-						this.anInt624 = arg1.readUShortLE();
-						this.aByte29 = arg1.readByte();
-					} else if (local9 == 26) {
-						this.anInt625 = arg1.readUShortLE();
-					} else if (local9 >= 30 && local9 < 35) {
-						if (this.aStringArray10 == null) {
-							this.aStringArray10 = new String[5];
-						}
-						this.aStringArray10[local9 - 30] = arg1.readString();
-						if (this.aStringArray10[local9 - 30].equalsIgnoreCase("hidden")) {
-							this.aStringArray10[local9 - 30] = null;
-						}
-					} else if (local9 >= 35 && local9 < 40) {
-						if (this.aStringArray11 == null) {
-							this.aStringArray11 = new String[5];
-						}
-						this.aStringArray11[local9 - 35] = arg1.readString();
-					} else if (local9 == 40) {
-						@Pc(259) int local259 = arg1.readUByte();
-						this.anIntArray176 = new int[local259];
-						this.anIntArray177 = new int[local259];
-						for (@Pc(269) int local269 = 0; local269 < local259; local269++) {
-							this.anIntArray176[local269] = arg1.readUShortLE();
-							this.anIntArray177[local269] = arg1.readUShortLE();
-						}
-					} else if (local9 == 78) {
-						this.anInt626 = arg1.readUShortLE();
-					} else if (local9 == 79) {
-						this.anInt627 = arg1.readUShortLE();
-					} else if (local9 == 90) {
-						this.anInt628 = arg1.readUShortLE();
-					} else if (local9 == 91) {
-						this.anInt630 = arg1.readUShortLE();
-					} else if (local9 == 92) {
-						this.anInt629 = arg1.readUShortLE();
-					} else if (local9 == 93) {
-						this.anInt631 = arg1.readUShortLE();
-					} else if (local9 == 95) {
-						this.anInt617 = arg1.readUShortLE();
-					} else if (local9 == 97) {
-						this.anInt632 = arg1.readUShortLE();
-					} else if (local9 == 98) {
-						this.anInt633 = arg1.readUShortLE();
-					} else if (local9 >= 100 && local9 < 110) {
-						if (this.anIntArray178 == null) {
-							this.anIntArray178 = new int[10];
-							this.anIntArray179 = new int[10];
-						}
-						this.anIntArray178[local9 - 100] = arg1.readUShortLE();
-						this.anIntArray179[local9 - 100] = arg1.readUShortLE();
-					} else if (local9 == 110) {
-						this.anInt634 = arg1.readUShortLE();
-					} else if (local9 == 111) {
-						this.anInt635 = arg1.readUShortLE();
-					} else if (local9 == 112) {
-						this.anInt636 = arg1.readUShortLE();
-					} else if (local9 == 113) {
-						this.anInt637 = arg1.readByte();
-					} else if (local9 == 114) {
-						this.anInt638 = arg1.readByte() * 5;
-					}
+			if (code == 1) {
+				this.modelId = buffer.readUShortBE();
+			} else if (code == 2) {
+				this.name = buffer.readString();
+			} else if (code == 3) {
+				this.examine = buffer.readStringBytes();
+			} else if (code == 4) {
+				this.iconZoom = buffer.readUShortBE();
+			} else if (code == 5) {
+				this.iconPitch = buffer.readUShortBE();
+			} else if (code == 6) {
+				this.iconYaw = buffer.readUShortBE();
+			} else if (code == 7) {
+				this.iconOffsetX = buffer.readUShortBE();
+				if (this.iconOffsetX > 32767) {
+					this.iconOffsetX -= 65536;
 				}
+			} else if (code == 8) {
+				this.iconOffsetY = buffer.readUShortBE();
+				if (this.iconOffsetY > 32767) {
+					this.iconOffsetY -= 65536;
+				}
+			} else if (code == 10) {
+				this.anInt620 = buffer.readUShortBE();
+			} else if (code == 11) {
+				this.isStackable = true;
+			} else if (code == 12) {
+				this.highAlchValue = buffer.readIntBE();
+			} else if (code == 16) {
+				this.isMembers = true;
+			} else if (code == 23) {
+				this.anInt622 = buffer.readUShortBE();
+				this.aByte28 = buffer.readByte();
+			} else if (code == 24) {
+				this.anInt623 = buffer.readUShortBE();
+			} else if (code == 25) {
+				this.anInt624 = buffer.readUShortBE();
+				this.aByte29 = buffer.readByte();
+			} else if (code == 26) {
+				this.anInt625 = buffer.readUShortBE();
+			} else if (code >= 30 && code < 35) {
+				if (this.groundOptions == null) {
+					this.groundOptions = new String[5];
+				}
+				this.groundOptions[code - 30] = buffer.readString();
+				if (this.groundOptions[code - 30].equalsIgnoreCase("hidden")) {
+					this.groundOptions[code - 30] = null;
+				}
+
+			} else if (code >= 35 && code < 40) {
+				if (this.inventoryOptions == null) {
+					this.inventoryOptions = new String[5];
+				}
+				this.inventoryOptions[code - 35] = buffer.readString();
+			} else if (code == 40) {
+				@Pc(259) int recolorCount = buffer.readUByte();
+				this.originalColor = new int[recolorCount];
+				this.overrideColor = new int[recolorCount];
+				for (@Pc(269) int local269 = 0; local269 < recolorCount; local269++) {
+					this.originalColor[local269] = buffer.readUShortBE();
+					this.overrideColor[local269] = buffer.readUShortBE();
+				}
+			} else if (code == 78) {
+				this.anInt626 = buffer.readUShortBE();
+			} else if (code == 79) {
+				this.anInt627 = buffer.readUShortBE();
+			} else if (code == 90) {
+				this.anInt628 = buffer.readUShortBE();
+			} else if (code == 91) {
+				this.anInt630 = buffer.readUShortBE();
+			} else if (code == 92) {
+				this.anInt629 = buffer.readUShortBE();
+			} else if (code == 93) {
+				this.anInt631 = buffer.readUShortBE();
+			} else if (code == 95) {
+				this.anInt617 = buffer.readUShortBE();
+			} else if (code == 97) {
+				this.linkedId = buffer.readUShortBE();
+			} else if (code == 98) {
+				this.notedId = buffer.readUShortBE();
+			} else if (code >= 100 && code < 110) {
+				if (this.anIntArray178 == null) {
+					this.anIntArray178 = new int[10];
+					this.anIntArray179 = new int[10];
+				}
+				this.anIntArray178[code - 100] = buffer.readUShortBE();
+				this.anIntArray179[code - 100] = buffer.readUShortBE();
+			} else if (code == 110) {
+				this.anInt634 = buffer.readUShortBE();
+			} else if (code == 111) {
+				this.anInt635 = buffer.readUShortBE();
+			} else if (code == 112) {
+				this.anInt636 = buffer.readUShortBE();
+			} else if (code == 113) {
+				this.anInt637 = buffer.readByte();
+			} else if (code == 114) {
+				this.anInt638 = buffer.readByte() * 5;
 			}
-		} catch (@Pc(452) RuntimeException local452) {
-			signlink.reporterror("24729, " + arg0 + ", " + arg1 + ", " + local452.toString());
-			throw new RuntimeException();
 		}
 	}
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "(Z)V")
 	public void method348(@OriginalArg(0) boolean arg0) {
 		try {
-			@Pc(3) Class15 local3 = Static15.method345(this.anInt633);
-			this.anInt613 = local3.anInt613;
-			this.anInt614 = local3.anInt614;
-			this.anInt615 = local3.anInt615;
-			this.anInt616 = local3.anInt616;
+			@Pc(3) ObjectConfig local3 = Static15.method345(this.notedId);
+			this.modelId = local3.modelId;
+			this.iconZoom = local3.iconZoom;
+			this.iconPitch = local3.iconPitch;
+			this.iconYaw = local3.iconYaw;
 			this.anInt617 = local3.anInt617;
-			this.anInt618 = local3.anInt618;
-			this.anInt619 = local3.anInt619;
-			this.anIntArray176 = local3.anIntArray176;
-			this.anIntArray177 = local3.anIntArray177;
-			@Pc(43) Class15 local43 = Static15.method345(this.anInt632);
-			this.aString26 = local43.aString26;
-			this.aBoolean153 = local43.aBoolean153;
-			this.anInt621 = local43.anInt621;
+			this.iconOffsetX = local3.iconOffsetX;
+			this.iconOffsetY = local3.iconOffsetY;
+			this.originalColor = local3.originalColor;
+			this.overrideColor = local3.overrideColor;
+			@Pc(43) ObjectConfig local43 = Static15.method345(this.linkedId);
+			this.name = local43.name;
+			this.isMembers = local43.isMembers;
+			this.highAlchValue = local43.highAlchValue;
 			if (arg0) {
 				this.aBoolean150 = !this.aBoolean150;
 			}
 			@Pc(67) String local67 = "a";
-			@Pc(72) char local72 = local43.aString26.charAt(0);
+			@Pc(72) char local72 = local43.name.charAt(0);
 			if (local72 == 'A' || local72 == 'E' || local72 == 'I' || local72 == 'O' || local72 == 'U') {
 				local67 = "an";
 			}
-			this.aByteArray6 = ("Swap this note at any bank for " + local67 + " " + local43.aString26 + ".").getBytes();
-			this.aBoolean152 = true;
+			this.examine = ("Swap this note at any bank for " + local67 + " " + local43.name + ".").getBytes();
+			this.isStackable = true;
 		} catch (@Pc(111) RuntimeException local111) {
 			signlink.reporterror("27153, " + arg0 + ", " + local111.toString());
 			throw new RuntimeException();
@@ -345,16 +341,16 @@ public final class Class15 {
 		if (local48 != null) {
 			return local48;
 		}
-		local48 = Static11.method288(0, this.anInt613);
+		local48 = Static11.method288(0, this.modelId);
 		if (local48 == null) {
 			return null;
 		}
 		if (this.anInt634 != 128 || this.anInt635 != 128 || this.anInt636 != 128) {
 			local48.method304(792, this.anInt636, this.anInt634, this.anInt635);
 		}
-		if (this.anIntArray176 != null) {
-			for (local11 = 0; local11 < this.anIntArray176.length; local11++) {
-				local48.method302(this.anIntArray176[local11], this.anIntArray177[local11]);
+		if (this.originalColor != null) {
+			for (local11 = 0; local11 < this.originalColor.length; local11++) {
+				local48.method302(this.originalColor[local11], this.overrideColor[local11]);
 			}
 		}
 		local48.method305(this.anInt637 + 64, this.anInt638 + 768, -50, -10, -50, true);
@@ -378,14 +374,14 @@ public final class Class15 {
 					return Static15.method345(local9).method350(614, 1);
 				}
 			}
-			@Pc(47) Class1_Sub1_Sub1_Sub5 local47 = Static11.method288(0, this.anInt613);
+			@Pc(47) Class1_Sub1_Sub1_Sub5 local47 = Static11.method288(0, this.modelId);
 			@Pc(51) int local51 = 37 / arg0;
 			if (local47 == null) {
 				return null;
 			}
-			if (this.anIntArray176 != null) {
-				for (local11 = 0; local11 < this.anIntArray176.length; local11++) {
-					local47.method302(this.anIntArray176[local11], this.anIntArray177[local11]);
+			if (this.originalColor != null) {
+				for (local11 = 0; local11 < this.originalColor.length; local11++) {
+					local47.method302(this.originalColor[local11], this.overrideColor[local11]);
 				}
 			}
 			return local47;
@@ -464,9 +460,9 @@ public final class Class15 {
 			if (arg1 == 1 && this.aByte29 != 0) {
 				local35.method301((byte) -32, 0, 0, this.aByte29);
 			}
-			if (this.anIntArray176 != null) {
-				for (@Pc(125) int local125 = 0; local125 < this.anIntArray176.length; local125++) {
-					local35.method302(this.anIntArray176[local125], this.anIntArray177[local125]);
+			if (this.originalColor != null) {
+				for (@Pc(125) int local125 = 0; local125 < this.originalColor.length; local125++) {
+					local35.method302(this.originalColor[local125], this.overrideColor[local125]);
 				}
 			}
 			return local35;
@@ -526,9 +522,9 @@ public final class Class15 {
 				@Pc(46) Class1_Sub1_Sub1_Sub5[] local46 = new Class1_Sub1_Sub1_Sub5[] { local28, local35 };
 				local28 = new Class1_Sub1_Sub1_Sub5(local46, 2, -928);
 			}
-			if (this.anIntArray176 != null) {
-				for (@Pc(58) int local58 = 0; local58 < this.anIntArray176.length; local58++) {
-					local28.method302(this.anIntArray176[local58], this.anIntArray177[local58]);
+			if (this.originalColor != null) {
+				for (@Pc(58) int local58 = 0; local58 < this.originalColor.length; local58++) {
+					local28.method302(this.originalColor[local58], this.overrideColor[local58]);
 				}
 			}
 			return local28;

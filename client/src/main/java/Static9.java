@@ -33,12 +33,12 @@ public final class Static9 {
 	public static void method256(@OriginalArg(0) Class48 arg0) {
 		aBuffer_5 = new Buffer(arg0.method678("loc.dat", null), (byte) 3);
 		@Pc(19) Buffer local19 = new Buffer(arg0.method678("loc.idx", null), (byte) 3);
-		anInt516 = local19.readUShortLE();
+		anInt516 = local19.readUShortBE();
 		anIntArray116 = new int[anInt516];
 		@Pc(27) int local27 = 2;
 		for (@Pc(29) int local29 = 0; local29 < anInt516; local29++) {
 			anIntArray116[local29] = local27;
-			local27 += local19.readUShortLE();
+			local27 += local19.readUShortBE();
 		}
 		aClass9Array1 = new Class9[10];
 		for (@Pc(49) int local49 = 0; local49 < 10; local49++) {
@@ -74,6 +74,7 @@ public final class Static9 {
 		local27.anInt518 = arg0;
 		local27.method259();
 		local27.method260(9, aBuffer_5);
+		local27.aStringArray8 = new String[] { "One", "Two", "Three", "Four", "Five" };
 		return local27;
 	}
 }

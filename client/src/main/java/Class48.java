@@ -70,7 +70,7 @@ public final class Class48 {
 				local7 = new Buffer(this.aByteArray21, (byte) 3);
 				this.aBoolean245 = true;
 			}
-			this.anInt996 = local7.readUShortLE();
+			this.anInt996 = local7.readUShortBE();
 			this.anIntArray267 = new int[this.anInt996];
 			this.anIntArray268 = new int[this.anInt996];
 			this.anIntArray269 = new int[this.anInt996];

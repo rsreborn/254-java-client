@@ -30,7 +30,7 @@ public final class Static5 {
 				anInt217 = 84;
 			}
 			while (true) {
-				@Pc(16) int local16 = arg1.readUShortLE();
+				@Pc(16) int local16 = arg1.readUShortBE();
 				if (local16 == 65535) {
 					return;
 				}

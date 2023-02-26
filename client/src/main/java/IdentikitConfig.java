@@ -5,7 +5,7 @@ import org.openrs2.deob.annotation.Pc;
 import sign.signlink;
 
 @OriginalClass("client!lc")
-public final class Class23 {
+public final class IdentikitConfig {
 
 	@OriginalMember(owner = "client!lc", name = "e", descriptor = "[I")
 	private int[] anIntArray221;
@@ -46,16 +46,16 @@ public final class Class23 {
 						@Pc(36) int local36 = arg1.readUByte();
 						this.anIntArray221 = new int[local36];
 						for (@Pc(42) int local42 = 0; local42 < local36; local42++) {
-							this.anIntArray221[local42] = arg1.readUShortLE();
+							this.anIntArray221[local42] = arg1.readUShortBE();
 						}
 					} else if (local18 == 3) {
 						this.aBoolean190 = true;
 					} else if (local18 >= 40 && local18 < 50) {
-						this.anIntArray222[local18 - 40] = arg1.readUShortLE();
+						this.anIntArray222[local18 - 40] = arg1.readUShortBE();
 					} else if (local18 >= 50 && local18 < 60) {
-						this.anIntArray223[local18 - 50] = arg1.readUShortLE();
+						this.anIntArray223[local18 - 50] = arg1.readUShortBE();
 					} else if (local18 >= 60 && local18 < 70) {
-						this.anIntArray224[local18 - 60] = arg1.readUShortLE();
+						this.anIntArray224[local18 - 60] = arg1.readUShortBE();
 					} else {
 						System.out.println("Error unrecognised config code: " + local18);
 					}

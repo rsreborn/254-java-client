@@ -17,7 +17,7 @@ public final class Class1_Sub1_Sub1_Sub3 extends Class1_Sub1_Sub1 {
 	@Override
 	protected Class1_Sub1_Sub1_Sub5 method316(@OriginalArg(0) int arg0) {
 		try {
-			@Pc(3) Class15 local3 = Static15.method345(this.anInt487);
+			@Pc(3) ObjectConfig local3 = Static15.method345(this.anInt487);
 			if (arg0 != 45160) {
 				throw new NullPointerException();
 			}

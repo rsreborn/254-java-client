@@ -87,9 +87,9 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 	public Class1_Sub1_Sub2_Sub2(@OriginalArg(0) Class48 arg0, @OriginalArg(1) String arg1, @OriginalArg(2) int arg2) {
 		@Pc(40) Buffer local40 = new Buffer(arg0.method678(arg1 + ".dat", null), (byte) 3);
 		@Pc(49) Buffer local49 = new Buffer(arg0.method678("index.dat", null), (byte) 3);
-		local49.position = local40.readUShortLE();
-		this.anInt690 = local49.readUShortLE();
-		this.anInt691 = local49.readUShortLE();
+		local49.position = local40.readUShortBE();
+		this.anInt690 = local49.readUShortBE();
+		this.anInt691 = local49.readUShortBE();
 		@Pc(64) int local64 = local49.readUByte();
 		@Pc(67) int[] local67 = new int[local64];
 		for (@Pc(69) int local69 = 0; local69 < local64 - 1; local69++) {
@@ -100,13 +100,13 @@ public final class Class1_Sub1_Sub2_Sub2 extends Class1_Sub1_Sub2 {
 		}
 		for (@Pc(104) int local104 = 0; local104 < arg2; local104++) {
 			local49.position += 2;
-			local40.position += local49.readUShortLE() * local49.readUShortLE();
+			local40.position += local49.readUShortBE() * local49.readUShortBE();
 			local49.position++;
 		}
 		this.anInt688 = local49.readUByte();
 		this.anInt689 = local49.readUByte();
-		this.anInt686 = local49.readUShortLE();
-		this.anInt687 = local49.readUShortLE();
+		this.anInt686 = local49.readUShortBE();
+		this.anInt687 = local49.readUShortBE();
 		@Pc(151) int local151 = local49.readUByte();
 		@Pc(157) int local157 = this.anInt686 * this.anInt687;
 		this.anIntArray210 = new int[local157];

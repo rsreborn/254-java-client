@@ -21,7 +21,7 @@ public final class Static26 {
 				aBoolean214 = !aBoolean214;
 			}
 			@Pc(16) Buffer local16 = new Buffer(arg1.method678("varbit.dat", null), (byte) 3);
-			anInt863 = local16.readUShortLE();
+			anInt863 = local16.readUShortBE();
 			if (aClass35Array1 == null) {
 				aClass35Array1 = new Class35[anInt863];
 			}

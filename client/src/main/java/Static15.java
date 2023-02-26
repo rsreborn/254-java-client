@@ -3,6 +3,8 @@ import org.openrs2.deob.annotation.OriginalMember;
 import org.openrs2.deob.annotation.Pc;
 import sign.signlink;
 
+import java.nio.charset.StandardCharsets;
+
 public final class Static15 {
 
 	@OriginalMember(owner = "client!hc", name = "a", descriptor = "Z")
@@ -18,7 +20,7 @@ public final class Static15 {
 	private static Buffer aBuffer_9;
 
 	@OriginalMember(owner = "client!hc", name = "i", descriptor = "[Lclient!hc;")
-	private static Class15[] aClass15Array1;
+	private static ObjectConfig[] aObjectConfigArray1;
 
 	@OriginalMember(owner = "client!hc", name = "j", descriptor = "I")
 	private static int anInt611;
@@ -39,16 +41,16 @@ public final class Static15 {
 	public static void method343(@OriginalArg(0) Class48 arg0) {
 		aBuffer_9 = new Buffer(arg0.method678("obj.dat", null), (byte) 3);
 		@Pc(19) Buffer local19 = new Buffer(arg0.method678("obj.idx", null), (byte) 3);
-		anInt610 = local19.readUShortLE();
+		anInt610 = local19.readUShortBE();
 		anIntArray175 = new int[anInt610];
 		@Pc(27) int local27 = 2;
 		for (@Pc(29) int local29 = 0; local29 < anInt610; local29++) {
 			anIntArray175[local29] = local27;
-			local27 += local19.readUShortLE();
+			local27 += local19.readUShortBE();
 		}
-		aClass15Array1 = new Class15[10];
+		aObjectConfigArray1 = new ObjectConfig[10];
 		for (@Pc(49) int local49 = 0; local49 < 10; local49++) {
-			aClass15Array1[local49] = new Class15();
+			aObjectConfigArray1[local49] = new ObjectConfig();
 		}
 	}
 
@@ -58,7 +60,7 @@ public final class Static15 {
 			aClass42_7 = null;
 			aClass42_8 = null;
 			anIntArray175 = null;
-			aClass15Array1 = null;
+			aObjectConfigArray1 = null;
 			aBuffer_9 = null;
 			@Pc(13) int local13 = 50 / arg0;
 		} catch (@Pc(15) RuntimeException local15) {
@@ -68,26 +70,28 @@ public final class Static15 {
 	}
 
 	@OriginalMember(owner = "client!hc", name = "b", descriptor = "(I)Lclient!hc;")
-	public static Class15 method345(@OriginalArg(0) int arg0) {
+	public static ObjectConfig method345(@OriginalArg(0) int arg0) {
 		for (@Pc(1) int local1 = 0; local1 < 10; local1++) {
-			if (aClass15Array1[local1].anInt612 == arg0) {
-				return aClass15Array1[local1];
+			if (aObjectConfigArray1[local1].anInt612 == arg0) {
+				return aObjectConfigArray1[local1];
 			}
 		}
 		anInt611 = (anInt611 + 1) % 10;
-		@Pc(27) Class15 local27 = aClass15Array1[anInt611];
+		@Pc(27) ObjectConfig local27 = aObjectConfigArray1[anInt611];
 		aBuffer_9.position = anIntArray175[arg0];
 		local27.anInt612 = arg0;
 		local27.method346();
-		local27.method347(9, aBuffer_9);
-		if (local27.anInt633 != -1) {
+		local27.readDefinition(aBuffer_9);
+		local27.groundOptions = new String[] { "One", "Two", "Three", "Four", "Five" };
+		local27.inventoryOptions = new String[] { "One", "Two", "Three", "Four", "Five" };
+		if (local27.notedId != -1) {
 			local27.method348(false);
 		}
-		if (!aBoolean151 && local27.aBoolean153) {
-			local27.aString26 = "Members Object";
-			local27.aByteArray6 = "Login to a members' server to use this object.".getBytes();
-			local27.aStringArray10 = null;
-			local27.aStringArray11 = null;
+		if (!aBoolean151 && local27.isMembers) {
+			local27.name = "Members Object";
+			local27.examine = "Login to a members' server to use this object.".getBytes();
+			local27.groundOptions = null;
+			local27.inventoryOptions = null;
 		}
 		return local27;
 	}
@@ -106,7 +110,7 @@ public final class Static15 {
 					return local9;
 				}
 			}
-			@Pc(30) Class15 local30 = method345(arg2);
+			@Pc(30) ObjectConfig local30 = method345(arg2);
 			if (local30.anIntArray178 == null) {
 				arg1 = -1;
 			}
@@ -126,8 +130,8 @@ public final class Static15 {
 				return null;
 			}
 			@Pc(80) Class1_Sub1_Sub2_Sub2 local80 = null;
-			if (local30.anInt633 != -1) {
-				local80 = method351(-1, 10, local30.anInt632, 977);
+			if (local30.notedId != -1) {
+				local80 = method351(-1, 10, local30.linkedId, 977);
 				if (local80 == null) {
 					return null;
 				}
@@ -150,16 +154,16 @@ public final class Static15 {
 			Static14.method453(-216, 32, local9.anIntArray210, 32);
 			Static14.method458(32, 32, 0, 0, (byte) 3, 0);
 			Static16.method371(338);
-			@Pc(149) int local149 = local30.anInt614;
+			@Pc(149) int local149 = local30.iconZoom;
 			if (arg0 == -1) {
 				local149 = (int) ((double) local149 * 1.5D);
 			}
 			if (arg0 > 0) {
 				local149 = (int) ((double) local149 * 1.04D);
 			}
-			@Pc(175) int local175 = Class1_Sub1_Sub2_Sub1.anIntArray183[local30.anInt615] * local149 >> 16;
-			@Pc(184) int local184 = Class1_Sub1_Sub2_Sub1.anIntArray184[local30.anInt615] * local149 >> 16;
-			local74.method308(0, local30.anInt616, local30.anInt617, local30.anInt615, local30.anInt618, local175 + local74.anInt566 / 2 + local30.anInt619, local184 + local30.anInt619);
+			@Pc(175) int local175 = Class1_Sub1_Sub2_Sub1.anIntArray183[local30.iconPitch] * local149 >> 16;
+			@Pc(184) int local184 = Class1_Sub1_Sub2_Sub1.anIntArray184[local30.iconPitch] * local149 >> 16;
+			local74.method308(0, local30.iconYaw, local30.anInt617, local30.iconPitch, local30.iconOffsetX, local175 + local74.anInt566 / 2 + local30.iconOffsetY, local184 + local30.iconOffsetY);
 			for (@Pc(210) int local210 = 31; local210 >= 0; local210--) {
 				for (local184 = 31; local184 >= 0; local184--) {
 					if (local9.anIntArray210[local210 + local184 * 32] == 0) {
@@ -201,7 +205,7 @@ public final class Static15 {
 					}
 				}
 			}
-			if (local30.anInt633 != -1) {
+			if (local30.notedId != -1) {
 				local335 = local80.anInt690;
 				@Pc(519) int local519 = local80.anInt691;
 				local80.anInt690 = 32;
@@ -219,7 +223,7 @@ public final class Static15 {
 			Static16.anInt662 = local105;
 			Static16.anIntArray185 = local107;
 			Static16.aBoolean161 = true;
-			if (local30.aBoolean152) {
+			if (local30.isStackable) {
 				local9.anInt690 = 33;
 			} else {
 				local9.anInt690 = 32;
